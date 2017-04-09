@@ -1,0 +1,10 @@
+E:\HoanChinh\CCLTHienDai\Thuchanh\1542232_Exec\1542232_Exec\bin\Debug\1542232_Exec.exe.config
+E:\HoanChinh\CCLTHienDai\Thuchanh\1542232_Exec\1542232_Exec\bin\Debug\1542232_Exec.exe
+E:\HoanChinh\CCLTHienDai\Thuchanh\1542232_Exec\1542232_Exec\bin\Debug\1542232_Exec.pdb
+E:\HoanChinh\CCLTHienDai\Thuchanh\1542232_Exec\1542232_Exec\bin\Debug\Microsoft.SqlServer.DTSRuntimeWrap.dll
+E:\HoanChinh\CCLTHienDai\Thuchanh\1542232_Exec\1542232_Exec\obj\Debug\1542232_Exec.csprojResolveAssemblyReference.cache
+E:\HoanChinh\CCLTHienDai\Thuchanh\1542232_Exec\1542232_Exec\obj\Debug\_1542232_Exec.Form1.resources
+E:\HoanChinh\CCLTHienDai\Thuchanh\1542232_Exec\1542232_Exec\obj\Debug\_1542232_Exec.Properties.Resources.resources
+E:\HoanChinh\CCLTHienDai\Thuchanh\1542232_Exec\1542232_Exec\obj\Debug\1542232_Exec.csproj.GenerateResource.Cache
+E:\HoanChinh\CCLTHienDai\Thuchanh\1542232_Exec\1542232_Exec\obj\Debug\1542232_Exec.exe
+E:\HoanChinh\CCLTHienDai\Thuchanh\1542232_Exec\1542232_Exec\obj\Debug\1542232_Exec.pdb
