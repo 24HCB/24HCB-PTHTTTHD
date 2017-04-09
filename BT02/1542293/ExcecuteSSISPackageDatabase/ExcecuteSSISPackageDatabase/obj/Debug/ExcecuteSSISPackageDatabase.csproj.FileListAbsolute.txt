@@ -1,0 +1,9 @@
+C:\Users\John Nguyen\Desktop\1542293\ExcecuteSSISPackageDatabase\ExcecuteSSISPackageDatabase\bin\Debug\ExcecuteSSISPackageDatabase.exe.config
+C:\Users\John Nguyen\Desktop\1542293\ExcecuteSSISPackageDatabase\ExcecuteSSISPackageDatabase\bin\Debug\ExcecuteSSISPackageDatabase.exe
+C:\Users\John Nguyen\Desktop\1542293\ExcecuteSSISPackageDatabase\ExcecuteSSISPackageDatabase\bin\Debug\ExcecuteSSISPackageDatabase.pdb
+C:\Users\John Nguyen\Desktop\1542293\ExcecuteSSISPackageDatabase\ExcecuteSSISPackageDatabase\obj\Debug\ExcecuteSSISPackageDatabase.csprojResolveAssemblyReference.cache
+C:\Users\John Nguyen\Desktop\1542293\ExcecuteSSISPackageDatabase\ExcecuteSSISPackageDatabase\obj\Debug\ExcecuteSSISPackageDatabase.Form1.resources
+C:\Users\John Nguyen\Desktop\1542293\ExcecuteSSISPackageDatabase\ExcecuteSSISPackageDatabase\obj\Debug\ExcecuteSSISPackageDatabase.Properties.Resources.resources
+C:\Users\John Nguyen\Desktop\1542293\ExcecuteSSISPackageDatabase\ExcecuteSSISPackageDatabase\obj\Debug\ExcecuteSSISPackageDatabase.csproj.GenerateResource.Cache
+C:\Users\John Nguyen\Desktop\1542293\ExcecuteSSISPackageDatabase\ExcecuteSSISPackageDatabase\obj\Debug\ExcecuteSSISPackageDatabase.exe
+C:\Users\John Nguyen\Desktop\1542293\ExcecuteSSISPackageDatabase\ExcecuteSSISPackageDatabase\obj\Debug\ExcecuteSSISPackageDatabase.pdb
