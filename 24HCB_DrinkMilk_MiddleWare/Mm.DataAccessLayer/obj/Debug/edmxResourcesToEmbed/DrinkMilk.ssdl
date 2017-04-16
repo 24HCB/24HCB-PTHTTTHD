@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DrinkMilkModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BO">
+    <Key>
+      <PropertyRef Name="MaSoChip" />
+    </Key>
+    <Property Name="MaSoChip" Type="int" Nullable="false" />
+    <Property Name="NgayNhap" Type="date" />
+    <Property Name="CanNang" Type="int" />
+    <Property Name="MauSac" Type="nvarchar" MaxLength="20" />
+    <Property Name="DacDiemNhanDien" Type="nvarchar" MaxLength="200" />
+    <Property Name="DiTat" Type="bit" />
+  </EntityType>
+  <EntityType Name="ChiTietQuyTrinh">
+    <Key>
+      <PropertyRef Name="MaQuyTrinh" />
+      <PropertyRef Name="MaSoChip" />
+    </Key>
+    <Property Name="MaQuyTrinh" Type="int" Nullable="false" />
+    <Property Name="MaSoChip" Type="int" Nullable="false" />
+    <Property Name="SoLuongSua" Type="int" />
+    <Property Name="TinhTrangBauVu" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'DrinkMilk.dbo.ChiTietSucKhoeBo' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ChiTietSucKhoeBo">
+          <Property Name="MaSoChip" Type="int" />
+          <Property Name="NgayGhiNhan" Type="date" />
+          <Property Name="GioGhiNhan" Type="time" Precision="7" />
+          <Property Name="CanNang" Type="int" />
+          <Property Name="NhietDo" Type="int" />
+          <Property Name="Protit" Type="int" />
+          <Property Name="Gluxit" Type="int" />
+          <Property Name="Lipit" Type="int" />
+          <Property Name="TTSucKhoe" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+  <EntityType Name="CHUONG">
+    <Key>
+      <PropertyRef Name="MaSoChuong" />
+    </Key>
+    <Property Name="MaSoChuong" Type="int" Nullable="false" />
+    <Property Name="MaCoSo" Type="int" />
+    <Property Name="DiaChiChuong" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="COSO">
+    <Key>
+      <PropertyRef Name="MaCS" />
+    </Key>
+    <Property Name="MaCS" Type="int" Nullable="false" />
+    <Property Name="DiaChiCS" Type="nvarchar" MaxLength="100" />
+    <Property Name="MaTruSo" Type="int" />
+    <Property Name="NguoiQuanLy" Type="int" />
+  </EntityType>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaNV" Type="int" Nullable="false" />
+    <Property Name="TenNhanVien" Type="nvarchar" MaxLength="50" />
+    <Property Name="CMND" Type="char" MaxLength="12" />
+    <Property Name="SoDienThoai" Type="char" MaxLength="12" />
+    <Property Name="username" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="QUYTRINHVATSUA">
+    <Key>
+      <PropertyRef Name="MaQuyTrinh" />
+    </Key>
+    <Property Name="MaQuyTrinh" Type="int" Nullable="false" />
+    <Property Name="MaSoChuong" Type="int" />
+    <Property Name="MaNhanVien" Type="int" />
+    <Property Name="NgayThucHien" Type="date" />
+    <Property Name="GioBatDau" Type="time" Precision="7" />
+    <Property Name="GioKetThuc" Type="time" Precision="7" />
+  </EntityType>
+  <EntityType Name="TRUSO">
+    <Key>
+      <PropertyRef Name="MaTruSo" />
+    </Key>
+    <Property Name="MaTruSo" Type="int" Nullable="false" />
+    <Property Name="DiaChiTruSo" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK_ChiTietQuyTrinh_BO">
+    <End Role="BO" Type="Self.BO" Multiplicity="1" />
+    <End Role="ChiTietQuyTrinh" Type="Self.ChiTietQuyTrinh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BO">
+        <PropertyRef Name="MaSoChip" />
+      </Principal>
+      <Dependent Role="ChiTietQuyTrinh">
+        <PropertyRef Name="MaSoChip" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChiTietQuyTrinh_QUYTRINHVATSUA">
+    <End Role="QUYTRINHVATSUA" Type="Self.QUYTRINHVATSUA" Multiplicity="1" />
+    <End Role="ChiTietQuyTrinh" Type="Self.ChiTietQuyTrinh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QUYTRINHVATSUA">
+        <PropertyRef Name="MaQuyTrinh" />
+      </Principal>
+      <Dependent Role="ChiTietQuyTrinh">
+        <PropertyRef Name="MaQuyTrinh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+error 6004: The table 'DrinkMilk.dbo.ChiTietSucKhoeBo' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_ChiTietSucKhoeBo_BO" />-->
+  <Association Name="FK_CHUONG_COSO">
+    <End Role="COSO" Type="Self.COSO" Multiplicity="0..1" />
+    <End Role="CHUONG" Type="Self.CHUONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COSO">
+        <PropertyRef Name="MaCS" />
+      </Principal>
+      <Dependent Role="CHUONG">
+        <PropertyRef Name="MaCoSo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COSO_NHANVIEN">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+    <End Role="COSO" Type="Self.COSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MaNV" />
+      </Principal>
+      <Dependent Role="COSO">
+        <PropertyRef Name="NguoiQuanLy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COSO_TRUSO">
+    <End Role="TRUSO" Type="Self.TRUSO" Multiplicity="0..1" />
+    <End Role="COSO" Type="Self.COSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRUSO">
+        <PropertyRef Name="MaTruSo" />
+      </Principal>
+      <Dependent Role="COSO">
+        <PropertyRef Name="MaTruSo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QUYTRINHVATSUA_CHUONG">
+    <End Role="CHUONG" Type="Self.CHUONG" Multiplicity="0..1" />
+    <End Role="QUYTRINHVATSUA" Type="Self.QUYTRINHVATSUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHUONG">
+        <PropertyRef Name="MaSoChuong" />
+      </Principal>
+      <Dependent Role="QUYTRINHVATSUA">
+        <PropertyRef Name="MaSoChuong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QUYTRINHVATSUA_NHANVIEN">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+    <End Role="QUYTRINHVATSUA" Type="Self.QUYTRINHVATSUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MaNV" />
+      </Principal>
+      <Dependent Role="QUYTRINHVATSUA">
+        <PropertyRef Name="MaNhanVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DrinkMilkModelStoreContainer">
+    <EntitySet Name="BO" EntityType="Self.BO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChiTietQuyTrinh" EntityType="Self.ChiTietQuyTrinh" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHUONG" EntityType="Self.CHUONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COSO" EntityType="Self.COSO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QUYTRINHVATSUA" EntityType="Self.QUYTRINHVATSUA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRUSO" EntityType="Self.TRUSO" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ChiTietQuyTrinh_BO" Association="Self.FK_ChiTietQuyTrinh_BO">
+      <End Role="BO" EntitySet="BO" />
+      <End Role="ChiTietQuyTrinh" EntitySet="ChiTietQuyTrinh" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChiTietQuyTrinh_QUYTRINHVATSUA" Association="Self.FK_ChiTietQuyTrinh_QUYTRINHVATSUA">
+      <End Role="QUYTRINHVATSUA" EntitySet="QUYTRINHVATSUA" />
+      <End Role="ChiTietQuyTrinh" EntitySet="ChiTietQuyTrinh" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHUONG_COSO" Association="Self.FK_CHUONG_COSO">
+      <End Role="COSO" EntitySet="COSO" />
+      <End Role="CHUONG" EntitySet="CHUONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COSO_NHANVIEN" Association="Self.FK_COSO_NHANVIEN">
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+      <End Role="COSO" EntitySet="COSO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COSO_TRUSO" Association="Self.FK_COSO_TRUSO">
+      <End Role="TRUSO" EntitySet="TRUSO" />
+      <End Role="COSO" EntitySet="COSO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QUYTRINHVATSUA_CHUONG" Association="Self.FK_QUYTRINHVATSUA_CHUONG">
+      <End Role="CHUONG" EntitySet="CHUONG" />
+      <End Role="QUYTRINHVATSUA" EntitySet="QUYTRINHVATSUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QUYTRINHVATSUA_NHANVIEN" Association="Self.FK_QUYTRINHVATSUA_NHANVIEN">
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+      <End Role="QUYTRINHVATSUA" EntitySet="QUYTRINHVATSUA" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

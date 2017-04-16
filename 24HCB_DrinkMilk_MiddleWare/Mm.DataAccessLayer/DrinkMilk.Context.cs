@@ -9,10 +9,11 @@
 
 namespace Mm.DataAccessLayer
 {
+    using DomainModel;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+
     public partial class DrinkMilkEntities : DbContext
     {
         public DrinkMilkEntities()

@@ -1,0 +1,4 @@
+C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DomainModel\bin\Debug\Mm.DomainModel.dll
+C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DomainModel\bin\Debug\Mm.DomainModel.pdb
+C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DomainModel\obj\Debug\Mm.DomainModel.dll
+C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DomainModel\obj\Debug\Mm.DomainModel.pdb

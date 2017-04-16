@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DrinkMilkModelStoreContainer" CdmEntityContainer="DrinkMilkEntities">
+    <EntitySetMapping Name="BOes">
+      <EntityTypeMapping TypeName="DrinkMilkModel.BO">
+        <MappingFragment StoreEntitySet="BO">
+          <ScalarProperty Name="MaSoChip" ColumnName="MaSoChip" />
+          <ScalarProperty Name="NgayNhap" ColumnName="NgayNhap" />
+          <ScalarProperty Name="CanNang" ColumnName="CanNang" />
+          <ScalarProperty Name="MauSac" ColumnName="MauSac" />
+          <ScalarProperty Name="DacDiemNhanDien" ColumnName="DacDiemNhanDien" />
+          <ScalarProperty Name="DiTat" ColumnName="DiTat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChiTietQuyTrinhs">
+      <EntityTypeMapping TypeName="DrinkMilkModel.ChiTietQuyTrinh">
+        <MappingFragment StoreEntitySet="ChiTietQuyTrinh">
+          <ScalarProperty Name="MaQuyTrinh" ColumnName="MaQuyTrinh" />
+          <ScalarProperty Name="MaSoChip" ColumnName="MaSoChip" />
+          <ScalarProperty Name="SoLuongSua" ColumnName="SoLuongSua" />
+          <ScalarProperty Name="TinhTrangBauVu" ColumnName="TinhTrangBauVu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHUONGs">
+      <EntityTypeMapping TypeName="DrinkMilkModel.CHUONG">
+        <MappingFragment StoreEntitySet="CHUONG">
+          <ScalarProperty Name="MaSoChuong" ColumnName="MaSoChuong" />
+          <ScalarProperty Name="MaCoSo" ColumnName="MaCoSo" />
+          <ScalarProperty Name="DiaChiChuong" ColumnName="DiaChiChuong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COSOes">
+      <EntityTypeMapping TypeName="DrinkMilkModel.COSO">
+        <MappingFragment StoreEntitySet="COSO">
+          <ScalarProperty Name="MaCS" ColumnName="MaCS" />
+          <ScalarProperty Name="DiaChiCS" ColumnName="DiaChiCS" />
+          <ScalarProperty Name="MaTruSo" ColumnName="MaTruSo" />
+          <ScalarProperty Name="NguoiQuanLy" ColumnName="NguoiQuanLy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHANVIENs">
+      <EntityTypeMapping TypeName="DrinkMilkModel.NHANVIEN">
+        <MappingFragment StoreEntitySet="NHANVIEN">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="TenNhanVien" ColumnName="TenNhanVien" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+          <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QUYTRINHVATSUAs">
+      <EntityTypeMapping TypeName="DrinkMilkModel.QUYTRINHVATSUA">
+        <MappingFragment StoreEntitySet="QUYTRINHVATSUA">
+          <ScalarProperty Name="MaQuyTrinh" ColumnName="MaQuyTrinh" />
+          <ScalarProperty Name="MaSoChuong" ColumnName="MaSoChuong" />
+          <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+          <ScalarProperty Name="NgayThucHien" ColumnName="NgayThucHien" />
+          <ScalarProperty Name="GioBatDau" ColumnName="GioBatDau" />
+          <ScalarProperty Name="GioKetThuc" ColumnName="GioKetThuc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRUSOes">
+      <EntityTypeMapping TypeName="DrinkMilkModel.TRUSO">
+        <MappingFragment StoreEntitySet="TRUSO">
+          <ScalarProperty Name="MaTruSo" ColumnName="MaTruSo" />
+          <ScalarProperty Name="DiaChiTruSo" ColumnName="DiaChiTruSo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

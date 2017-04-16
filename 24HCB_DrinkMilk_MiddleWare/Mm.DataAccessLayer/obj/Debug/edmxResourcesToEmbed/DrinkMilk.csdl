@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DrinkMilkModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BO">
+    <Key>
+      <PropertyRef Name="MaSoChip" />
+    </Key>
+    <Property Name="MaSoChip" Type="Int32" Nullable="false" />
+    <Property Name="NgayNhap" Type="DateTime" Precision="0" />
+    <Property Name="CanNang" Type="Int32" />
+    <Property Name="MauSac" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DacDiemNhanDien" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DiTat" Type="Boolean" />
+    <NavigationProperty Name="ChiTietQuyTrinhs" Relationship="Self.FK_ChiTietQuyTrinh_BO" FromRole="BO" ToRole="ChiTietQuyTrinh" />
+  </EntityType>
+  <EntityType Name="ChiTietQuyTrinh">
+    <Key>
+      <PropertyRef Name="MaQuyTrinh" />
+      <PropertyRef Name="MaSoChip" />
+    </Key>
+    <Property Name="MaQuyTrinh" Type="Int32" Nullable="false" />
+    <Property Name="MaSoChip" Type="Int32" Nullable="false" />
+    <Property Name="SoLuongSua" Type="Int32" />
+    <Property Name="TinhTrangBauVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BO" Relationship="Self.FK_ChiTietQuyTrinh_BO" FromRole="ChiTietQuyTrinh" ToRole="BO" />
+    <NavigationProperty Name="QUYTRINHVATSUA" Relationship="Self.FK_ChiTietQuyTrinh_QUYTRINHVATSUA" FromRole="ChiTietQuyTrinh" ToRole="QUYTRINHVATSUA" />
+  </EntityType>
+  <EntityType Name="CHUONG">
+    <Key>
+      <PropertyRef Name="MaSoChuong" />
+    </Key>
+    <Property Name="MaSoChuong" Type="Int32" Nullable="false" />
+    <Property Name="MaCoSo" Type="Int32" />
+    <Property Name="DiaChiChuong" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="COSO" Relationship="Self.FK_CHUONG_COSO" FromRole="CHUONG" ToRole="COSO" />
+    <NavigationProperty Name="QUYTRINHVATSUAs" Relationship="Self.FK_QUYTRINHVATSUA_CHUONG" FromRole="CHUONG" ToRole="QUYTRINHVATSUA" />
+  </EntityType>
+  <EntityType Name="COSO">
+    <Key>
+      <PropertyRef Name="MaCS" />
+    </Key>
+    <Property Name="MaCS" Type="Int32" Nullable="false" />
+    <Property Name="DiaChiCS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MaTruSo" Type="Int32" />
+    <Property Name="NguoiQuanLy" Type="Int32" />
+    <NavigationProperty Name="CHUONGs" Relationship="Self.FK_CHUONG_COSO" FromRole="COSO" ToRole="CHUONG" />
+    <NavigationProperty Name="NHANVIEN" Relationship="Self.FK_COSO_NHANVIEN" FromRole="COSO" ToRole="NHANVIEN" />
+    <NavigationProperty Name="TRUSO" Relationship="Self.FK_COSO_TRUSO" FromRole="COSO" ToRole="TRUSO" />
+  </EntityType>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaNV" Type="Int32" Nullable="false" />
+    <Property Name="TenNhanVien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CMND" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="SoDienThoai" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="COSOes" Relationship="Self.FK_COSO_NHANVIEN" FromRole="NHANVIEN" ToRole="COSO" />
+    <NavigationProperty Name="QUYTRINHVATSUAs" Relationship="Self.FK_QUYTRINHVATSUA_NHANVIEN" FromRole="NHANVIEN" ToRole="QUYTRINHVATSUA" />
+  </EntityType>
+  <EntityType Name="QUYTRINHVATSUA">
+    <Key>
+      <PropertyRef Name="MaQuyTrinh" />
+    </Key>
+    <Property Name="MaQuyTrinh" Type="Int32" Nullable="false" />
+    <Property Name="MaSoChuong" Type="Int32" />
+    <Property Name="MaNhanVien" Type="Int32" />
+    <Property Name="NgayThucHien" Type="DateTime" Precision="0" />
+    <Property Name="GioBatDau" Type="Time" Precision="7" />
+    <Property Name="GioKetThuc" Type="Time" Precision="7" />
+    <NavigationProperty Name="ChiTietQuyTrinhs" Relationship="Self.FK_ChiTietQuyTrinh_QUYTRINHVATSUA" FromRole="QUYTRINHVATSUA" ToRole="ChiTietQuyTrinh" />
+    <NavigationProperty Name="CHUONG" Relationship="Self.FK_QUYTRINHVATSUA_CHUONG" FromRole="QUYTRINHVATSUA" ToRole="CHUONG" />
+    <NavigationProperty Name="NHANVIEN" Relationship="Self.FK_QUYTRINHVATSUA_NHANVIEN" FromRole="QUYTRINHVATSUA" ToRole="NHANVIEN" />
+  </EntityType>
+  <EntityType Name="TRUSO">
+    <Key>
+      <PropertyRef Name="MaTruSo" />
+    </Key>
+    <Property Name="MaTruSo" Type="Int32" Nullable="false" />
+    <Property Name="DiaChiTruSo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="COSOes" Relationship="Self.FK_COSO_TRUSO" FromRole="TRUSO" ToRole="COSO" />
+  </EntityType>
+  <Association Name="FK_ChiTietQuyTrinh_BO">
+    <End Role="BO" Type="Self.BO" Multiplicity="1" />
+    <End Role="ChiTietQuyTrinh" Type="Self.ChiTietQuyTrinh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BO">
+        <PropertyRef Name="MaSoChip" />
+      </Principal>
+      <Dependent Role="ChiTietQuyTrinh">
+        <PropertyRef Name="MaSoChip" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChiTietQuyTrinh_QUYTRINHVATSUA">
+    <End Role="QUYTRINHVATSUA" Type="Self.QUYTRINHVATSUA" Multiplicity="1" />
+    <End Role="ChiTietQuyTrinh" Type="Self.ChiTietQuyTrinh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QUYTRINHVATSUA">
+        <PropertyRef Name="MaQuyTrinh" />
+      </Principal>
+      <Dependent Role="ChiTietQuyTrinh">
+        <PropertyRef Name="MaQuyTrinh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CHUONG_COSO">
+    <End Role="COSO" Type="Self.COSO" Multiplicity="0..1" />
+    <End Role="CHUONG" Type="Self.CHUONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COSO">
+        <PropertyRef Name="MaCS" />
+      </Principal>
+      <Dependent Role="CHUONG">
+        <PropertyRef Name="MaCoSo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QUYTRINHVATSUA_CHUONG">
+    <End Role="CHUONG" Type="Self.CHUONG" Multiplicity="0..1" />
+    <End Role="QUYTRINHVATSUA" Type="Self.QUYTRINHVATSUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHUONG">
+        <PropertyRef Name="MaSoChuong" />
+      </Principal>
+      <Dependent Role="QUYTRINHVATSUA">
+        <PropertyRef Name="MaSoChuong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COSO_NHANVIEN">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+    <End Role="COSO" Type="Self.COSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MaNV" />
+      </Principal>
+      <Dependent Role="COSO">
+        <PropertyRef Name="NguoiQuanLy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COSO_TRUSO">
+    <End Role="TRUSO" Type="Self.TRUSO" Multiplicity="0..1" />
+    <End Role="COSO" Type="Self.COSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRUSO">
+        <PropertyRef Name="MaTruSo" />
+      </Principal>
+      <Dependent Role="COSO">
+        <PropertyRef Name="MaTruSo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QUYTRINHVATSUA_NHANVIEN">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+    <End Role="QUYTRINHVATSUA" Type="Self.QUYTRINHVATSUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MaNV" />
+      </Principal>
+      <Dependent Role="QUYTRINHVATSUA">
+        <PropertyRef Name="MaNhanVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DrinkMilkEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BOes" EntityType="Self.BO" />
+    <EntitySet Name="ChiTietQuyTrinhs" EntityType="Self.ChiTietQuyTrinh" />
+    <EntitySet Name="CHUONGs" EntityType="Self.CHUONG" />
+    <EntitySet Name="COSOes" EntityType="Self.COSO" />
+    <EntitySet Name="NHANVIENs" EntityType="Self.NHANVIEN" />
+    <EntitySet Name="QUYTRINHVATSUAs" EntityType="Self.QUYTRINHVATSUA" />
+    <EntitySet Name="TRUSOes" EntityType="Self.TRUSO" />
+    <AssociationSet Name="FK_ChiTietQuyTrinh_BO" Association="Self.FK_ChiTietQuyTrinh_BO">
+      <End Role="BO" EntitySet="BOes" />
+      <End Role="ChiTietQuyTrinh" EntitySet="ChiTietQuyTrinhs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChiTietQuyTrinh_QUYTRINHVATSUA" Association="Self.FK_ChiTietQuyTrinh_QUYTRINHVATSUA">
+      <End Role="QUYTRINHVATSUA" EntitySet="QUYTRINHVATSUAs" />
+      <End Role="ChiTietQuyTrinh" EntitySet="ChiTietQuyTrinhs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHUONG_COSO" Association="Self.FK_CHUONG_COSO">
+      <End Role="COSO" EntitySet="COSOes" />
+      <End Role="CHUONG" EntitySet="CHUONGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QUYTRINHVATSUA_CHUONG" Association="Self.FK_QUYTRINHVATSUA_CHUONG">
+      <End Role="CHUONG" EntitySet="CHUONGs" />
+      <End Role="QUYTRINHVATSUA" EntitySet="QUYTRINHVATSUAs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COSO_NHANVIEN" Association="Self.FK_COSO_NHANVIEN">
+      <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+      <End Role="COSO" EntitySet="COSOes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COSO_TRUSO" Association="Self.FK_COSO_TRUSO">
+      <End Role="TRUSO" EntitySet="TRUSOes" />
+      <End Role="COSO" EntitySet="COSOes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QUYTRINHVATSUA_NHANVIEN" Association="Self.FK_QUYTRINHVATSUA_NHANVIEN">
+      <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+      <End Role="QUYTRINHVATSUA" EntitySet="QUYTRINHVATSUAs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
