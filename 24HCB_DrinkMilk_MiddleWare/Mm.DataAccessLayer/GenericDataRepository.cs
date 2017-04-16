@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 
 namespace Mm.DataAccessLayer
 {
-    class GenericDataRepository<T> : IGenericDataRepository<T> where T:class
+    public class GenericDataRepository<T> : IGenericDataRepository<T> where T:class
     {
         public IList<T> GetAll(params System.Linq.Expressions.Expression<Func<T, object>>[] navigationproperties)
         {

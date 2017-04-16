@@ -15,6 +15,5 @@ C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.Webs
 C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.Website\bin\Mm.Website.pdb
 C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.Website\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.Website\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.Website\obj\Debug\Mm.Website.csprojResolveAssemblyReference.cache
 C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.Website\obj\Debug\Mm.Website.dll
 C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.Website\obj\Debug\Mm.Website.pdb
