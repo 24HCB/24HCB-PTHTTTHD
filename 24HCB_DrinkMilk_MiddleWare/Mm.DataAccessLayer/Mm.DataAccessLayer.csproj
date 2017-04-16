@@ -59,6 +59,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DrinkMilk.edmx</DependentUpon>
     </Compile>
+    <Compile Include="GenericDataRepository.cs" />
+    <Compile Include="IGenericDataRepository.cs" />
+    <Compile Include="IHeadQuaterRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
