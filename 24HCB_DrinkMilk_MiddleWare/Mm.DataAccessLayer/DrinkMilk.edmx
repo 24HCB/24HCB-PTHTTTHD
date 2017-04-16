@@ -1,0 +1,521 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DrinkMilkModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BO">
+          <Key>
+            <PropertyRef Name="MaSoChip" />
+          </Key>
+          <Property Name="MaSoChip" Type="int" Nullable="false" />
+          <Property Name="NgayNhap" Type="date" />
+          <Property Name="CanNang" Type="int" />
+          <Property Name="MauSac" Type="nvarchar" MaxLength="20" />
+          <Property Name="DacDiemNhanDien" Type="nvarchar" MaxLength="200" />
+          <Property Name="DiTat" Type="bit" />
+        </EntityType>
+        <EntityType Name="ChiTietQuyTrinh">
+          <Key>
+            <PropertyRef Name="MaQuyTrinh" />
+            <PropertyRef Name="MaSoChip" />
+          </Key>
+          <Property Name="MaQuyTrinh" Type="int" Nullable="false" />
+          <Property Name="MaSoChip" Type="int" Nullable="false" />
+          <Property Name="SoLuongSua" Type="int" />
+          <Property Name="TinhTrangBauVu" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'DrinkMilk.dbo.ChiTietSucKhoeBo' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ChiTietSucKhoeBo">
+          <Property Name="MaSoChip" Type="int" />
+          <Property Name="NgayGhiNhan" Type="date" />
+          <Property Name="GioGhiNhan" Type="time" Precision="7" />
+          <Property Name="CanNang" Type="int" />
+          <Property Name="NhietDo" Type="int" />
+          <Property Name="Protit" Type="int" />
+          <Property Name="Gluxit" Type="int" />
+          <Property Name="Lipit" Type="int" />
+          <Property Name="TTSucKhoe" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+        <EntityType Name="CHUONG">
+          <Key>
+            <PropertyRef Name="MaSoChuong" />
+          </Key>
+          <Property Name="MaSoChuong" Type="int" Nullable="false" />
+          <Property Name="MaCoSo" Type="int" />
+          <Property Name="DiaChiChuong" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="COSO">
+          <Key>
+            <PropertyRef Name="MaCS" />
+          </Key>
+          <Property Name="MaCS" Type="int" Nullable="false" />
+          <Property Name="DiaChiCS" Type="nvarchar" MaxLength="100" />
+          <Property Name="MaTruSo" Type="int" />
+          <Property Name="NguoiQuanLy" Type="int" />
+        </EntityType>
+        <EntityType Name="NHANVIEN">
+          <Key>
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaNV" Type="int" Nullable="false" />
+          <Property Name="TenNhanVien" Type="nvarchar" MaxLength="50" />
+          <Property Name="CMND" Type="char" MaxLength="12" />
+          <Property Name="SoDienThoai" Type="char" MaxLength="12" />
+          <Property Name="username" Type="varchar" MaxLength="50" />
+          <Property Name="password" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="QUYTRINHVATSUA">
+          <Key>
+            <PropertyRef Name="MaQuyTrinh" />
+          </Key>
+          <Property Name="MaQuyTrinh" Type="int" Nullable="false" />
+          <Property Name="MaSoChuong" Type="int" />
+          <Property Name="MaNhanVien" Type="int" />
+          <Property Name="NgayThucHien" Type="date" />
+          <Property Name="GioBatDau" Type="time" Precision="7" />
+          <Property Name="GioKetThuc" Type="time" Precision="7" />
+        </EntityType>
+        <EntityType Name="TRUSO">
+          <Key>
+            <PropertyRef Name="MaTruSo" />
+          </Key>
+          <Property Name="MaTruSo" Type="int" Nullable="false" />
+          <Property Name="DiaChiTruSo" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <Association Name="FK_ChiTietQuyTrinh_BO">
+          <End Role="BO" Type="Self.BO" Multiplicity="1" />
+          <End Role="ChiTietQuyTrinh" Type="Self.ChiTietQuyTrinh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BO">
+              <PropertyRef Name="MaSoChip" />
+            </Principal>
+            <Dependent Role="ChiTietQuyTrinh">
+              <PropertyRef Name="MaSoChip" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChiTietQuyTrinh_QUYTRINHVATSUA">
+          <End Role="QUYTRINHVATSUA" Type="Self.QUYTRINHVATSUA" Multiplicity="1" />
+          <End Role="ChiTietQuyTrinh" Type="Self.ChiTietQuyTrinh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="QUYTRINHVATSUA">
+              <PropertyRef Name="MaQuyTrinh" />
+            </Principal>
+            <Dependent Role="ChiTietQuyTrinh">
+              <PropertyRef Name="MaQuyTrinh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <!--Errors Found During Generation:
+error 6004: The table 'DrinkMilk.dbo.ChiTietSucKhoeBo' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_ChiTietSucKhoeBo_BO" />-->
+        <Association Name="FK_CHUONG_COSO">
+          <End Role="COSO" Type="Self.COSO" Multiplicity="0..1" />
+          <End Role="CHUONG" Type="Self.CHUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COSO">
+              <PropertyRef Name="MaCS" />
+            </Principal>
+            <Dependent Role="CHUONG">
+              <PropertyRef Name="MaCoSo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_COSO_NHANVIEN">
+          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+          <End Role="COSO" Type="Self.COSO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="COSO">
+              <PropertyRef Name="NguoiQuanLy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_COSO_TRUSO">
+          <End Role="TRUSO" Type="Self.TRUSO" Multiplicity="0..1" />
+          <End Role="COSO" Type="Self.COSO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TRUSO">
+              <PropertyRef Name="MaTruSo" />
+            </Principal>
+            <Dependent Role="COSO">
+              <PropertyRef Name="MaTruSo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QUYTRINHVATSUA_CHUONG">
+          <End Role="CHUONG" Type="Self.CHUONG" Multiplicity="0..1" />
+          <End Role="QUYTRINHVATSUA" Type="Self.QUYTRINHVATSUA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CHUONG">
+              <PropertyRef Name="MaSoChuong" />
+            </Principal>
+            <Dependent Role="QUYTRINHVATSUA">
+              <PropertyRef Name="MaSoChuong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QUYTRINHVATSUA_NHANVIEN">
+          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+          <End Role="QUYTRINHVATSUA" Type="Self.QUYTRINHVATSUA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="QUYTRINHVATSUA">
+              <PropertyRef Name="MaNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DrinkMilkModelStoreContainer">
+          <EntitySet Name="BO" EntityType="Self.BO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChiTietQuyTrinh" EntityType="Self.ChiTietQuyTrinh" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CHUONG" EntityType="Self.CHUONG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="COSO" EntityType="Self.COSO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QUYTRINHVATSUA" EntityType="Self.QUYTRINHVATSUA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRUSO" EntityType="Self.TRUSO" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ChiTietQuyTrinh_BO" Association="Self.FK_ChiTietQuyTrinh_BO">
+            <End Role="BO" EntitySet="BO" />
+            <End Role="ChiTietQuyTrinh" EntitySet="ChiTietQuyTrinh" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChiTietQuyTrinh_QUYTRINHVATSUA" Association="Self.FK_ChiTietQuyTrinh_QUYTRINHVATSUA">
+            <End Role="QUYTRINHVATSUA" EntitySet="QUYTRINHVATSUA" />
+            <End Role="ChiTietQuyTrinh" EntitySet="ChiTietQuyTrinh" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CHUONG_COSO" Association="Self.FK_CHUONG_COSO">
+            <End Role="COSO" EntitySet="COSO" />
+            <End Role="CHUONG" EntitySet="CHUONG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COSO_NHANVIEN" Association="Self.FK_COSO_NHANVIEN">
+            <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+            <End Role="COSO" EntitySet="COSO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COSO_TRUSO" Association="Self.FK_COSO_TRUSO">
+            <End Role="TRUSO" EntitySet="TRUSO" />
+            <End Role="COSO" EntitySet="COSO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QUYTRINHVATSUA_CHUONG" Association="Self.FK_QUYTRINHVATSUA_CHUONG">
+            <End Role="CHUONG" EntitySet="CHUONG" />
+            <End Role="QUYTRINHVATSUA" EntitySet="QUYTRINHVATSUA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QUYTRINHVATSUA_NHANVIEN" Association="Self.FK_QUYTRINHVATSUA_NHANVIEN">
+            <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+            <End Role="QUYTRINHVATSUA" EntitySet="QUYTRINHVATSUA" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DrinkMilkModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BO">
+          <Key>
+            <PropertyRef Name="MaSoChip" />
+          </Key>
+          <Property Name="MaSoChip" Type="Int32" Nullable="false" />
+          <Property Name="NgayNhap" Type="DateTime" Precision="0" />
+          <Property Name="CanNang" Type="Int32" />
+          <Property Name="MauSac" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DacDiemNhanDien" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DiTat" Type="Boolean" />
+          <NavigationProperty Name="ChiTietQuyTrinhs" Relationship="Self.FK_ChiTietQuyTrinh_BO" FromRole="BO" ToRole="ChiTietQuyTrinh" />
+        </EntityType>
+        <EntityType Name="ChiTietQuyTrinh">
+          <Key>
+            <PropertyRef Name="MaQuyTrinh" />
+            <PropertyRef Name="MaSoChip" />
+          </Key>
+          <Property Name="MaQuyTrinh" Type="Int32" Nullable="false" />
+          <Property Name="MaSoChip" Type="Int32" Nullable="false" />
+          <Property Name="SoLuongSua" Type="Int32" />
+          <Property Name="TinhTrangBauVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BO" Relationship="Self.FK_ChiTietQuyTrinh_BO" FromRole="ChiTietQuyTrinh" ToRole="BO" />
+          <NavigationProperty Name="QUYTRINHVATSUA" Relationship="Self.FK_ChiTietQuyTrinh_QUYTRINHVATSUA" FromRole="ChiTietQuyTrinh" ToRole="QUYTRINHVATSUA" />
+        </EntityType>
+        <EntityType Name="CHUONG">
+          <Key>
+            <PropertyRef Name="MaSoChuong" />
+          </Key>
+          <Property Name="MaSoChuong" Type="Int32" Nullable="false" />
+          <Property Name="MaCoSo" Type="Int32" />
+          <Property Name="DiaChiChuong" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="COSO" Relationship="Self.FK_CHUONG_COSO" FromRole="CHUONG" ToRole="COSO" />
+          <NavigationProperty Name="QUYTRINHVATSUAs" Relationship="Self.FK_QUYTRINHVATSUA_CHUONG" FromRole="CHUONG" ToRole="QUYTRINHVATSUA" />
+        </EntityType>
+        <EntityType Name="COSO">
+          <Key>
+            <PropertyRef Name="MaCS" />
+          </Key>
+          <Property Name="MaCS" Type="Int32" Nullable="false" />
+          <Property Name="DiaChiCS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MaTruSo" Type="Int32" />
+          <Property Name="NguoiQuanLy" Type="Int32" />
+          <NavigationProperty Name="CHUONGs" Relationship="Self.FK_CHUONG_COSO" FromRole="COSO" ToRole="CHUONG" />
+          <NavigationProperty Name="NHANVIEN" Relationship="Self.FK_COSO_NHANVIEN" FromRole="COSO" ToRole="NHANVIEN" />
+          <NavigationProperty Name="TRUSO" Relationship="Self.FK_COSO_TRUSO" FromRole="COSO" ToRole="TRUSO" />
+        </EntityType>
+        <EntityType Name="NHANVIEN">
+          <Key>
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaNV" Type="Int32" Nullable="false" />
+          <Property Name="TenNhanVien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CMND" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="SoDienThoai" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="COSOes" Relationship="Self.FK_COSO_NHANVIEN" FromRole="NHANVIEN" ToRole="COSO" />
+          <NavigationProperty Name="QUYTRINHVATSUAs" Relationship="Self.FK_QUYTRINHVATSUA_NHANVIEN" FromRole="NHANVIEN" ToRole="QUYTRINHVATSUA" />
+        </EntityType>
+        <EntityType Name="QUYTRINHVATSUA">
+          <Key>
+            <PropertyRef Name="MaQuyTrinh" />
+          </Key>
+          <Property Name="MaQuyTrinh" Type="Int32" Nullable="false" />
+          <Property Name="MaSoChuong" Type="Int32" />
+          <Property Name="MaNhanVien" Type="Int32" />
+          <Property Name="NgayThucHien" Type="DateTime" Precision="0" />
+          <Property Name="GioBatDau" Type="Time" Precision="7" />
+          <Property Name="GioKetThuc" Type="Time" Precision="7" />
+          <NavigationProperty Name="ChiTietQuyTrinhs" Relationship="Self.FK_ChiTietQuyTrinh_QUYTRINHVATSUA" FromRole="QUYTRINHVATSUA" ToRole="ChiTietQuyTrinh" />
+          <NavigationProperty Name="CHUONG" Relationship="Self.FK_QUYTRINHVATSUA_CHUONG" FromRole="QUYTRINHVATSUA" ToRole="CHUONG" />
+          <NavigationProperty Name="NHANVIEN" Relationship="Self.FK_QUYTRINHVATSUA_NHANVIEN" FromRole="QUYTRINHVATSUA" ToRole="NHANVIEN" />
+        </EntityType>
+        <EntityType Name="TRUSO">
+          <Key>
+            <PropertyRef Name="MaTruSo" />
+          </Key>
+          <Property Name="MaTruSo" Type="Int32" Nullable="false" />
+          <Property Name="DiaChiTruSo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="COSOes" Relationship="Self.FK_COSO_TRUSO" FromRole="TRUSO" ToRole="COSO" />
+        </EntityType>
+        <Association Name="FK_ChiTietQuyTrinh_BO">
+          <End Role="BO" Type="Self.BO" Multiplicity="1" />
+          <End Role="ChiTietQuyTrinh" Type="Self.ChiTietQuyTrinh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BO">
+              <PropertyRef Name="MaSoChip" />
+            </Principal>
+            <Dependent Role="ChiTietQuyTrinh">
+              <PropertyRef Name="MaSoChip" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChiTietQuyTrinh_QUYTRINHVATSUA">
+          <End Role="QUYTRINHVATSUA" Type="Self.QUYTRINHVATSUA" Multiplicity="1" />
+          <End Role="ChiTietQuyTrinh" Type="Self.ChiTietQuyTrinh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="QUYTRINHVATSUA">
+              <PropertyRef Name="MaQuyTrinh" />
+            </Principal>
+            <Dependent Role="ChiTietQuyTrinh">
+              <PropertyRef Name="MaQuyTrinh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CHUONG_COSO">
+          <End Role="COSO" Type="Self.COSO" Multiplicity="0..1" />
+          <End Role="CHUONG" Type="Self.CHUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COSO">
+              <PropertyRef Name="MaCS" />
+            </Principal>
+            <Dependent Role="CHUONG">
+              <PropertyRef Name="MaCoSo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QUYTRINHVATSUA_CHUONG">
+          <End Role="CHUONG" Type="Self.CHUONG" Multiplicity="0..1" />
+          <End Role="QUYTRINHVATSUA" Type="Self.QUYTRINHVATSUA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CHUONG">
+              <PropertyRef Name="MaSoChuong" />
+            </Principal>
+            <Dependent Role="QUYTRINHVATSUA">
+              <PropertyRef Name="MaSoChuong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_COSO_NHANVIEN">
+          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+          <End Role="COSO" Type="Self.COSO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="COSO">
+              <PropertyRef Name="NguoiQuanLy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_COSO_TRUSO">
+          <End Role="TRUSO" Type="Self.TRUSO" Multiplicity="0..1" />
+          <End Role="COSO" Type="Self.COSO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TRUSO">
+              <PropertyRef Name="MaTruSo" />
+            </Principal>
+            <Dependent Role="COSO">
+              <PropertyRef Name="MaTruSo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QUYTRINHVATSUA_NHANVIEN">
+          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+          <End Role="QUYTRINHVATSUA" Type="Self.QUYTRINHVATSUA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="QUYTRINHVATSUA">
+              <PropertyRef Name="MaNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DrinkMilkEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BOes" EntityType="Self.BO" />
+          <EntitySet Name="ChiTietQuyTrinhs" EntityType="Self.ChiTietQuyTrinh" />
+          <EntitySet Name="CHUONGs" EntityType="Self.CHUONG" />
+          <EntitySet Name="COSOes" EntityType="Self.COSO" />
+          <EntitySet Name="NHANVIENs" EntityType="Self.NHANVIEN" />
+          <EntitySet Name="QUYTRINHVATSUAs" EntityType="Self.QUYTRINHVATSUA" />
+          <EntitySet Name="TRUSOes" EntityType="Self.TRUSO" />
+          <AssociationSet Name="FK_ChiTietQuyTrinh_BO" Association="Self.FK_ChiTietQuyTrinh_BO">
+            <End Role="BO" EntitySet="BOes" />
+            <End Role="ChiTietQuyTrinh" EntitySet="ChiTietQuyTrinhs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChiTietQuyTrinh_QUYTRINHVATSUA" Association="Self.FK_ChiTietQuyTrinh_QUYTRINHVATSUA">
+            <End Role="QUYTRINHVATSUA" EntitySet="QUYTRINHVATSUAs" />
+            <End Role="ChiTietQuyTrinh" EntitySet="ChiTietQuyTrinhs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CHUONG_COSO" Association="Self.FK_CHUONG_COSO">
+            <End Role="COSO" EntitySet="COSOes" />
+            <End Role="CHUONG" EntitySet="CHUONGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QUYTRINHVATSUA_CHUONG" Association="Self.FK_QUYTRINHVATSUA_CHUONG">
+            <End Role="CHUONG" EntitySet="CHUONGs" />
+            <End Role="QUYTRINHVATSUA" EntitySet="QUYTRINHVATSUAs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COSO_NHANVIEN" Association="Self.FK_COSO_NHANVIEN">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="COSO" EntitySet="COSOes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COSO_TRUSO" Association="Self.FK_COSO_TRUSO">
+            <End Role="TRUSO" EntitySet="TRUSOes" />
+            <End Role="COSO" EntitySet="COSOes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QUYTRINHVATSUA_NHANVIEN" Association="Self.FK_QUYTRINHVATSUA_NHANVIEN">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="QUYTRINHVATSUA" EntitySet="QUYTRINHVATSUAs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DrinkMilkModelStoreContainer" CdmEntityContainer="DrinkMilkEntities">
+          <EntitySetMapping Name="BOes">
+            <EntityTypeMapping TypeName="DrinkMilkModel.BO">
+              <MappingFragment StoreEntitySet="BO">
+                <ScalarProperty Name="MaSoChip" ColumnName="MaSoChip" />
+                <ScalarProperty Name="NgayNhap" ColumnName="NgayNhap" />
+                <ScalarProperty Name="CanNang" ColumnName="CanNang" />
+                <ScalarProperty Name="MauSac" ColumnName="MauSac" />
+                <ScalarProperty Name="DacDiemNhanDien" ColumnName="DacDiemNhanDien" />
+                <ScalarProperty Name="DiTat" ColumnName="DiTat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChiTietQuyTrinhs">
+            <EntityTypeMapping TypeName="DrinkMilkModel.ChiTietQuyTrinh">
+              <MappingFragment StoreEntitySet="ChiTietQuyTrinh">
+                <ScalarProperty Name="MaQuyTrinh" ColumnName="MaQuyTrinh" />
+                <ScalarProperty Name="MaSoChip" ColumnName="MaSoChip" />
+                <ScalarProperty Name="SoLuongSua" ColumnName="SoLuongSua" />
+                <ScalarProperty Name="TinhTrangBauVu" ColumnName="TinhTrangBauVu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CHUONGs">
+            <EntityTypeMapping TypeName="DrinkMilkModel.CHUONG">
+              <MappingFragment StoreEntitySet="CHUONG">
+                <ScalarProperty Name="MaSoChuong" ColumnName="MaSoChuong" />
+                <ScalarProperty Name="MaCoSo" ColumnName="MaCoSo" />
+                <ScalarProperty Name="DiaChiChuong" ColumnName="DiaChiChuong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COSOes">
+            <EntityTypeMapping TypeName="DrinkMilkModel.COSO">
+              <MappingFragment StoreEntitySet="COSO">
+                <ScalarProperty Name="MaCS" ColumnName="MaCS" />
+                <ScalarProperty Name="DiaChiCS" ColumnName="DiaChiCS" />
+                <ScalarProperty Name="MaTruSo" ColumnName="MaTruSo" />
+                <ScalarProperty Name="NguoiQuanLy" ColumnName="NguoiQuanLy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NHANVIENs">
+            <EntityTypeMapping TypeName="DrinkMilkModel.NHANVIEN">
+              <MappingFragment StoreEntitySet="NHANVIEN">
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+                <ScalarProperty Name="TenNhanVien" ColumnName="TenNhanVien" />
+                <ScalarProperty Name="CMND" ColumnName="CMND" />
+                <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QUYTRINHVATSUAs">
+            <EntityTypeMapping TypeName="DrinkMilkModel.QUYTRINHVATSUA">
+              <MappingFragment StoreEntitySet="QUYTRINHVATSUA">
+                <ScalarProperty Name="MaQuyTrinh" ColumnName="MaQuyTrinh" />
+                <ScalarProperty Name="MaSoChuong" ColumnName="MaSoChuong" />
+                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+                <ScalarProperty Name="NgayThucHien" ColumnName="NgayThucHien" />
+                <ScalarProperty Name="GioBatDau" ColumnName="GioBatDau" />
+                <ScalarProperty Name="GioKetThuc" ColumnName="GioKetThuc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRUSOes">
+            <EntityTypeMapping TypeName="DrinkMilkModel.TRUSO">
+              <MappingFragment StoreEntitySet="TRUSO">
+                <ScalarProperty Name="MaTruSo" ColumnName="MaTruSo" />
+                <ScalarProperty Name="DiaChiTruSo" ColumnName="DiaChiTruSo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

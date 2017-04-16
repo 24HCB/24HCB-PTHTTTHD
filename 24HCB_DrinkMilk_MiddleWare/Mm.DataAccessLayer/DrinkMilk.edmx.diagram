@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ba146d97004d4ff59b9415f2a253fd41" Name="Diagram1">
+        <EntityTypeShape EntityType="DrinkMilkModel.BO" Width="1.5" PointX="7.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DrinkMilkModel.ChiTietQuyTrinh" Width="1.5" PointX="9.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DrinkMilkModel.CHUONG" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DrinkMilkModel.COSO" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DrinkMilkModel.NHANVIEN" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DrinkMilkModel.QUYTRINHVATSUA" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DrinkMilkModel.TRUSO" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <AssociationConnector Association="DrinkMilkModel.FK_ChiTietQuyTrinh_BO" ManuallyRouted="false" />
+        <AssociationConnector Association="DrinkMilkModel.FK_ChiTietQuyTrinh_QUYTRINHVATSUA" ManuallyRouted="false" />
+        <AssociationConnector Association="DrinkMilkModel.FK_CHUONG_COSO" ManuallyRouted="false" />
+        <AssociationConnector Association="DrinkMilkModel.FK_QUYTRINHVATSUA_CHUONG" ManuallyRouted="false" />
+        <AssociationConnector Association="DrinkMilkModel.FK_COSO_NHANVIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="DrinkMilkModel.FK_COSO_TRUSO" ManuallyRouted="false" />
+        <AssociationConnector Association="DrinkMilkModel.FK_QUYTRINHVATSUA_NHANVIEN" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
