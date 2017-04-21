@@ -6,3 +6,4 @@ C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DomainModel
 C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DomainModel\bin\Debug\Mm.DomainModel.pdb
 C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DomainModel\obj\Debug\Mm.DomainModel.dll
 C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DomainModel\obj\Debug\Mm.DomainModel.pdb
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DomainModel\obj\Debug\Mm.DomainModel.csprojResolveAssemblyReference.cache
