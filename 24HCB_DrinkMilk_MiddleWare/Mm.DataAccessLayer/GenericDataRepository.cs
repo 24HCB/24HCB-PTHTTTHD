@@ -64,7 +64,7 @@ namespace Mm.DataAccessLayer
             {
                 foreach (T item in items)
                 {
-                    context.Entry(item).State = System.Data.EntityState.Added;
+                    context.Entry(item).State = EntityState.Added;
                 }
                 context.SaveChanges();
             }
@@ -76,7 +76,7 @@ namespace Mm.DataAccessLayer
             {
                 foreach (T item in items)
                 {
-                    context.Entry(item).State = System.Data.EntityState.Modified;
+                    context.Entry(item).State = EntityState.Modified;
                 }
                 context.SaveChanges();
             }
@@ -89,7 +89,7 @@ namespace Mm.DataAccessLayer
             {
                 foreach (T item in items)
                 {
-                    context.Entry(item).State = System.Data.EntityState.Deleted;
+                    context.Entry(item).State = EntityState.Deleted;
                 }
                 context.SaveChanges();
             }

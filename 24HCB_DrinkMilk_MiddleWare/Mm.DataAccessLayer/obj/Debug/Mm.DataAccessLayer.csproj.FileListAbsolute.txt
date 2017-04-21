@@ -53,3 +53,15 @@ C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.Data
 C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DataAccessLayer\bin\Debug\ru\System.Spatial.resources.dll
 C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DataAccessLayer\bin\Debug\zh-Hans\System.Spatial.resources.dll
 C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DataAccessLayer\bin\Debug\zh-Hant\System.Spatial.resources.dll
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DataAccessLayer\obj\Debug\Mm.DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DataAccessLayer\bin\Debug\Mm.DataAccessLayer.dll.config
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DataAccessLayer\bin\Debug\Mm.DataAccessLayer.dll
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DataAccessLayer\bin\Debug\Mm.DataAccessLayer.pdb
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DataAccessLayer\bin\Debug\Mm.DomainModel.dll
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DataAccessLayer\bin\Debug\Mm.DomainModel.pdb
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DataAccessLayer\obj\Debug\Mm.DataAccessLayer.dll
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.DataAccessLayer\obj\Debug\Mm.DataAccessLayer.pdb

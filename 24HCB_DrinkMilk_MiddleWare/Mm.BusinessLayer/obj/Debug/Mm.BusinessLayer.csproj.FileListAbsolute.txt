@@ -10,3 +10,15 @@ C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.Busi
 C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.BusinessLayer\obj\Debug\Mm.BusinessLayer.dll
 C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.BusinessLayer\obj\Debug\Mm.BusinessLayer.pdb
 C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.BusinessLayer\bin\Debug\Mm.BusinessLayer.dll.config
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.BusinessLayer\obj\Debug\Mm.BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.BusinessLayer\bin\Debug\Mm.BusinessLayer.dll.config
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.BusinessLayer\bin\Debug\Mm.BusinessLayer.dll
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.BusinessLayer\bin\Debug\Mm.BusinessLayer.pdb
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.BusinessLayer\bin\Debug\Mm.DataAccessLayer.dll
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.BusinessLayer\bin\Debug\Mm.DomainModel.dll
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.BusinessLayer\bin\Debug\Mm.DataAccessLayer.pdb
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.BusinessLayer\bin\Debug\Mm.DomainModel.pdb
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.BusinessLayer\bin\Debug\EntityFramework.xml
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.BusinessLayer\obj\Debug\Mm.BusinessLayer.dll
+C:\Users\XuanNghiep\Documents\PTHTTTHD\24HCB_DrinkMilk_MiddleWare\Mm.BusinessLayer\obj\Debug\Mm.BusinessLayer.pdb
