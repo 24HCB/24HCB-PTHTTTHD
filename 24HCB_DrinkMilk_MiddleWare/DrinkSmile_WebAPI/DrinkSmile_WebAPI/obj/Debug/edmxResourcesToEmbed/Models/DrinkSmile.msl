@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DrinkSmileModelStoreContainer" CdmEntityContainer="DrinkEntities">
+    <EntitySetMapping Name="Cows">
+      <EntityTypeMapping TypeName="DrinkSmileModel.Cow">
+        <MappingFragment StoreEntitySet="Cows">
+          <ScalarProperty Name="cowsCode" ColumnName="cowsCode" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="characteristics" ColumnName="characteristics" />
+          <ScalarProperty Name="goesOff" ColumnName="goesOff" />
+          <ScalarProperty Name="data" ColumnName="data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="detail_Cows">
+      <EntityTypeMapping TypeName="DrinkSmileModel.detail_Cows">
+        <MappingFragment StoreEntitySet="detail_Cows">
+          <ScalarProperty Name="chipCode" ColumnName="chipCode" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="temperature" ColumnName="temperature" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="protit" ColumnName="protit" />
+          <ScalarProperty Name="gluxit" ColumnName="gluxit" />
+          <ScalarProperty Name="lipit" ColumnName="lipit" />
+          <ScalarProperty Name="healthStatus" ColumnName="healthStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetailMilks">
+      <EntityTypeMapping TypeName="DrinkSmileModel.DetailMilk">
+        <MappingFragment StoreEntitySet="DetailMilk">
+          <ScalarProperty Name="detailCode" ColumnName="detailCode" />
+          <ScalarProperty Name="ChipCode" ColumnName="ChipCode" />
+          <ScalarProperty Name="quantum" ColumnName="quantum" />
+          <ScalarProperty Name="breastsStatus" ColumnName="breastsStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="DrinkSmileModel.Location">
+        <MappingFragment StoreEntitySet="Location">
+          <ScalarProperty Name="localtionCode" ColumnName="localtionCode" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="stationCode" ColumnName="stationCode" />
+          <ScalarProperty Name="Maneger" ColumnName="Maneger" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lodgings">
+      <EntityTypeMapping TypeName="DrinkSmileModel.Lodging">
+        <MappingFragment StoreEntitySet="Lodging">
+          <ScalarProperty Name="lodgingCode" ColumnName="lodgingCode" />
+          <ScalarProperty Name="locationCode" ColumnName="locationCode" />
+          <ScalarProperty Name="addres" ColumnName="addres" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Milk">
+      <EntityTypeMapping TypeName="DrinkSmileModel.Milk">
+        <MappingFragment StoreEntitySet="Milk">
+          <ScalarProperty Name="milkCode" ColumnName="milkCode" />
+          <ScalarProperty Name="lodpingCode" ColumnName="lodpingCode" />
+          <ScalarProperty Name="employeeCode" ColumnName="employeeCode" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="timeStart" ColumnName="timeStart" />
+          <ScalarProperty Name="timeEnd" ColumnName="timeEnd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Posters">
+      <EntityTypeMapping TypeName="DrinkSmileModel.Poster">
+        <MappingFragment StoreEntitySet="Poster">
+          <ScalarProperty Name="employeeCode" ColumnName="employeeCode" />
+          <ScalarProperty Name="fullName" ColumnName="fullName" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="identityCode" ColumnName="identityCode" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stations">
+      <EntityTypeMapping TypeName="DrinkSmileModel.station">
+        <MappingFragment StoreEntitySet="station">
+          <ScalarProperty Name="stationCode" ColumnName="stationCode" />
+          <ScalarProperty Name="address" ColumnName="address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

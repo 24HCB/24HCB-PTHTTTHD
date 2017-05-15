@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DrinkSmileModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Cow">
+    <Key>
+      <PropertyRef Name="cowsCode" />
+    </Key>
+    <Property Name="cowsCode" Type="Int32" Nullable="false" />
+    <Property Name="weight" Type="Int32" />
+    <Property Name="color" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="characteristics" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="goesOff" Type="Boolean" />
+    <Property Name="data" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="detail_Cows">
+    <Key>
+      <PropertyRef Name="chipCode" />
+    </Key>
+    <Property Name="chipCode" Type="Int32" Nullable="false" />
+    <Property Name="date" Type="Time" Precision="7" />
+    <Property Name="temperature" Type="Int32" />
+    <Property Name="weight" Type="Int32" />
+    <Property Name="protit" Type="Int32" />
+    <Property Name="gluxit" Type="Int32" />
+    <Property Name="lipit" Type="Int32" />
+    <Property Name="healthStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DetailMilk">
+    <Key>
+      <PropertyRef Name="detailCode" />
+      <PropertyRef Name="ChipCode" />
+    </Key>
+    <Property Name="detailCode" Type="Int32" Nullable="false" />
+    <Property Name="ChipCode" Type="Int32" Nullable="false" />
+    <Property Name="quantum" Type="Int32" />
+    <Property Name="breastsStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="localtionCode" />
+    </Key>
+    <Property Name="localtionCode" Type="Int32" Nullable="false" />
+    <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="stationCode" Type="Int32" />
+    <Property Name="Maneger" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Lodging">
+    <Key>
+      <PropertyRef Name="lodgingCode" />
+    </Key>
+    <Property Name="lodgingCode" Type="Int32" Nullable="false" />
+    <Property Name="locationCode" Type="Int32" />
+    <Property Name="addres" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Milk">
+    <Key>
+      <PropertyRef Name="milkCode" />
+    </Key>
+    <Property Name="milkCode" Type="Int32" Nullable="false" />
+    <Property Name="lodpingCode" Type="Int32" />
+    <Property Name="employeeCode" Type="Int32" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="timeStart" Type="Time" Precision="7" />
+    <Property Name="timeEnd" Type="Time" Precision="7" />
+  </EntityType>
+  <EntityType Name="Poster">
+    <Key>
+      <PropertyRef Name="employeeCode" />
+    </Key>
+    <Property Name="employeeCode" Type="Int32" Nullable="false" />
+    <Property Name="fullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="identityCode" Type="Int32" />
+    <Property Name="phone" Type="Int32" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="station">
+    <Key>
+      <PropertyRef Name="stationCode" />
+    </Key>
+    <Property Name="stationCode" Type="Int32" Nullable="false" />
+    <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="DrinkEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cows" EntityType="Self.Cow" />
+    <EntitySet Name="detail_Cows" EntityType="Self.detail_Cows" />
+    <EntitySet Name="DetailMilks" EntityType="Self.DetailMilk" />
+    <EntitySet Name="Locations" EntityType="Self.Location" />
+    <EntitySet Name="Lodgings" EntityType="Self.Lodging" />
+    <EntitySet Name="Milk" EntityType="Self.Milk" />
+    <EntitySet Name="Posters" EntityType="Self.Poster" />
+    <EntitySet Name="stations" EntityType="Self.station" />
+  </EntityContainer>
+</Schema>

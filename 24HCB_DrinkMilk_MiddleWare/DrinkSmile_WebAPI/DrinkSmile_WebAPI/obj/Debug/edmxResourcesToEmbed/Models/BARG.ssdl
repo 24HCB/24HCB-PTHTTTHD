@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BARGModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="MaKH" />
+    </Key>
+    <Property Name="DiaChi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LoaiXe" Type="int" Nullable="false" />
+    <Property Name="TinhTrang" Type="int" Nullable="false" />
+    <Property Name="MaKH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SĐT" Type="int" />
+  </EntityType>
+  <EntityType Name="TaiXe">
+    <Key>
+      <PropertyRef Name="MaTX" />
+    </Key>
+    <Property Name="TaiXe" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TinhTrang" Type="int" Nullable="false" />
+    <Property Name="MaTX" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="BARGModelStoreContainer">
+    <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TaiXe" EntityType="Self.TaiXe" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

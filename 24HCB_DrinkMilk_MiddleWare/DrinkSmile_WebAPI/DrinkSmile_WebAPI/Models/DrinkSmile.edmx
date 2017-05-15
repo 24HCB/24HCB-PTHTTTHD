@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DrinkSmileModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Cows">
+          <Key>
+            <PropertyRef Name="cowsCode" />
+          </Key>
+          <Property Name="cowsCode" Type="int" Nullable="false" />
+          <Property Name="weight" Type="int" />
+          <Property Name="color" Type="varchar" MaxLength="20" />
+          <Property Name="characteristics" Type="varchar" MaxLength="50" />
+          <Property Name="goesOff" Type="bit" />
+          <Property Name="data" Type="date" />
+        </EntityType>
+        <EntityType Name="detail_Cows">
+          <Key>
+            <PropertyRef Name="chipCode" />
+          </Key>
+          <Property Name="chipCode" Type="int" Nullable="false" />
+          <Property Name="date" Type="time" Precision="7" />
+          <Property Name="temperature" Type="int" />
+          <Property Name="weight" Type="int" />
+          <Property Name="protit" Type="int" />
+          <Property Name="gluxit" Type="int" />
+          <Property Name="lipit" Type="int" />
+          <Property Name="healthStatus" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DetailMilk">
+          <Key>
+            <PropertyRef Name="detailCode" />
+            <PropertyRef Name="ChipCode" />
+          </Key>
+          <Property Name="detailCode" Type="int" Nullable="false" />
+          <Property Name="ChipCode" Type="int" Nullable="false" />
+          <Property Name="quantum" Type="int" />
+          <Property Name="breastsStatus" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Location">
+          <Key>
+            <PropertyRef Name="localtionCode" />
+          </Key>
+          <Property Name="localtionCode" Type="int" Nullable="false" />
+          <Property Name="address" Type="varchar" MaxLength="100" />
+          <Property Name="stationCode" Type="int" />
+          <Property Name="Maneger" Type="int" />
+        </EntityType>
+        <EntityType Name="Lodging">
+          <Key>
+            <PropertyRef Name="lodgingCode" />
+          </Key>
+          <Property Name="lodgingCode" Type="int" Nullable="false" />
+          <Property Name="locationCode" Type="int" />
+          <Property Name="addres" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Milk">
+          <Key>
+            <PropertyRef Name="milkCode" />
+          </Key>
+          <Property Name="milkCode" Type="int" Nullable="false" />
+          <Property Name="lodpingCode" Type="int" />
+          <Property Name="employeeCode" Type="int" />
+          <Property Name="date" Type="date" />
+          <Property Name="timeStart" Type="time" Precision="7" />
+          <Property Name="timeEnd" Type="time" Precision="7" />
+        </EntityType>
+        <EntityType Name="Poster">
+          <Key>
+            <PropertyRef Name="employeeCode" />
+          </Key>
+          <Property Name="employeeCode" Type="int" Nullable="false" />
+          <Property Name="fullName" Type="varchar" MaxLength="50" />
+          <Property Name="address" Type="varchar" MaxLength="50" />
+          <Property Name="identityCode" Type="int" />
+          <Property Name="phone" Type="int" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="userName" Type="varchar" MaxLength="50" />
+          <Property Name="password" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="station">
+          <Key>
+            <PropertyRef Name="stationCode" />
+          </Key>
+          <Property Name="stationCode" Type="int" Nullable="false" />
+          <Property Name="address" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityContainer Name="DrinkSmileModelStoreContainer">
+          <EntitySet Name="Cows" EntityType="Self.Cows" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="detail_Cows" EntityType="Self.detail_Cows" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DetailMilk" EntityType="Self.DetailMilk" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Location" EntityType="Self.Location" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Lodging" EntityType="Self.Lodging" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Milk" EntityType="Self.Milk" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Poster" EntityType="Self.Poster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="station" EntityType="Self.station" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DrinkSmileModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Cow">
+          <Key>
+            <PropertyRef Name="cowsCode" />
+          </Key>
+          <Property Name="cowsCode" Type="Int32" Nullable="false" />
+          <Property Name="weight" Type="Int32" />
+          <Property Name="color" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="characteristics" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="goesOff" Type="Boolean" />
+          <Property Name="data" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="detail_Cows">
+          <Key>
+            <PropertyRef Name="chipCode" />
+          </Key>
+          <Property Name="chipCode" Type="Int32" Nullable="false" />
+          <Property Name="date" Type="Time" Precision="7" />
+          <Property Name="temperature" Type="Int32" />
+          <Property Name="weight" Type="Int32" />
+          <Property Name="protit" Type="Int32" />
+          <Property Name="gluxit" Type="Int32" />
+          <Property Name="lipit" Type="Int32" />
+          <Property Name="healthStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="DetailMilk">
+          <Key>
+            <PropertyRef Name="detailCode" />
+            <PropertyRef Name="ChipCode" />
+          </Key>
+          <Property Name="detailCode" Type="Int32" Nullable="false" />
+          <Property Name="ChipCode" Type="Int32" Nullable="false" />
+          <Property Name="quantum" Type="Int32" />
+          <Property Name="breastsStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Location">
+          <Key>
+            <PropertyRef Name="localtionCode" />
+          </Key>
+          <Property Name="localtionCode" Type="Int32" Nullable="false" />
+          <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="stationCode" Type="Int32" />
+          <Property Name="Maneger" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Lodging">
+          <Key>
+            <PropertyRef Name="lodgingCode" />
+          </Key>
+          <Property Name="lodgingCode" Type="Int32" Nullable="false" />
+          <Property Name="locationCode" Type="Int32" />
+          <Property Name="addres" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Milk">
+          <Key>
+            <PropertyRef Name="milkCode" />
+          </Key>
+          <Property Name="milkCode" Type="Int32" Nullable="false" />
+          <Property Name="lodpingCode" Type="Int32" />
+          <Property Name="employeeCode" Type="Int32" />
+          <Property Name="date" Type="DateTime" Precision="0" />
+          <Property Name="timeStart" Type="Time" Precision="7" />
+          <Property Name="timeEnd" Type="Time" Precision="7" />
+        </EntityType>
+        <EntityType Name="Poster">
+          <Key>
+            <PropertyRef Name="employeeCode" />
+          </Key>
+          <Property Name="employeeCode" Type="Int32" Nullable="false" />
+          <Property Name="fullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="identityCode" Type="Int32" />
+          <Property Name="phone" Type="Int32" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="station">
+          <Key>
+            <PropertyRef Name="stationCode" />
+          </Key>
+          <Property Name="stationCode" Type="Int32" Nullable="false" />
+          <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="DrinkEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Cows" EntityType="Self.Cow" />
+          <EntitySet Name="detail_Cows" EntityType="Self.detail_Cows" />
+          <EntitySet Name="DetailMilks" EntityType="Self.DetailMilk" />
+          <EntitySet Name="Locations" EntityType="Self.Location" />
+          <EntitySet Name="Lodgings" EntityType="Self.Lodging" />
+          <EntitySet Name="Milk" EntityType="Self.Milk" />
+          <EntitySet Name="Posters" EntityType="Self.Poster" />
+          <EntitySet Name="stations" EntityType="Self.station" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DrinkSmileModelStoreContainer" CdmEntityContainer="DrinkEntities">
+          <EntitySetMapping Name="Cows">
+            <EntityTypeMapping TypeName="DrinkSmileModel.Cow">
+              <MappingFragment StoreEntitySet="Cows">
+                <ScalarProperty Name="cowsCode" ColumnName="cowsCode" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="color" ColumnName="color" />
+                <ScalarProperty Name="characteristics" ColumnName="characteristics" />
+                <ScalarProperty Name="goesOff" ColumnName="goesOff" />
+                <ScalarProperty Name="data" ColumnName="data" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="detail_Cows">
+            <EntityTypeMapping TypeName="DrinkSmileModel.detail_Cows">
+              <MappingFragment StoreEntitySet="detail_Cows">
+                <ScalarProperty Name="chipCode" ColumnName="chipCode" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="temperature" ColumnName="temperature" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="protit" ColumnName="protit" />
+                <ScalarProperty Name="gluxit" ColumnName="gluxit" />
+                <ScalarProperty Name="lipit" ColumnName="lipit" />
+                <ScalarProperty Name="healthStatus" ColumnName="healthStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DetailMilks">
+            <EntityTypeMapping TypeName="DrinkSmileModel.DetailMilk">
+              <MappingFragment StoreEntitySet="DetailMilk">
+                <ScalarProperty Name="detailCode" ColumnName="detailCode" />
+                <ScalarProperty Name="ChipCode" ColumnName="ChipCode" />
+                <ScalarProperty Name="quantum" ColumnName="quantum" />
+                <ScalarProperty Name="breastsStatus" ColumnName="breastsStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Locations">
+            <EntityTypeMapping TypeName="DrinkSmileModel.Location">
+              <MappingFragment StoreEntitySet="Location">
+                <ScalarProperty Name="localtionCode" ColumnName="localtionCode" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="stationCode" ColumnName="stationCode" />
+                <ScalarProperty Name="Maneger" ColumnName="Maneger" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lodgings">
+            <EntityTypeMapping TypeName="DrinkSmileModel.Lodging">
+              <MappingFragment StoreEntitySet="Lodging">
+                <ScalarProperty Name="lodgingCode" ColumnName="lodgingCode" />
+                <ScalarProperty Name="locationCode" ColumnName="locationCode" />
+                <ScalarProperty Name="addres" ColumnName="addres" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Milk">
+            <EntityTypeMapping TypeName="DrinkSmileModel.Milk">
+              <MappingFragment StoreEntitySet="Milk">
+                <ScalarProperty Name="milkCode" ColumnName="milkCode" />
+                <ScalarProperty Name="lodpingCode" ColumnName="lodpingCode" />
+                <ScalarProperty Name="employeeCode" ColumnName="employeeCode" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="timeStart" ColumnName="timeStart" />
+                <ScalarProperty Name="timeEnd" ColumnName="timeEnd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Posters">
+            <EntityTypeMapping TypeName="DrinkSmileModel.Poster">
+              <MappingFragment StoreEntitySet="Poster">
+                <ScalarProperty Name="employeeCode" ColumnName="employeeCode" />
+                <ScalarProperty Name="fullName" ColumnName="fullName" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="identityCode" ColumnName="identityCode" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="stations">
+            <EntityTypeMapping TypeName="DrinkSmileModel.station">
+              <MappingFragment StoreEntitySet="station">
+                <ScalarProperty Name="stationCode" ColumnName="stationCode" />
+                <ScalarProperty Name="address" ColumnName="address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
