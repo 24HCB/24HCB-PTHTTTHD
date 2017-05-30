@@ -18,9 +18,11 @@ namespace WebsiteApi
             {
                 HttpContext.Current.Response.AddHeader("Cache-Control", "no-cache");
                 HttpContext.Current.Response.AddHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-                HttpContext.Current.Response.AddHeader("Access-Control-Allow-Headers", "Content-Type, Accept");
+                HttpContext.Current.Response.AddHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
                 HttpContext.Current.Response.AddHeader("Access-Control-Max-Age", "1728000");
                 HttpContext.Current.Response.End();
+
+               // HttpContext.Current.Response.AddHeader("Access-Control-Allow-Credentials", "true");
             }
         }
         protected void Application_Start()

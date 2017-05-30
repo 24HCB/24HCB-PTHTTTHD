@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" media="all" href="niceforms-default.css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+</head>
+<body>
+<div id="main_container">
+	<div class="header">
+    <div class="logo" margin-left="100px">
+<h3>HỆ THỐNG QUẢN LÝ BÒ </h3>
+<p>Thực hiện: nhóm 24HCB2</p>	
+	</div>
+    
+    <div class="right_header">Welcome Admin, <a href="#">Visit site</a> | <a href="#" class="logout">Logout</a></div>
+    </div>
+    
+    <div class="main_content">
+    
+                    <div class="menu">
+                    <ul>
+                    <li><a href="list.html">Quản lý bò<!--[if IE 7]><!--></a><!--<![endif]-->
+                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                        <ul>
+                        <li><a href="#inforcows" onclick="inforcowsFunction()"  >Quản lý bò</a></li>
+                        <li><a href="#reporthealth" title="">Quản lý sức khỏe bò</a></li>
+						<li><a href="#getmilk" onclick="getmilkFunction()">Quản lý quy trình vắt sữa</a></li>
+                        </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                    </li>
+                    <li><a href="login.html">Quản lý nhân viên<!--[if IE 7]><!--></a><!--<![endif]-->
+                    </li>
+                    <li><a href="login.html">Quản lý trụ sở<!--[if IE 7]><!--></a><!--<![endif]-->
+                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                        <ul>
+                        <li><a href="#unit" onclick="unitFunction()" >Quản lý trụ sở</a></li>
+                        <li><a href="" title="">Quản lý cơ sở</a></li>
+                        <li><a href="#lodging" onclick="lodgingFunction()"  >Quản lý chuồng trại</a></li>
+                     <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                    </li>
+                    </ul>
+                    </div>
+    <div class="center_content">  
+    
+    <div class="right_content">   
+
+
+<form id="form_reports" style="display: none;" class="formshow" >
+		<p> Báo cáo </p>
+        <br />
+        Nhập Tên TK cần tạo: <input type="text" id="txtTenThe" />
+        <button id="btnDangKy" type="button">Rút tiền</button>
+        <br></br>
+</form>
+
+<form id="form_getmilk" style="display: none;" class="formshow" >
+		<p> Quy trình vắt sữa bò </p>  
+</form>
+
+<form id="form_inforcows" style="display: none;" class="formshow" >
+		<p> Thông tin bò </p>  
+</form>
+
+<form id="form_unit" style="display: none;" class="formshow">
+<h2>Quản lý trụ sở</h2>                  
+<table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+    <thead>
+    	<tr>
+            <th scope="col" class="rounded">ID</th>
+            <th scope="col" class="rounded">Trụ sở</th>
+            <th scope="col" class="rounded">Edit</th>
+            <th scope="col" class="rounded-q4">Delete</th>
+        </tr>
+    </thead>
+    <tbody  id="stationList">
+	
+    </tbody>
+</table>
+<div class="pagination">
+	<span class="disabled"><< prev</span><span class="current">1</span><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a>…<a href="">10</a><a href="">11</a><a href="">12</a>...<a href="">100</a><a href="">101</a><a href="">next >></a>
+</div> 
+<h2>Thêm trụ sở</h2>
+
+<div class="form">     
+ <form action="" method="post" class="niceform">
+	<fieldset>
+		<dl>
+			<dt><label for="TruSo">Trụ Sở</label></dt>
+			<dd><input type="txtTruSo" class="form-control" id="txtTruSo" placeholder="Trụ Sở"></dd>
+		</dl>
+		<dl>
+			<dt><label for="DiaChiTruSo">Địa Chỉ</label></dt>
+			<dd><input type="txtDiaChiTruSo" class="form-control" id="txtDiaChiTruSo" placeholder="Địa chỉ trụ sở"></dd>
+		</dl>
+		<dl class="submit">
+		  <button type="button" class="btn btn-default" id="btnAdd">Thêm</button>
+		  <button type="button" class="btn btn-default" id="btnUpdate">Sửa</button>
+		</dl>
+	</fieldset>
+ </form>
+</div>
+</form>
+
+<form id="form_lodging" style="display: none;" class="formshow" >
+		<p> Chuồng trại </p>  
+</form>
+
+     
+     </div><!-- end of right content-->
+            
+                    
+  </div>   <!--end of center content -->               
+                    
+                    
+    
+    
+    <div class="clear"></div>
+    </div> <!--end of main content-->
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+		document.getElementById("myDropdown").classList.toggle("show");
+	}
+
+function getmilkFunction(){
+	document.getElementById("form_inforcows").style.display="none";
+	document.getElementById("form_unit").style.display="none";
+	document.getElementById("form_lodging").style.display="none";
+	
+	
+	document.getElementById("form_getmilk").style.display="block";
+}
+
+function inforcowsFunction(){
+	document.getElementById("form_unit").style.display="none";
+	document.getElementById("form_lodging").style.display="none";
+	document.getElementById("form_getmilk").style.display="none";
+	
+	document.getElementById("form_inforcows").style.display="block";
+}
+
+function unitFunction(){
+	document.getElementById("form_lodging").style.display="none";
+	document.getElementById("form_getmilk").style.display="none";
+	document.getElementById("form_inforcows").style.display="none";
+	
+	document.getElementById("form_unit").style.display="block";
+}
+
+function lodgingFunction(){
+	document.getElementById("form_getmilk").style.display="none";
+	document.getElementById("form_inforcows").style.display="none";
+	document.getElementById("form_unit").style.display="none";
+	
+	document.getElementById("form_lodging").style.display="block";
+}
+
+
+// Close the dropdown if the user clicks outside of it
+
+		$(function () {
+           var _url = 'http://localhost:2796/api/TruSo';
+			$.ajax({
+				url: _url,
+				dataType: 'json',
+				timeout: 30 * 1000
+			})
+			.done(function (data) {
+				//console.log(data);
+
+				$.each(data, function (index, dm) {
+					var tr = '<tr>' +
+								'<td>' + dm.MaTruSo + '</td>' +
+								'<td>' + dm.DiaChiTruSo + '</td>' +
+								'<td><a href="#" onclick="getAction('+ dm.MaTruSo +', '+ dm.DiaChiTruSo +')" ><img src="images/user_edit.png" alt="" title="" border="0" /></a></td>' +
+								'<td><a href="#" onclick="deleteAction('+ dm.MaTruSo +')"><img src="images/trash.png" alt="" title="" border="0" /></a></td>' +
+							+'</tr>';
+
+					$('#stationList').append(tr);
+				});
+			})
+			.fail(function (jqXHR, textStatus, error) {
+				console.log(jqXHR);
+				console.log(jqXHR.statusCode);
+			});
+        });
+
+		$('#btnAdd').on('click', function () {
+            var stationNo = $('#txtTruSo').val();
+			var address = $('#txtDiaChiTruSo').val();
+			
+            var _url = 'http://localhost:2796/api/TruSo/add';
+            var dataToPost = {
+					'MaTruSo': stationNo,
+					'DiaChiTruSo': address
+            }
+
+            var jsonToPost = JSON.stringify(dataToPost);
+            //console.log(jsonToPost);
+
+            $.ajax({
+                type: 'POST',
+                url: _url,
+                data: jsonToPost,
+                dataType: 'json',
+                contentType: 'application/json',
+                timeout: 30 * 1000
+            })
+                .done(function (data, textStatus, jqXHR) {
+                    console.log(data);
+                    console.log(jqXHR);
+					var tr = '<tr>' +
+								'<td>' + stationNo + '</td>' +
+                                '<td>' + address + '</td>' +
+								'<td><a href="#" onclick="getAction('+ stationNo +', '+ address +')" ><img src="images/user_edit.png" alt="" title="" border="0" /></a></td>' +
+								'<td><a href="#" onclick="deleteAction('+ stationNo +')"><img src="images/trash.png" alt="" title="" border="0" /></a></td>' +
+							+'</tr>';
+					 $('#stationList').append(tr);
+                })
+                .fail(function (jqXHR, textStatus, error) {
+                    //console.log(textStatus);
+                    console.log(error);
+                    //console.log(jqXHR);
+                });
+        });
+		
+		function deleteAction(stationNo){
+		
+            var _url = 'http://localhost:2796/api/TruSo/' + stationNo;
+            var dataToPost = {
+					'MaTruSo': stationNo,
+					'DiaChiTruSo': ''
+            }
+
+            var jsonToPost = JSON.stringify(dataToPost);
+            //console.log(jsonToPost);
+
+            $.ajax({
+                type: 'DELETE',
+                url: _url,
+                data: jsonToPost,
+                dataType: 'json',
+                contentType: 'application/json',
+                timeout: 30 * 1000
+            })
+                .done(function (data, textStatus, jqXHR) {
+                    console.log(data);
+                    console.log(jqXHR);
+					 $('#stationList').empty();
+					 var _url = 'http://localhost:2796/api/TruSo';
+						$.ajax({
+							url: _url,
+							dataType: 'json',
+							timeout: 30 * 1000
+						})
+						.done(function (data) {
+							//console.log(data);
+
+							$.each(data, function (index, dm) {
+								var tr = '<tr>' +
+											'<td>' + dm.MaTruSo + '</td>' +
+											'<td>' + dm.DiaChiTruSo + '</td>' +
+											'<td><a href="#" onclick="getAction('+ dm.MaTruSo +', '+ dm.DiaChiTruSo +')" ><img src="images/user_edit.png" alt="" title="" border="0" /></a></td>' +
+											'<td><a href="#" onclick="deleteAction('+ dm.MaTruSo +')"><img src="images/trash.png" alt="" title="" border="0" /></a></td>' +
+										+'</tr>';
+
+								$('#stationList').append(tr);
+							});
+						})
+						.fail(function (jqXHR, textStatus, error) {
+							console.log(jqXHR);
+							console.log(jqXHR.statusCode);
+						});
+                })
+                .fail(function (jqXHR, textStatus, error) {
+                    //console.log(textStatus);
+                    console.log(error);
+                    //console.log(jqXHR);
+                });
+        };
+		
+		$('#btnUpdate').on('click', function () {
+            var stationNo = $('#txtTruSo').val();
+			var address = $('#txtDiaChiTruSo').val();
+			
+            var _url = 'http://localhost:2796/api/TruSo/' + stationNo;
+            var dataToPost = {
+					'MaTruSo': stationNo,
+					'DiaChiTruSo': address
+            }
+
+            var jsonToPost = JSON.stringify(dataToPost);
+            //console.log(jsonToPost);
+
+            $.ajax({
+                type: 'PUT',
+                url: _url,
+                data: jsonToPost,
+                dataType: 'json',
+                contentType: 'application/json',
+                timeout: 30 * 1000
+            })
+                .done(function (data, textStatus, jqXHR) {
+                    console.log(data);
+                    console.log(jqXHR);
+					 $('#stationList').empty();
+					 var _url = 'http://localhost:2796/api/TruSo';
+						$.ajax({
+							url: _url,
+							dataType: 'json',
+							timeout: 30 * 1000
+						})
+						.done(function (data) {
+							//console.log(data);
+
+							$.each(data, function (index, dm) {
+								var tr = '<tr>' +
+											'<td>' + dm.MaTruSo + '</td>' +
+											'<td>' + dm.DiaChiTruSo + '</td>' +
+											'<td><a href="#" onclick="getAction('+ dm.MaTruSo +', '+ dm.DiaChiTruSo +')" ><img src="images/user_edit.png" alt="" title="" border="0" /></a></td>' +
+											'<td><a href="#" onclick="deleteAction('+ dm.MaTruSo +')"><img src="images/trash.png" alt="" title="" border="0" /></a></td>' +
+											
+										+'</tr>';
+
+								$('#stationList').append(tr);
+							});
+						})
+						.fail(function (jqXHR, textStatus, error) {
+							console.log(jqXHR);
+							console.log(jqXHR.statusCode);
+						});
+                })
+                .fail(function (jqXHR, textStatus, error) {
+                    //console.log(textStatus);
+                    console.log(error);
+                    //console.log(jqXHR);
+                });
+        });
+		
+		$('#txtTruSo').focusout(function() {
+				var stationNo = $('#txtTruSo').val();
+				
+				if(stationNo != "")
+				{
+
+					var _url = 'http://localhost:2796/api/TruSo/' + stationNo;
+					$.ajax({
+							url: _url,
+							dataType: 'json',
+							timeout: 30 * 1000
+						})
+					.done(function (data) {
+							$('#txtTruSo').val(data.MaTruSo);
+							$('#txtDiaChiTruSo').val(data.DiaChiTruSo);
+					})
+					.fail(function (jqXHR, textStatus, error) {
+						console.log(jqXHR);
+						console.log(jqXHR.statusCode);
+					});
+				}
+		  });
+		  function getAction(stationNo, address){
+							$('#txtTruSo').val(stationNo);
+							$('#txtDiaChiTruSo').val(address);
+		  };
+
+</script>
+
+
+</body>
+</html>
