@@ -1,0 +1,48 @@
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DomainModel.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DomainModel.pdb
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+D:\New\24HCB_DrinkSmile\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\New\24HCB_DrinkSmile\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\New\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+D:\New\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\New\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\New\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DomainModel.dll
+D:\New\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\EntityFramework.dll
+D:\New\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\New\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DomainModel.pdb
+D:\New\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\EntityFramework.xml
+D:\New\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\New\24HCB_DrinkSmile\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+D:\New\Demo 20170526\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+D:\New\Demo 20170526\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\New\Demo 20170526\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DomainModel.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\EntityFramework.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DomainModel.pdb
+D:\New\Demo 20170526\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\EntityFramework.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+D:\New\Demo 20170526\24HCB_DrinkSmile\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DomainModel.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\EntityFramework.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DomainModel.pdb
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\EntityFramework.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

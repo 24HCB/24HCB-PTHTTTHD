@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HCB_VNModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BO">
+    <Key>
+      <PropertyRef Name="MaSoChip" />
+    </Key>
+    <Property Name="MaSoChip" Type="Int32" Nullable="false" />
+    <Property Name="NgayNhap" Type="DateTime" Precision="0" />
+    <Property Name="CanNang" Type="Int32" />
+    <Property Name="MauSac" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DacDiemNhanDien" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DiTat" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="BONCHUA">
+    <Key>
+      <PropertyRef Name="MaBonChua" />
+    </Key>
+    <Property Name="MaBonChua" Type="Int32" Nullable="false" />
+    <Property Name="MaCoSo" Type="Int32" />
+    <Property Name="SucChuaToiDa" Type="Int32" />
+    <Property Name="SucChuaHienTai" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CHUONG">
+    <Key>
+      <PropertyRef Name="MaSoChuong" />
+    </Key>
+    <Property Name="MaSoChuong" Type="Int32" Nullable="false" />
+    <Property Name="MaCoSo" Type="Int32" />
+    <Property Name="DiaChiChuong" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="COSO">
+    <Key>
+      <PropertyRef Name="MaCS" />
+    </Key>
+    <Property Name="MaCS" Type="Int32" Nullable="false" />
+    <Property Name="DiaChiCS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MaTruSo" Type="Int32" />
+    <Property Name="NguoiQuanLy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CTQUYTRINH">
+    <Key>
+      <PropertyRef Name="MaQuyTrinh" />
+      <PropertyRef Name="MaSoChip" />
+    </Key>
+    <Property Name="MaQuyTrinh" Type="Int32" Nullable="false" />
+    <Property Name="MaSoChip" Type="Int32" Nullable="false" />
+    <Property Name="SoLuongSua" Type="Int32" />
+    <Property Name="TinhTrangBauVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CTSUCKHOE">
+    <Key>
+      <PropertyRef Name="MaSoChip" />
+      <PropertyRef Name="NgayGhiNhan" />
+    </Key>
+    <Property Name="MaSoChip" Type="Int32" Nullable="false" />
+    <Property Name="NgayGhiNhan" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="GioGhiNhan" Type="Time" Precision="7" />
+    <Property Name="CanNang" Type="Int32" />
+    <Property Name="NhietDo" Type="Int32" />
+    <Property Name="Protit" Type="Int32" />
+    <Property Name="Gluxit" Type="Int32" />
+    <Property Name="Lipit" Type="Int32" />
+    <Property Name="TTSucKhoe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaNV" Type="Int32" Nullable="false" />
+    <Property Name="TenNhanVien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CMND" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="SoDienThoai" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PHANPHOI">
+    <Key>
+      <PropertyRef Name="MaPhanPhoi" />
+    </Key>
+    <Property Name="MaPhanPhoi" Type="Int32" Nullable="false" />
+    <Property Name="MaNhaSX" Type="Int32" />
+    <Property Name="MaBonChua" Type="Int32" />
+    <Property Name="NgayPP" Type="Time" Precision="7" />
+  </EntityType>
+  <EntityType Name="QUYTRINHVATSUA">
+    <Key>
+      <PropertyRef Name="MaQuyTrinh" />
+    </Key>
+    <Property Name="MaQuyTrinh" Type="Int32" Nullable="false" />
+    <Property Name="MaSoChuong" Type="Int32" />
+    <Property Name="MaNhanVien" Type="Int32" />
+    <Property Name="NgayThucHien" Type="DateTime" Precision="0" />
+    <Property Name="GioBatDau" Type="Time" Precision="7" />
+    <Property Name="GioKetThuc" Type="Time" Precision="7" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TRUSO">
+    <Key>
+      <PropertyRef Name="MaTruSo" />
+    </Key>
+    <Property Name="MaTruSo" Type="Int32" Nullable="false" />
+    <Property Name="DiaChiTruSo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="DrinkSmileEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BOes" EntityType="Self.BO" />
+    <EntitySet Name="BONCHUAs" EntityType="Self.BONCHUA" />
+    <EntitySet Name="CHUONGs" EntityType="Self.CHUONG" />
+    <EntitySet Name="COSOes" EntityType="Self.COSO" />
+    <EntitySet Name="CTQUYTRINHs" EntityType="Self.CTQUYTRINH" />
+    <EntitySet Name="CTSUCKHOEs" EntityType="Self.CTSUCKHOE" />
+    <EntitySet Name="NHANVIENs" EntityType="Self.NHANVIEN" />
+    <EntitySet Name="PHANPHOIs" EntityType="Self.PHANPHOI" />
+    <EntitySet Name="QUYTRINHVATSUAs" EntityType="Self.QUYTRINHVATSUA" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="TRUSOes" EntityType="Self.TRUSO" />
+  </EntityContainer>
+</Schema>

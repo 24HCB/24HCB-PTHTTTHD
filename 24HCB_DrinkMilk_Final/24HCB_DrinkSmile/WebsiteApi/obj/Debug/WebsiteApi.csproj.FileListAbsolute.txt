@@ -1,0 +1,393 @@
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\ApplicationInsights.config
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\csc.exe
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\vbc.exe
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\VBCSCompiler.exe
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\WebsiteApi.dll.config
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\WebsiteApi.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\WebsiteApi.pdb
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Antlr3.Runtime.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\BusinessLayer.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\DataAccessLayer.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\DomainModel.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\EntityFramework.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\EntityFramework.SqlServer.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.Web.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.ApplicationInsights.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Newtonsoft.Json.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Owin.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Net.Http.Formatting.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Helpers.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.Owin.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.WebHost.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Mvc.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Optimization.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Razor.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.Razor.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\WebGrease.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\BusinessLayer.pdb
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\DataAccessLayer.pdb
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\DomainModel.pdb
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.Web.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.ApplicationInsights.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Newtonsoft.Json.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Net.Http.Formatting.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Helpers.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.WebHost.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Mvc.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Optimization.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Razor.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.Razor.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Antlr3.Runtime.pdb
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\EntityFramework.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\EntityFramework.SqlServer.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.Owin.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\obj\Debug\WebsiteApi.csprojResolveAssemblyReference.cache
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\obj\Debug\WebsiteApi.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\WebsiteApi\obj\Debug\WebsiteApi.pdb
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\ApplicationInsights.config
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\csc.exe
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\System.Collections.Immutable.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\System.Reflection.Metadata.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\vbc.exe
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\VBCSCompiler.exe
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\VBCSCompiler.exe.config
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\WebsiteApi.dll.config
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\WebsiteApi.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\WebsiteApi.pdb
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Antlr3.Runtime.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\BusinessLayer.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\DataAccessLayer.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\DomainModel.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\EntityFramework.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\EntityFramework.SqlServer.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.Agent.Intercept.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.DependencyCollector.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.Web.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.WindowsServer.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.ApplicationInsights.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.Core.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Cookies.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Facebook.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Google.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.OAuth.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Twitter.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Web.Infrastructure.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Newtonsoft.Json.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Owin.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Net.Http.Formatting.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Cors.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Helpers.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.Cors.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.Owin.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.WebHost.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Mvc.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Optimization.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Razor.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.Deployment.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.Razor.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\WebGrease.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\BusinessLayer.pdb
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\DataAccessLayer.pdb
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\DomainModel.pdb
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.DependencyCollector.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.Web.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.WindowsServer.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.ApplicationInsights.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.Cors.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Newtonsoft.Json.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Net.Http.Formatting.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Helpers.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.WebHost.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Mvc.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Optimization.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Razor.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.Deployment.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.Razor.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Antlr3.Runtime.pdb
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\EntityFramework.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\EntityFramework.SqlServer.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.Core.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Facebook.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Cookies.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.OAuth.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Google.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Twitter.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.Owin.xml
+D:\New\24HCB_DrinkSmile\WebsiteApi\obj\Debug\WebsiteApi.csprojResolveAssemblyReference.cache
+D:\New\24HCB_DrinkSmile\WebsiteApi\obj\Debug\WebsiteApi.dll
+D:\New\24HCB_DrinkSmile\WebsiteApi\obj\Debug\WebsiteApi.pdb
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\ApplicationInsights.config
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\csc.exe
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\System.Collections.Immutable.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\System.Reflection.Metadata.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\vbc.exe
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\VBCSCompiler.exe
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\VBCSCompiler.exe.config
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\WebsiteApi.dll.config
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\WebsiteApi.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\WebsiteApi.pdb
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Antlr3.Runtime.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\BusinessLayer.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\DataAccessLayer.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\DomainModel.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\EntityFramework.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\EntityFramework.SqlServer.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.Agent.Intercept.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.DependencyCollector.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.Web.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.WindowsServer.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.ApplicationInsights.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.Core.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Cookies.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Facebook.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Google.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.OAuth.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Twitter.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Web.Infrastructure.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Newtonsoft.Json.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Owin.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Net.Http.Formatting.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Cors.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Helpers.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.Cors.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.Owin.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.WebHost.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Mvc.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Optimization.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Razor.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.Deployment.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.Razor.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\WebGrease.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\BusinessLayer.pdb
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\DataAccessLayer.pdb
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\DomainModel.pdb
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.DependencyCollector.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.Web.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.WindowsServer.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.ApplicationInsights.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.Cors.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Newtonsoft.Json.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Net.Http.Formatting.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Helpers.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.WebHost.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Mvc.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Optimization.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Razor.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.Deployment.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.Razor.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Antlr3.Runtime.pdb
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\EntityFramework.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\EntityFramework.SqlServer.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.Core.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Facebook.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Cookies.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.OAuth.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Google.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Twitter.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.Owin.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\obj\Debug\WebsiteApi.csprojResolveAssemblyReference.cache
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\obj\Debug\WebsiteApi.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\WebsiteApi\obj\Debug\WebsiteApi.pdb
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\obj\Debug\WebsiteApi.csprojResolveAssemblyReference.cache
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\obj\Debug\WebsiteApi.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\obj\Debug\WebsiteApi.pdb
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\ApplicationInsights.config
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\csc.exe
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\System.Collections.Immutable.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\System.Reflection.Metadata.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\vbc.exe
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\VBCSCompiler.exe
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\roslyn\VBCSCompiler.exe.config
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\WebsiteApi.dll.config
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\WebsiteApi.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\WebsiteApi.pdb
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Antlr3.Runtime.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\BusinessLayer.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\DataAccessLayer.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\DomainModel.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\EntityFramework.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\EntityFramework.SqlServer.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.Agent.Intercept.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.DependencyCollector.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.Web.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.WindowsServer.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.ApplicationInsights.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.Core.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Cookies.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Facebook.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Google.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.OAuth.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Twitter.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Web.Infrastructure.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Newtonsoft.Json.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Owin.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Net.Http.Formatting.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Cors.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Helpers.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.Cors.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.Owin.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.WebHost.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Mvc.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Optimization.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Razor.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.Deployment.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.Razor.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\WebGrease.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\BusinessLayer.pdb
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\DataAccessLayer.pdb
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\DomainModel.pdb
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.DependencyCollector.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.Web.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AI.WindowsServer.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.ApplicationInsights.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.Cors.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Newtonsoft.Json.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Net.Http.Formatting.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Helpers.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.WebHost.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Mvc.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Optimization.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Razor.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.Deployment.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.WebPages.Razor.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Antlr3.Runtime.pdb
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\EntityFramework.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\EntityFramework.SqlServer.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.Core.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Facebook.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Cookies.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.OAuth.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Google.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.Twitter.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\WebsiteApi\bin\System.Web.Http.Owin.xml

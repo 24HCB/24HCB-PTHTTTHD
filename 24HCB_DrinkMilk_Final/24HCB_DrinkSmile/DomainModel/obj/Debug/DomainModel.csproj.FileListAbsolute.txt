@@ -1,0 +1,27 @@
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\DomainModel\bin\Debug\DomainModel.dll.config
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\DomainModel\bin\Debug\DomainModel.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\DomainModel\bin\Debug\DomainModel.pdb
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\DomainModel\bin\Debug\EntityFramework.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\DomainModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\DomainModel\bin\Debug\EntityFramework.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\DomainModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\DomainModel\obj\Debug\DomainModel.dll
+C:\Users\ng.phuocloc\Desktop\24HCB_DrinkSmile\DomainModel\obj\Debug\DomainModel.pdb
+D:\New\Demo 20170526\24HCB_DrinkSmile\DomainModel\bin\Debug\DomainModel.dll.config
+D:\New\Demo 20170526\24HCB_DrinkSmile\DomainModel\bin\Debug\DomainModel.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\DomainModel\bin\Debug\DomainModel.pdb
+D:\New\Demo 20170526\24HCB_DrinkSmile\DomainModel\bin\Debug\EntityFramework.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\DomainModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\DomainModel\bin\Debug\EntityFramework.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\DomainModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\New\Demo 20170526\24HCB_DrinkSmile\DomainModel\obj\Debug\DomainModel.dll
+D:\New\Demo 20170526\24HCB_DrinkSmile\DomainModel\obj\Debug\DomainModel.pdb
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\DomainModel.dll.config
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\DomainModel.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\DomainModel.pdb
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\EntityFramework.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\EntityFramework.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DomainModel\obj\Debug\DomainModel.dll
+D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DomainModel\obj\Debug\DomainModel.pdb

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HCBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cows">
+    <Key>
+      <PropertyRef Name="cowsCode" />
+    </Key>
+    <Property Name="cowsCode" Type="int" Nullable="false" />
+    <Property Name="weight" Type="int" />
+    <Property Name="color" Type="varchar" MaxLength="20" />
+    <Property Name="characteristics" Type="varchar" MaxLength="50" />
+    <Property Name="goesOff" Type="bit" />
+    <Property Name="data" Type="date" />
+  </EntityType>
+  <EntityType Name="detail_Cows">
+    <Key>
+      <PropertyRef Name="chipCode" />
+    </Key>
+    <Property Name="chipCode" Type="int" Nullable="false" />
+    <Property Name="date" Type="time" Precision="7" />
+    <Property Name="temperature" Type="int" />
+    <Property Name="weight" Type="int" />
+    <Property Name="protit" Type="int" />
+    <Property Name="gluxit" Type="int" />
+    <Property Name="lipit" Type="int" />
+    <Property Name="healthStatus" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DetailMilk">
+    <Key>
+      <PropertyRef Name="detailCode" />
+      <PropertyRef Name="ChipCode" />
+    </Key>
+    <Property Name="detailCode" Type="int" Nullable="false" />
+    <Property Name="ChipCode" Type="int" Nullable="false" />
+    <Property Name="quantum" Type="int" />
+    <Property Name="breastsStatus" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="localtionCode" />
+    </Key>
+    <Property Name="localtionCode" Type="int" Nullable="false" />
+    <Property Name="address" Type="varchar" MaxLength="100" />
+    <Property Name="stationCode" Type="int" />
+    <Property Name="Maneger" Type="int" />
+  </EntityType>
+  <EntityType Name="Lodging">
+    <Key>
+      <PropertyRef Name="lodgingCode" />
+    </Key>
+    <Property Name="lodgingCode" Type="int" Nullable="false" />
+    <Property Name="locationCode" Type="int" />
+    <Property Name="addres" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Milk">
+    <Key>
+      <PropertyRef Name="milkCode" />
+    </Key>
+    <Property Name="milkCode" Type="int" Nullable="false" />
+    <Property Name="lodpingCode" Type="int" />
+    <Property Name="employeeCode" Type="int" />
+    <Property Name="date" Type="date" />
+    <Property Name="timeStart" Type="time" Precision="7" />
+    <Property Name="timeEnd" Type="time" Precision="7" />
+  </EntityType>
+  <EntityType Name="Poster">
+    <Key>
+      <PropertyRef Name="employeeCode" />
+    </Key>
+    <Property Name="employeeCode" Type="int" Nullable="false" />
+    <Property Name="fullName" Type="varchar" MaxLength="50" />
+    <Property Name="address" Type="varchar" MaxLength="50" />
+    <Property Name="identityCode" Type="int" />
+    <Property Name="phone" Type="int" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="userName" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="station">
+    <Key>
+      <PropertyRef Name="stationCode" />
+    </Key>
+    <Property Name="stationCode" Type="int" Nullable="false" />
+    <Property Name="address" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="HCBModelStoreContainer">
+    <EntitySet Name="Cows" EntityType="Self.Cows" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="detail_Cows" EntityType="Self.detail_Cows" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DetailMilk" EntityType="Self.DetailMilk" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Location" EntityType="Self.Location" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Lodging" EntityType="Self.Lodging" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Milk" EntityType="Self.Milk" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Poster" EntityType="Self.Poster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="station" EntityType="Self.station" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

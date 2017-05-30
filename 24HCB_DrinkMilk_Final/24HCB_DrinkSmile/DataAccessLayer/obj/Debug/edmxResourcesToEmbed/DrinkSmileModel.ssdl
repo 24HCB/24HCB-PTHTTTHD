@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HCB_VNModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BO">
+    <Key>
+      <PropertyRef Name="MaSoChip" />
+    </Key>
+    <Property Name="MaSoChip" Type="int" Nullable="false" />
+    <Property Name="NgayNhap" Type="date" />
+    <Property Name="CanNang" Type="int" />
+    <Property Name="MauSac" Type="nvarchar" MaxLength="20" />
+    <Property Name="DacDiemNhanDien" Type="nvarchar" MaxLength="200" />
+    <Property Name="DiTat" Type="bit" />
+  </EntityType>
+  <EntityType Name="BONCHUA">
+    <Key>
+      <PropertyRef Name="MaBonChua" />
+    </Key>
+    <Property Name="MaBonChua" Type="int" Nullable="false" />
+    <Property Name="MaCoSo" Type="int" />
+    <Property Name="SucChuaToiDa" Type="int" />
+    <Property Name="SucChuaHienTai" Type="int" />
+  </EntityType>
+  <EntityType Name="CHUONG">
+    <Key>
+      <PropertyRef Name="MaSoChuong" />
+    </Key>
+    <Property Name="MaSoChuong" Type="int" Nullable="false" />
+    <Property Name="MaCoSo" Type="int" />
+    <Property Name="DiaChiChuong" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="COSO">
+    <Key>
+      <PropertyRef Name="MaCS" />
+    </Key>
+    <Property Name="MaCS" Type="int" Nullable="false" />
+    <Property Name="DiaChiCS" Type="nvarchar" MaxLength="100" />
+    <Property Name="MaTruSo" Type="int" />
+    <Property Name="NguoiQuanLy" Type="int" />
+  </EntityType>
+  <EntityType Name="CTQUYTRINH">
+    <Key>
+      <PropertyRef Name="MaQuyTrinh" />
+      <PropertyRef Name="MaSoChip" />
+    </Key>
+    <Property Name="MaQuyTrinh" Type="int" Nullable="false" />
+    <Property Name="MaSoChip" Type="int" Nullable="false" />
+    <Property Name="SoLuongSua" Type="int" />
+    <Property Name="TinhTrangBauVu" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CTSUCKHOE">
+    <Key>
+      <PropertyRef Name="MaSoChip" />
+      <PropertyRef Name="NgayGhiNhan" />
+    </Key>
+    <Property Name="MaSoChip" Type="int" Nullable="false" />
+    <Property Name="NgayGhiNhan" Type="date" Nullable="false" />
+    <Property Name="GioGhiNhan" Type="time" Precision="7" />
+    <Property Name="CanNang" Type="int" />
+    <Property Name="NhietDo" Type="int" />
+    <Property Name="Protit" Type="int" />
+    <Property Name="Gluxit" Type="int" />
+    <Property Name="Lipit" Type="int" />
+    <Property Name="TTSucKhoe" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaNV" Type="int" Nullable="false" />
+    <Property Name="TenNhanVien" Type="nvarchar" MaxLength="50" />
+    <Property Name="CMND" Type="char" MaxLength="12" />
+    <Property Name="SoDienThoai" Type="char" MaxLength="12" />
+    <Property Name="username" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PHANPHOI">
+    <Key>
+      <PropertyRef Name="MaPhanPhoi" />
+    </Key>
+    <Property Name="MaPhanPhoi" Type="int" Nullable="false" />
+    <Property Name="MaNhaSX" Type="int" />
+    <Property Name="MaBonChua" Type="int" />
+    <Property Name="NgayPP" Type="time" Precision="7" />
+  </EntityType>
+  <EntityType Name="QUYTRINHVATSUA">
+    <Key>
+      <PropertyRef Name="MaQuyTrinh" />
+    </Key>
+    <Property Name="MaQuyTrinh" Type="int" Nullable="false" />
+    <Property Name="MaSoChuong" Type="int" />
+    <Property Name="MaNhanVien" Type="int" />
+    <Property Name="NgayThucHien" Type="date" />
+    <Property Name="GioBatDau" Type="time" Precision="7" />
+    <Property Name="GioKetThuc" Type="time" Precision="7" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TRUSO">
+    <Key>
+      <PropertyRef Name="MaTruSo" />
+    </Key>
+    <Property Name="MaTruSo" Type="int" Nullable="false" />
+    <Property Name="DiaChiTruSo" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityContainer Name="HCB_VNModelStoreContainer">
+    <EntitySet Name="BO" EntityType="Self.BO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BONCHUA" EntityType="Self.BONCHUA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHUONG" EntityType="Self.CHUONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COSO" EntityType="Self.COSO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CTQUYTRINH" EntityType="Self.CTQUYTRINH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CTSUCKHOE" EntityType="Self.CTSUCKHOE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHANPHOI" EntityType="Self.PHANPHOI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QUYTRINHVATSUA" EntityType="Self.QUYTRINHVATSUA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRUSO" EntityType="Self.TRUSO" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
