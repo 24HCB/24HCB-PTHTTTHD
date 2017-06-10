@@ -15,10 +15,10 @@ namespace WebsiteApi.Controllers
             return new BusinessLayer.BusinessLayer().GetAllCoSo();
         }
 
-        public IEnumerable<COSO> Get(int id)
+        public COSO Get(int id)
         {
             //return "value";
-            return new BusinessLayer.BusinessLayer().GetCoSoByTruSoCode(id);
+            return new BusinessLayer.BusinessLayer().GetCoSoById(id);
         }
         public void Post([FromBody]DomainModel.COSO value)
         {

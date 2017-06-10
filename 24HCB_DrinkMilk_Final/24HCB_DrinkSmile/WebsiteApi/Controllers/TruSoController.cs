@@ -20,7 +20,7 @@ namespace WebsiteApi.Controllers
         public TRUSO Get(int id)
         {
             //return "value";
-            return new BusinessLayer.BusinessLayer().GetTruSoByName(id);
+            return new BusinessLayer.BusinessLayer().GetTruSoById(id);
         }
 
         // POST api/values

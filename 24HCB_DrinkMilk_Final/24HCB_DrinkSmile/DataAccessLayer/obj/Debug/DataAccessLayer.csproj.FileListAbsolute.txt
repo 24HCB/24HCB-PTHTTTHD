@@ -46,3 +46,15 @@ D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\EntityFramewo
 D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
 D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 D:\New\DrinkSmile_Final\24HCB_DrinkSmile\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DomainModel.dll
+C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\DomainModel.pdb
+C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
