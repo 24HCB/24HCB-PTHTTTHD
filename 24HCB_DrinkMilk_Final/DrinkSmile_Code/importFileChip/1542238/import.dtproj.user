@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTransformationsUserConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <StartObjectID>Import.dtsx</StartObjectID>
+        <UserIDs>
+          <ConfigurationSetting>
+            <Id>{B010E71F-31B6-40C2-9753-A95671F1E449}</Id>
+            <Name>{B010E71F-31B6-40C2-9753-A95671F1E449}</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3radJXHMAUeBQdwbHasszgAAAABOAAAAewBCADAAMQAwAEUANwAxAEYALQAzADEAQgA2AC0ANAAwAEMAMgAtADkANwA1ADMALQBBADkANQA2ADcAMQBGADEARQA0ADQAOQB9AAAAEGYAAAABAAAgAAAAusTNxg+YJvNhQrIF/DabzBh59XHVhx04mq+YCM0YhtAAAAAADoAAAAACAAAgAAAABuAn4ZSX0404ifbH/wcqoQ0vK47D3gN6kkTz0sNKlvYQAAAAsHcHqiHpuevxHy67elzDQkAAAABEkvFiC2S2BwGavm5cIJaxwJ88enoXR6eXBkg+rM53hGkkOvJoU/k5CySmmI5znwbIMiokK63+Hh8gXa6lnalX</Value>
+          </ConfigurationSetting>
+        </UserIDs>
+        <UserPasswords>
+          <ConfigurationSetting>
+            <Id>{B010E71F-31B6-40C2-9753-A95671F1E449}</Id>
+            <Name>{B010E71F-31B6-40C2-9753-A95671F1E449}</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3radJXHMAUeBQdwbHasszgAAAABOAAAAewBCADAAMQAwAEUANwAxAEYALQAzADEAQgA2AC0ANAAwAEMAMgAtADkANwA1ADMALQBBADkANQA2ADcAMQBGADEARQA0ADQAOQB9AAAAEGYAAAABAAAgAAAAbMakn0eD9sHz4m88fj7I7tFLip7gz5VaBgQJstqpkSIAAAAADoAAAAACAAAgAAAAw3akRzjag0MFjR0mxDs5nJ/5D5Oz/w9zwRaOUsi64rYgAAAAsh/YKoQkKwjUBpfjkN9NmosbjI3HWTdWojHAC1WlcO9AAAAAIzyid02RdF1nvzlImdyDje4npNbB6g55yybxUGo++shBwitqp24NgyxtYhFJVVMQqLAaUrwJQvGiEfkuTHOWjg==</Value>
+          </ConfigurationSetting>
+        </UserPasswords>
+        <OfflineMode>false</OfflineMode>
+        <ProgressReporting>true</ProgressReporting>
+        <ParameterConfigurationSensitiveValues>
+          <ConfigurationSetting>
+            <Id>LastModifiedTime</Id>
+            <Name>LastModifiedTime</Name>
+            <Value xsi:type="xsd:dateTime">2017-04-09T05:32:05.3035705Z</Value>
+          </ConfigurationSetting>
+        </ParameterConfigurationSensitiveValues>
+      </Options>
+    </Configuration>
+  </Configurations>
+</DataTransformationsUserConfiguration>
