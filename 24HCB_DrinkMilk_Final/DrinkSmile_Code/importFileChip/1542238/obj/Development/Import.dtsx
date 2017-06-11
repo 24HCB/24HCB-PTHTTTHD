@@ -7,68 +7,53 @@
   DTS:CreatorName="DESKTOP-LK3LGN2\ng.phuocloc"
   DTS:DTSID="{EF8DDF0C-2D94-482E-A5E1-932D457090B0}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="14.0.0600.250"
+  DTS:LastModifiedProductVersion="12.0.2430.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="Import"
   DTS:PackageType="5"
   DTS:VersionBuild="21"
-  DTS:VersionGUID="{AA21F62F-D1B8-42C3-BC5B-713D17D5C2EA}">
+  DTS:VersionGUID="{9698D531-F0A4-4370-A535-ED3CB88612BF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[24hcbvn.database.windows.net.24HCB_VN.AnSon]"
+      DTS:refId="Package.ConnectionManagers[.\sqlexpress.24HCB_VN]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{9746B0CD-B29A-4694-850E-CE2F35713AEB}"
-      DTS:ObjectName="24hcbvn.database.windows.net.24HCB_VN.AnSon">
+      DTS:DTSID="{0CC2B1D2-5571-4104-AD0D-9E9DE6C38667}"
+      DTS:ObjectName=".\sqlexpress.24HCB_VN">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=24hcbvn.database.windows.net;User ID=AnSon;Initial Catalog=24HCB_VN;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3radJXHMAUeBQdwbHasszgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADwf2aY723W+qNn3+EmYJOaZTroMGOWR9me8RgYrIuwRgAAAAAOgAAAAAIAACAAAAD60OOsJGjt5hcShVTnOxV5k7+1ZwzWyGAnEa/0W7tOnyAAAACxsLf+uhe5UBcQldK51l6d+aZt3ktqsl7B72gOILWq2UAAAAD3MiHcBl1S2vPPtd+Bj+iS4AQ1tVoAEa+cNxITRHBB5Q21UtIS6jKk/2/uS08LzRGKqJOwbjWOLcRD67Z7pmbQ</DTS:Password>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[24hcbvn.database.windows.net.24HCB_VN.AnSon 1]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{B010E71F-31B6-40C2-9753-A95671F1E449}"
-      DTS:ObjectName="24hcbvn.database.windows.net.24HCB_VN.AnSon 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=24hcbvn.database.windows.net;User ID=AnSon;Initial Catalog=24HCB_VN;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3radJXHMAUeBQdwbHasszgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAAIVV/1d/dZFI4U9OhhVQdvG3QY/SLxs0rCgFUoHgunAAAAAAOgAAAAAIAACAAAACNPsfwB2LgJoyrtpVv8xBwmLC08nDGiwYJQI6IxwFCKiAAAACpUzx/bmiDFsM6ZmO+yOgtskfU+Nc+djYMii/qkdmrtEAAAAAQjJjZkSB3WALT0uvuSLBtS/5sg+1eZm+mNM9rKaCuJTW6JMlzVCLrU9lC15KJJFHqFIHO6HWkP/KLNKZUbXWn</DTS:Password>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[24hcbvn.database.windows.net.24HCB_VN.AnSon 2]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{1F606649-8836-415A-8513-344E6A23F45C}"
-      DTS:ObjectName="24hcbvn.database.windows.net.24HCB_VN.AnSon 2">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=24hcbvn.database.windows.net;User ID=AnSon;Initial Catalog=24HCB_VN;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3radJXHMAUeBQdwbHasszgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACk3+gzYsD5Xi/uwgNseakdakY3Lui9cW07zDJZpOQ2cwAAAAAOgAAAAAIAACAAAAAdLjVgbrCcb80548pDYnARJMGe+sGq+2vpRZe9c6yLdiAAAAB3P65PwcZBJos9tUW8YkXHE/yCiFdHDYeJ7uLjf5pOEkAAAADRmKPMmHqGBWfBqSgolIz2s+STRMMusnOvw46n9/2q6oggbFaF2TzlAHESm3kGlNhHyzIdiwceeb7MxJoCRG4T</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=.\sqlexpress;Initial Catalog=24HCB_VN;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
       DTS:CreationName="EXCEL"
-      DTS:DTSID="{74762BB5-B19B-4E0E-ACD6-F78309C18F6D}"
+      DTS:DTSID="{02BCE9ED-D8A9-469F-BDCE-B609A6B664D5}"
       DTS:ObjectName="Excel Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\anson\Desktop\TTSUCKHOE.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Xuan Nghiep\Downloads\TTSUCKHOE-2.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{6C301F46-F082-4BB6-B3DB-6762EA499B7E}"
+      DTS:ObjectName="Excel Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\ng.phuocloc\Documents\GitHub\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\DrinkSmile_Code\importFileChip\COW_INFO\TTSUCKHOE-2.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.DrinkMilk]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1B93C51D-FB7F-495E-B2B6-F290D1912D1B}"
+      DTS:ObjectName="localhost.DrinkMilk">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=DrinkMilk;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -124,7 +109,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -142,8 +127,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -173,7 +158,7 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[GioGhiNhan]"
-                      dataType="r8"
+                      dataType="date"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[GioGhiNhan]"
@@ -248,7 +233,7 @@
                       name="NgayGhiNhan" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[GioGhiNhan]"
-                      dataType="r8"
+                      dataType="date"
                       name="GioGhiNhan" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[CanNang]"
@@ -294,7 +279,7 @@
                       name="NgayGhiNhan" />
                     <outputColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[GioGhiNhan]"
-                      dataType="r8"
+                      dataType="date"
                       lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[GioGhiNhan]"
                       name="GioGhiNhan" />
                     <outputColumn
@@ -369,7 +354,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -403,8 +388,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[24hcbvn.database.windows.net.24HCB_VN.AnSon 2]"
-                  connectionManagerRefId="Package.ConnectionManagers[24hcbvn.database.windows.net.24HCB_VN.AnSon 2]"
+                  connectionManagerID="Package.ConnectionManagers[.\sqlexpress.24HCB_VN]"
+                  connectionManagerRefId="Package.ConnectionManagers[.\sqlexpress.24HCB_VN]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -431,7 +416,7 @@
                       lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NgayGhiNhan]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GioGhiNhan]"
-                      cachedDataType="r8"
+                      cachedDataType="date"
                       cachedName="GioGhiNhan"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GioGhiNhan]"
                       lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[GioGhiNhan]" />
@@ -565,7 +550,7 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="150,42"
+          Size="150.4,41.6"
           Id="Package\Data Flow Task"
           TopLeft="109.090910948716,42.2673802719284" />
       </GraphLayout>
@@ -577,39 +562,39 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="126.2,243.2" />
-        <NodeLayout
-          Size="139,42"
+          Size="139.2,41.6"
           Id="Package\Data Flow Task\Excel Source"
           TopLeft="122.4,51.2" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="127.2,243.2" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Excel Source Output]"
-          TopLeft="191.9,93.2">
+          TopLeft="192,92.8">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="19.8,150"
+              EndConnector="20.8,150.4"
               Start="0,0"
-              End="19.8,142.5">
+              End="20.8,142.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,71" />
+                    End="0,71.2" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,71"
-                    Point2="0,75"
-                    Point3="4,75" />
+                    Point1="0,71.2"
+                    Point2="0,75.2"
+                    Point3="4,75.2" />
                   <mssgle:LineSegment
-                    End="15.8,75" />
+                    End="16.8,75.2" />
                   <mssgle:CubicBezierSegment
-                    Point1="15.8,75"
-                    Point2="19.8,75"
-                    Point3="19.8,79" />
+                    Point1="16.8,75.2"
+                    Point2="20.8,75.2"
+                    Point3="20.8,79.2" />
                   <mssgle:LineSegment
-                    End="19.8,142.5" />
+                    End="20.8,142.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
