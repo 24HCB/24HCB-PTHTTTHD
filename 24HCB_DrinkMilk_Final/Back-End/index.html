@@ -404,22 +404,28 @@
 toggle between hiding and showing the dropdown content */
 
 $( document ).ready(function() {
+	AddQLSucKhoe();
 	window.setInterval(function(){
-		var _url = 'http://localhost:2796/api/QLSucKhoe';
-		$.ajax({
-			url: _url,
-			dataType: 'json',
-			timeout: 30 * 1000
-		})
-		.done(function (data) {
-			console.log("Insert data successed");
-		})
-		.fail(function (jqXHR, textStatus, error) {
-			console.log(jqXHR);
-			console.log(jqXHR.statusCode);
-		});
+		AddQLSucKhoe();
 	}, 600000);
 });
+
+function AddQLSucKhoe()
+{
+	var _url = 'http://localhost:2796/api/QLSucKhoe';
+	$.ajax({
+		url: _url,
+		dataType: 'json',
+		timeout: 30 * 1000
+	})
+	.done(function (data) {
+		console.log("Insert data successed");
+	})
+	.fail(function (jqXHR, textStatus, error) {
+		console.log(jqXHR);
+		console.log(jqXHR.statusCode);
+	});
+}
 
 function myFunction() {
 		document.getElementById("myDropdown").classList.toggle("show");
@@ -580,6 +586,7 @@ function lodgingFunction(){
 			timeout: 30 * 1000
 		})
 		.done(function (data) {
+			$('#mySelectTruSo').empty();
 			$.each(data, function (index, dm) {		
 				$('#mySelectTruSo').append($("<option/>", {
 					value: dm.MaTruSo,
@@ -602,6 +609,7 @@ function lodgingFunction(){
 			timeout: 30 * 1000
 		})
 		.done(function (data) {
+			$('#mySelectNguoiQuanLy').empty();
 			$.each(data, function (index, dm) {		
 				$('#mySelectNguoiQuanLy').append($("<option/>", {
 					value: dm.MaNV,
@@ -913,6 +921,7 @@ function lodgingFunction(){
 			timeout: 30 * 1000
 		})
 		.done(function (data) {
+			$('#mySelectCoSoChuong').empty();
 			$.each(data, function (index, dm) {		
 				$('#mySelectCoSoChuong').append($("<option/>", {
 					value: dm.MaCS,
@@ -1234,7 +1243,7 @@ function lodgingFunction(){
 							'<td>' + dm.MaSoChip + '</td>' +
 							'<td>' + dm.SoLuongSua + '</td>' +
 							'<td>' + dm.TinhTrangBauVu + '</td>' +
-							'<td><a href="#" onclick="deleteCTQuyTrinhAction('+ dm.MaQuyTrinh + ', ' + dm.maSoChip +')"><img src="images/trash.png" alt="" title="" border="0" /></a></td>' +
+							'<td><a href="#" onclick="deleteCTQuyTrinhAction('+ dm.MaQuyTrinh + ', ' + dm.MaSoChip +')"><img src="images/trash.png" alt="" title="" border="0" /></a></td>' +
 						+'</tr>';
 
 				$('#CTQuyTrinhList').append(tr);
@@ -1259,6 +1268,7 @@ function lodgingFunction(){
 			timeout: 30 * 1000
 		})
 		.done(function (data) {
+			$('#mySelectChip').empty();
 			$.each(data, function (index, dm) {		
 				$('#mySelectChip').append($("<option/>", {
 					value: dm.MaSoChip,
@@ -1305,7 +1315,8 @@ function lodgingFunction(){
 	});
 	
 	  function deleteCTQuyTrinhAction(maQuyTrinh, maSoChip){
-
+		alert(maQuyTrinh);
+		alert(maSoChip);
 		var _url = 'http://localhost:2796/api/CTQuyTrinh';
 		var dataToPost = {
 				'MaQuyTrinh': maQuyTrinh,
@@ -1551,6 +1562,7 @@ function lodgingFunction(){
 			timeout: 30 * 1000
 		})
 		.done(function (data) {
+			$('#mySelectChuong').empty();
 			$.each(data, function (index, dm) {		
 				$('#mySelectChuong').append($("<option/>", {
 					value: dm.MaSoChuong,
@@ -1574,6 +1586,7 @@ function lodgingFunction(){
 			timeout: 30 * 1000
 		})
 		.done(function (data) {
+			$('#mySelectNhanVienQuyTrinh').empty();
 			$.each(data, function (index, dm) {		
 				$('#mySelectNhanVienQuyTrinh').append($("<option/>", {
 					value: dm.MaNV,
@@ -1601,7 +1614,7 @@ function lodgingFunction(){
 			$.each(data, function (index, dm) {
 				var tr = '<tr>' +
 							'<td>' + dm.MaSoChip + '</td>' +
-							'<td>' + dm.NgayGhiNhan + '</td>' +
+							'<td>' + dm.NgayGhiNhan.substring(0, 10) + '</td>' +
 							'<td>' + dm.GioGhiNhan + '</td>' +
 							'<td>' + dm.CanNang + '</td>' +
 							'<td>' + dm.NhietDo + '</td>' +
