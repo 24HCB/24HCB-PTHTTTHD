@@ -254,8 +254,16 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BoController.cs" />
+    <Compile Include="Controllers\BonChuaController.cs" />
+    <Compile Include="Controllers\ChuongController.cs" />
+    <Compile Include="Controllers\CTQuyTrinhController.cs" />
+    <Compile Include="Controllers\CTSucKhoeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\CoSoController.cs" />
+    <Compile Include="Controllers\NhanVienController.cs" />
+    <Compile Include="Controllers\PhanPhoiController.cs" />
+    <Compile Include="Controllers\QTVatSuaController.cs" />
     <Compile Include="Controllers\TruSoController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
