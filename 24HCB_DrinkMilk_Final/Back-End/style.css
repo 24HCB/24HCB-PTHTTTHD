@@ -170,7 +170,7 @@ background:url(images/menu_bg.jpg) no-repeat center top #fff;
 
 
 /* make the second level visible when hover on first level list OR link */
-.menu ul li:hover ul, .menu ul a:hover ul {visibility:visible; height:auto; padding-bottom:3em; background:transparent url(images/trans.gif);}
+.menu ul li:hover ul, .menu ul a:hover ul {visibility:visible; height:auto; padding-bottom:3em;}
 /* keep the third level hidden when you hover on first level list OR link */
 .menu ul :hover ul ul{visibility:hidden;}
 /* keep the fourth level hidden when you hover on second level list OR link */

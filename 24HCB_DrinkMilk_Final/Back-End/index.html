@@ -3,7 +3,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" type="text/css" media="all" href="niceforms-default.css" />
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 </head>
 <body>
 <div id="main_container">
@@ -17,29 +17,30 @@
     </div>
     
     <div class="main_content">
-    
                     <div class="menu">
                     <ul>
-                    <li><a href="list.html">Quản lý bò<!--[if IE 7]><!--></a><!--<![endif]-->
-                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <li><a href="">Quản lý bò</a>
                         <ul>
-                        <li><a href="#inforcows" onclick="inforcowsFunction()"  >Quản lý bò</a></li>
-                        <li><a href="#reporthealth" title="">Quản lý sức khỏe bò</a></li>
-						<li><a href="#getmilk" onclick="getmilkFunction()">Quản lý quy trình vắt sữa</a></li>
+                        <li><a href="#inforcows" onclick="inforcowsFunction()" >Quản lý bò</a></li>
+                        <li><a href="#reporthealth" onclick="reporthealthFunction()">Quản lý sức khỏe bò</a></li>
                         </ul>
-                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
                     </li>
-                    <li><a href="login.html">Quản lý nhân viên<!--[if IE 7]><!--></a><!--<![endif]-->
+                    <li><a href="" >Quản lý quy trình vắt sữa</a>
+						<ul>
+                        <li><a href="#getmilk" onclick="getmilkFunction()" >Quản lý quy trình vắt sữa</a></li>
+                        <li><a href="#getdetailmilk" onclick="getdetailmilkFunction()">Quản lý chi tiết quy trình vắt sữa</a></li>
+                        </ul>
                     </li>
-                    <li><a href="login.html">Quản lý trụ sở<!--[if IE 7]><!--></a><!--<![endif]-->
-                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <li><a href="">Quản lý trụ sở</a>
                         <ul>
                         <li><a href="#unit" onclick="unitFunction()" >Quản lý trụ sở</a></li>
                         <li><a href="#coso" onclick="cosoFunction()" >Quản lý cơ sở</a></li>
                         <li><a href="#lodging" onclick="lodgingFunction()"  >Quản lý chuồng trại</a></li>
-                     <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+						</ul>
                     </li>
-                    </ul>
+					<li><a href="#reports" onclick="getReportFunction()">Báo cáo</a>
+                    </li>
+    
                     </div>
     <div class="center_content">  
     
@@ -55,11 +56,203 @@
 </form>
 
 <form id="form_getmilk" style="display: none;" class="formshow" >
-		<p> Quy trình vắt sữa bò </p>  
+	<h2>Quy trình vắt sữa bò</h2>                  
+	<table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+		<thead>
+			<tr>
+				<th scope="col" class="rounded">Mã quy trình</th>
+				<th scope="col" class="rounded">Mã số chuồng</th>
+				<th scope="col" class="rounded">Mã nhân viên</th>
+				<th scope="col" class="rounded">Ngày thực hiện</th>
+				<th scope="col" class="rounded">Giờ bắt đầu</th>
+				<th scope="col" class="rounded">Giờ kết thúc</th>
+				<th scope="col" class="rounded">Edit</th>
+				<th scope="col" class="rounded-q4">Delete</th>
+			</tr>
+		</thead>
+		<tbody  id="QuyTrinhList">
+		
+		</tbody>
+	</table>
+	<div class="pagination">
+		<span class="disabled"><< prev</span><span class="current">1</span><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a>…<a href="">10</a><a href="">11</a><a href="">12</a>...<a href="">100</a><a href="">101</a><a href="">next >></a>
+	</div> 
+	
+	<h2>Thêm quy trình vắt sữa bò</h2>
+
+	<div class="form">     
+	 <form action="" method="post" class="niceform">
+		<fieldset>
+			<dl>
+				<dt><label for="MaQuyTrinh">Mã quy trình</label></dt>
+				<dd><input type="text" class="form-control" id="txtMaQuyTrinh" readonly placeholder="Mã quy trình"></dd>
+			</dl>
+			<dl>
+				<dt><label for="MaSoChuong">Mã số chuồng</label></dt>
+				<dd><select id='mySelectChuong'></select></dd>
+			</dl>
+			<dl>
+				<dt><label for="MaNhanVien">Mã nhân viên</label></dt>
+				<dd><select id='mySelectNhanVienQuyTrinh'></select></dd>
+			</dl>
+			<dl>
+				<dt><label for="NgayThucHien">Ngày thực hiện</label></dt>
+				<dd><input type="date" class="form-control" id="txtNgayThucHien" placeholder="Ngày nhập"></dd>
+			</dl>
+			<dl>
+				<dt><label for="GioBatDau">Giờ bắt đầu</label></dt>
+				<dd><input type="time" class="form-control" id="txtGioBatDau" placeholder="Giờ bắt đầu"></dd>
+			</dl>
+			<dl>
+				<dt><label for="GioKetThuc">Giờ kết thúc</label></dt>
+				<dd><input type="time" class="form-control" id="txtGioKetThuc" placeholder="Giờ kết thúc"></dd>
+			</dl>
+			<dl class="submit">
+			  <button type="button" class="btn btn-default" id="btnAddQuyTrinh">Thêm</button>
+			  <button type="button" class="btn btn-default" id="btnUpdateQuyTrinh">Sửa</button>
+			</dl>
+		</fieldset>
+	 </form>
+	</div>  
+</form>
+
+<form id="form_getdetailmilk" style="display: none;" class="formshow" >
+	<h2>Chi tiết quy trình vắt sữa bò</h2>                  
+	<table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+		<thead>
+			<tr>
+				<th scope="col" class="rounded">Mã quy trình</th>
+				<th scope="col" class="rounded">Mã số chip</th>
+				<th scope="col" class="rounded">Số lượng sữa</th>
+				<th scope="col" class="rounded">Tình trạng bầu vú</th>
+				<th scope="col" class="rounded-q4">Delete</th>
+			</tr>
+		</thead>
+		<tbody  id="CTQuyTrinhList">
+		
+		</tbody>
+	</table>
+	<div class="pagination">
+		<span class="disabled"><< prev</span><span class="current">1</span><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a>…<a href="">10</a><a href="">11</a><a href="">12</a>...<a href="">100</a><a href="">101</a><a href="">next >></a>
+	</div> 
+	
+	<h2>Thêm chi tiết quy trình vắt sữa bò</h2>
+
+	<div class="form">     
+	 <form action="" method="post" class="niceform">
+		<fieldset>
+			<dl>
+				<dt><label for="MaQuyTrinh_CT">Ngày thực hiện</label></dt>
+				<dd><input type="date" class="form-control" id="txtNgayThucHien_CT" placeholder="Ngày thực hiện"></dd>
+			</dl>
+			<dl>
+				<dt><label for="MaQuyTrinh_CT">Mã quy trình</label></dt>
+				<dd><select id='mySelectQuyTrinh'></select></dd>
+			</dl>
+			<dl>
+				<dt><label for="MaSoChip_CT">Mã số chip</label></dt>
+				<dd><select id='mySelectChip'></select></dd>
+			</dl>
+			<dl>
+				<dt><label for="SoLuongSua">Số lượng sữa</label></dt>
+				<dd><input type="text" class="form-control" id="txtSoLuongSua" placeholder="Số lượng sữa"></dd>
+			</dl>
+			<dl>
+				<dt><label for="TinhTrangBauVu">Tình trạng bầu vú</label></dt>
+				<dd><input type="text" class="form-control" id="txtTinhTrangBauVu" placeholder="Tình trạng bầu vú"></dd>
+			</dl>
+			<dl class="submit">
+			  <button type="button" class="btn btn-default" id="btnAddCTQuyTrinh">Thêm</button>
+			</dl>
+		</fieldset>
+	 </form>
+	</div>  
 </form>
 
 <form id="form_inforcows" style="display: none;" class="formshow" >
-		<p> Thông tin bò </p>  
+	<h2>Quản lý thông tin bò</h2>                  
+	<table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+		<thead>
+			<tr>
+				<th scope="col" class="rounded">Mã số Chip</th>
+				<th scope="col" class="rounded">Ngày nhập</th>
+				<th scope="col" class="rounded">Cân nặng</th>
+				<th scope="col" class="rounded">Màu sắc</th>
+				<th scope="col" class="rounded">Đặc điểm nhận diện</th>
+				<th scope="col" class="rounded">Dị tật</th>
+				<th scope="col" class="rounded">Edit</th>
+				<th scope="col" class="rounded-q4">Delete</th>
+			</tr>
+		</thead>
+		<tbody  id="BoList">
+		
+		</tbody>
+	</table>
+	<div class="pagination">
+		<span class="disabled"><< prev</span><span class="current">1</span><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a>…<a href="">10</a><a href="">11</a><a href="">12</a>...<a href="">100</a><a href="">101</a><a href="">next >></a>
+	</div> 
+	
+	<h2>Thêm thông tin bò</h2>
+
+	<div class="form">     
+	 <form action="" method="post" class="niceform">
+		<fieldset>
+			<dl>
+				<dt><label for="MaSoChip">Mã số chip</label></dt>
+				<dd><input type="text" class="form-control" id="txtMaSoChip" readonly placeholder="Mã số chip"></dd>
+			</dl>
+			<dl>
+				<dt><label for="NgayNhap">Ngày nhập</label></dt>
+				<dd><input type="date" class="form-control" id="txtNgayNhap" placeholder="Ngày nhập"></dd>
+			</dl>
+			<dl>
+				<dt><label for="CanNang">Cân nặng</label></dt>
+				<dd><input type="txtCanNang" class="form-control" id="txtCanNang" placeholder="Cân nặng"></dd>
+			</dl>
+			<dl>
+				<dt><label for="MauSac">Màu sắc</label></dt>
+				<dd><input type="txtMauSac" class="form-control" id="txtMauSac" placeholder="Màu sắc"></dd>
+			</dl>
+			<dl>
+				<dt><label for="DacDiemNhanDien">Đặc điểm nhận diện</label></dt>
+				<dd><input type="txtDacDiemNhanDien" class="form-control" id="txtDacDiemNhanDien" placeholder="Đặc điểm nhận diện"></dd>
+			</dl>
+			<dl>
+				<dt><label for="DiTat">Dị tật</label></dt>
+				<dd><input type="checkbox" class="form-control" id="txtDiTat" placeholder="Dị tật"></dd>
+			</dl>
+			<dl class="submit">
+			  <button type="button" class="btn btn-default" id="btnAddBo">Thêm</button>
+			  <button type="button" class="btn btn-default" id="btnUpdateBo">Sửa</button>
+			</dl>
+		</fieldset>
+	 </form>
+	</div>
+</form>
+
+<form id="form_reporthealth" style="display: none;" class="formshow" >
+	<h2>Quản lý thông tin sức khỏe bò</h2>                  
+	<table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+		<thead>
+			<tr>
+				<th scope="col" class="rounded">Mã số Chip</th>
+				<th scope="col" class="rounded">Ngày ghi nhận</th>
+				<th scope="col" class="rounded">Giờ ghi nhận</th>
+				<th scope="col" class="rounded">Cân nặng</th>
+				<th scope="col" class="rounded">Nhiệt độ </th>
+				<th scope="col" class="rounded">Protit</th>
+				<th scope="col" class="rounded">Gluxit</th>
+				<th scope="col" class="rounded">Lipit</th>
+				<th scope="col" class="rounded">TT Sức khỏe</th>
+			</tr>
+		</thead>
+		<tbody  id="SucKhoeBoList">
+		
+		</tbody>
+	</table>
+	<div class="pagination">
+		<span class="disabled"><< prev</span><span class="current">1</span><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a>…<a href="">10</a><a href="">11</a><a href="">12</a>...<a href="">100</a><a href="">101</a><a href="">next >></a>
+	</div> 
 </form>
 
 <form id="form_unit" style="display: none;" class="formshow">
@@ -103,7 +296,49 @@
 </form>
 
 <form id="form_lodging" style="display: none;" class="formshow" >
-		<p> Chuồng trại </p>  
+	<h2>Quản lý chuồng trại</h2>                  
+	<table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+		<thead>
+			<tr>
+				<th scope="col" class="rounded">Mã số chuồng</th>
+				<th scope="col" class="rounded">Mã cơ sở</th>
+				<th scope="col" class="rounded">Địa chỉ chuồng</th>
+				<th scope="col" class="rounded">Edit</th>
+				<th scope="col" class="rounded-q4">Delete</th>
+			</tr>
+		</thead>
+		<tbody  id="chuongList">
+		
+		</tbody>
+	</table>
+	<div class="pagination">
+		<span class="disabled"><< prev</span><span class="current">1</span><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a>…<a href="">10</a><a href="">11</a><a href="">12</a>...<a href="">100</a><a href="">101</a><a href="">next >></a>
+	</div> 
+	
+	<h2>Thêm chuồng trại</h2>
+
+	<div class="form">     
+	 <form action="" method="post" class="niceform">
+		<fieldset>
+			<dl>
+				<dt><label for="MaSoChuong">Mã số chuồng</label></dt>
+				<dd><input type="txtMaSoChuong" class="form-control" id="txtMaSoChuong" readonly placeholder="Mã số chuồng"></dd>
+			</dl>
+			<dl>
+				<dt><label for="MaCoSo">Cơ sở</label></dt>
+				<dd><select id='mySelectCoSoChuong'></select></dd>
+			</dl>
+			<dl>
+				<dt><label for="DiaChiChuong">Địa chỉ chuồng</label></dt>
+				<dd><input type="txtDiaChiChuong" class="form-control" id="txtDiaChiChuong" placeholder="Trụ sở"></dd>
+			</dl>
+			<dl class="submit">
+			  <button type="button" class="btn btn-default" id="btnAddChuong">Thêm</button>
+			  <button type="button" class="btn btn-default" id="btnUpdateChuong">Sửa</button>
+			</dl>
+		</fieldset>
+	 </form>
+	</div>
 </form>
 
 <form id="form_CoSo" style="display: none;" class="formshow" >
@@ -142,11 +377,11 @@
 			</dl>
 			<dl>
 				<dt><label for="TruSo">Trụ Sở</label></dt>
-				<dd><input type="txtTruSo1" class="form-control" id="txtTruSo1" placeholder="Trụ sở"></dd>
+				<dd><select id='mySelectTruSo'></select></dd>
 			</dl>
 			<dl>
 				<dt><label for="NguoiQuanLy">Người Quản Lý</label></dt>
-				<dd><input type="txtNguoiQuanLy" class="form-control" id="txtNguoiQuanLy" placeholder="Người quản lý"></dd>
+				<dd><select id='mySelectNguoiQuanLy'></select></dd>
 			</dl>
 			<dl class="submit">
 			  <button type="button" class="btn btn-default" id="btnAddCoSo">Thêm</button>
@@ -165,10 +400,9 @@
 </div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
-
-
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
+
 function myFunction() {
 		document.getElementById("myDropdown").classList.toggle("show");
 	}
@@ -178,8 +412,31 @@ function getmilkFunction(){
 	document.getElementById("form_unit").style.display="none";
 	document.getElementById("form_lodging").style.display="none";
 	document.getElementById("form_CoSo").style.display="none";
+	document.getElementById("form_getdetailmilk").style.display="none";
+	document.getElementById("form_reporthealth").style.display="none";
 	
 	document.getElementById("form_getmilk").style.display="block";
+	
+	document.getElementById("form_getmilk").style.display="block";
+	$('#QuyTrinhList').empty();
+	getComboChuong();
+	getComboNhanVienQuyTrinh();
+	getqtVatSua();
+}
+
+function getdetailmilkFunction(){
+	document.getElementById("form_inforcows").style.display="none";
+	document.getElementById("form_unit").style.display="none";
+	document.getElementById("form_lodging").style.display="none";
+	document.getElementById("form_CoSo").style.display="none";	
+	document.getElementById("form_getmilk").style.display="none";
+	document.getElementById("form_reporthealth").style.display="none";
+	
+	document.getElementById("form_getdetailmilk").style.display="block";
+	
+	$('#CTQuyTrinhList').empty();
+	getComboChip();
+	getCTQuyTrinh();
 }
 
 function inforcowsFunction(){
@@ -187,8 +444,34 @@ function inforcowsFunction(){
 	document.getElementById("form_lodging").style.display="none";
 	document.getElementById("form_getmilk").style.display="none";
 	document.getElementById("form_CoSo").style.display="none";
+	document.getElementById("form_getdetailmilk").style.display="none";
+	document.getElementById("form_reporthealth").style.display="none";
 	
 	document.getElementById("form_inforcows").style.display="block";
+	
+	$('#BoList').empty();
+
+	getBo();
+	
+	var now = new Date();
+	var day = ("0" + now.getDate()).slice(-2);
+	var month = ("0" + (now.getMonth() + 1)).slice(-2);
+	var today = now.getFullYear()+"-"+(month)+"-"+ (day);
+
+	$('#txtNgayNhap').val(today);  
+}
+
+function reporthealthFunction(){
+	document.getElementById("form_unit").style.display="none";
+	document.getElementById("form_lodging").style.display="none";
+	document.getElementById("form_getmilk").style.display="none";
+	document.getElementById("form_CoSo").style.display="none";
+	document.getElementById("form_getdetailmilk").style.display="none";
+	document.getElementById("form_inforcows").style.display="none";
+	
+	document.getElementById("form_reporthealth").style.display="block";
+	$('#SucKhoeBoList').empty();
+	getSucKhoeBo();
 }
 
 function unitFunction(){
@@ -196,6 +479,8 @@ function unitFunction(){
 	document.getElementById("form_getmilk").style.display="none";
 	document.getElementById("form_inforcows").style.display="none";
 	document.getElementById("form_CoSo").style.display="none";
+	document.getElementById("form_getdetailmilk").style.display="none";
+	document.getElementById("form_reporthealth").style.display="none";
 	
 	document.getElementById("form_unit").style.display="block";
 	
@@ -208,10 +493,14 @@ function cosoFunction(){
 	document.getElementById("form_getmilk").style.display="none";
 	document.getElementById("form_inforcows").style.display="none";
 	document.getElementById("form_unit").style.display="none";
+	document.getElementById("form_getdetailmilk").style.display="none";
+	document.getElementById("form_reporthealth").style.display="none";
 	
 	document.getElementById("form_CoSo").style.display="block";
 	
 	$('#stationList1').empty();
+	getComboTruSo();
+	getComboNhanVien();
 	getCoSo();
 }
 
@@ -220,10 +509,15 @@ function lodgingFunction(){
 	document.getElementById("form_inforcows").style.display="none";
 	document.getElementById("form_unit").style.display="none";
 	document.getElementById("form_CoSo").style.display="none";
+	document.getElementById("form_getdetailmilk").style.display="none";
+	document.getElementById("form_reporthealth").style.display="none";
 	
 	document.getElementById("form_lodging").style.display="block";
+	
+	$('#chuongList').empty();
+	getComboCoSo();
+	getChuong();
 }
-
 
 // Quản lý trụ sở
 	function getTruSo(){
@@ -241,10 +535,9 @@ function lodgingFunction(){
 				var tr = '<tr>' +
 							'<td>' + dm.MaTruSo + '</td>' +
 							'<td>' + dm.DiaChiTruSo + '</td>' +
-							'<td><a href="#" onclick="getTruSoAction('+ dm.MaTruSo +', '+ dm.DiaChiTruSo +')" ><img src="images/user_edit.png" alt="" title="" border="0" /></a></td>' +
+							'<td><a href="#" onclick="getTruSoAction(' + dm.MaTruSo + ')" ><img src="images/user_edit.png" alt="" title="" border="0" /></a></td>' +
 							'<td><a href="#" onclick="deleteTruSoAction('+ dm.MaTruSo +')"><img src="images/trash.png" alt="" title="" border="0" /></a></td>' +
 						+'</tr>';
-
 				$('#stationList').append(tr);
 				maxstation = dm.MaTruSo;
 			});
@@ -253,6 +546,50 @@ function lodgingFunction(){
 			$('#txtDiaChiTruSo').val("");
 			$("#btnUpdateTruSo").prop("disabled",true);
 			$("#btnAddTruSo").prop("disabled",false);
+		})
+		.fail(function (jqXHR, textStatus, error) {
+			console.log(jqXHR);
+			console.log(jqXHR.statusCode);
+		});
+	};
+	
+	function getComboTruSo(){
+		var _url = 'http://localhost:2796/api/TruSo';
+	   var maxstation = 1;
+		$.ajax({
+			url: _url,
+			dataType: 'json',
+			timeout: 30 * 1000
+		})
+		.done(function (data) {
+			$.each(data, function (index, dm) {		
+				$('#mySelectTruSo').append($("<option/>", {
+					value: dm.MaTruSo,
+					text: dm.DiaChiTruSo
+				}));
+			});
+		})
+		.fail(function (jqXHR, textStatus, error) {
+			console.log(jqXHR);
+			console.log(jqXHR.statusCode);
+		});
+	};
+	
+	function getComboNhanVien(){
+		var _url = 'http://localhost:2796/api/NhanVien';
+	   var maxstation = 1;
+		$.ajax({
+			url: _url,
+			dataType: 'json',
+			timeout: 30 * 1000
+		})
+		.done(function (data) {
+			$.each(data, function (index, dm) {		
+				$('#mySelectNguoiQuanLy').append($("<option/>", {
+					value: dm.MaNV,
+					text: dm.TenNhanVien
+				}));
+			});
 		})
 		.fail(function (jqXHR, textStatus, error) {
 			console.log(jqXHR);
@@ -269,10 +606,8 @@ function lodgingFunction(){
 				'MaTruSo': stationNo,
 				'DiaChiTruSo': address
 		}
-
 		var jsonToPost = JSON.stringify(dataToPost);
 		//console.log(jsonToPost);
-
 		$.ajax({
 			type: 'POST',
 			url: _url,
@@ -299,9 +634,7 @@ function lodgingFunction(){
 				'MaTruSo': stationNo,
 				'DiaChiTruSo': address
 		}
-
 		var jsonToPost = JSON.stringify(dataToPost);
-
 		$.ajax({
 			type: 'PUT',
 			url: _url,
@@ -315,30 +648,37 @@ function lodgingFunction(){
 				console.log(jqXHR);
 				$('#stationList').empty();
 				getTruSo();
-
 			})
 			.fail(function (jqXHR, textStatus, error) {
 				console.log(error);
 			});
 	});
-
-	  function getTruSoAction(stationNo, address){
-	  $("#btnUpdateTruSo").prop("disabled",false);
-			$("#btnAddTruSo").prop("disabled",true);
-						$('#txtTruSo').val(stationNo);
-						$('#txtDiaChiTruSo').val(address);
+	  function getTruSoAction(stationNo){
+			var _url = 'http://localhost:2796/api/TruSo/' + stationNo;
+			$.ajax({
+				url: _url,
+				dataType: 'json',
+				timeout: 30 * 1000
+			})
+			.done(function (data) {
+				$('#txtTruSo').val(data.MaTruSo);
+				$('#txtDiaChiTruSo').val(data.DiaChiTruSo);
+				$("#btnUpdateTruSo").prop("disabled",false);
+				$("#btnAddTruSo").prop("disabled",true);
+			})
+			.fail(function (jqXHR, textStatus, error) {
+				console.log(jqXHR);
+				console.log(jqXHR.statusCode);
+			});	
 	  };
 	  
 	  function deleteTruSoAction(stationNo){
-
 		var _url = 'http://localhost:2796/api/TruSo/' + stationNo;
 		var dataToPost = {
 				'MaTruSo': stationNo,
 				'DiaChiTruSo': ''
 		}
-
 		var jsonToPost = JSON.stringify(dataToPost);
-
 		$.ajax({
 			type: 'DELETE',
 			url: _url,
@@ -356,7 +696,7 @@ function lodgingFunction(){
 			});
 	};
 	
-// Quản lý cơ sở
+	// Quản lý cơ sở
 	function getCoSo(){
 		var _url = 'http://localhost:2796/api/CoSo';
 	   var maxstation = 1;
@@ -373,7 +713,7 @@ function lodgingFunction(){
 							'<td>' + dm.DiaChiCS + '</td>' +
 							'<td>' + dm.MaTruSo + '</td>' +
 							'<td>' + dm.NguoiQuanLy + '</td>' +
-							'<td><a href="#" onclick="getCoSoAction('+ dm.MaCS +', '+ dm.DiaChiCS +', '+ dm.MaTruSo +', '+ dm.NguoiQuanLy +')" ><img src="images/user_edit.png" alt="" title="" border="0" /></a></td>' +
+							'<td><a href="#" onclick="getCoSoAction('+ dm.MaCS +')" ><img src="images/user_edit.png" alt="" title="" border="0" /></a></td>' +
 							'<td><a href="#" onclick="deleteCoSoAction('+ dm.MaCS +')"><img src="images/trash.png" alt="" title="" border="0" /></a></td>' +
 						+'</tr>';
 
@@ -383,8 +723,6 @@ function lodgingFunction(){
 			maxstation = maxstation + 1;
 			$('#txtMaCoSo').val(maxstation);	
 			$('#txtDiaChiCoSo').val("");
-			$('#txtTruSo1').val("");
-			$('#txtNguoiQuanLy').val("");
 			$("#btnUpdateCoSo").prop("disabled",true);
 			$("#btnAddCoSo").prop("disabled",false);
 		})
@@ -393,16 +731,12 @@ function lodgingFunction(){
 			console.log(jqXHR.statusCode);
 		});
 	};
-	
-	$(function () {
-
-	});
 
 	$('#btnAddCoSo').on('click', function () {
 		var maCoSo = $('#txtMaCoSo').val();
 		var diaChi = $('#txtDiaChiCoSo').val();
-		var truSo = $('#txtTruSo1').val();
-		var nguoiQuanLy = $('#txtNguoiQuanLy').val();
+		var truSo = $('#mySelectTruSo option:selected').attr('value');
+		var nguoiQuanLy = $('#mySelectNguoiQuanLy option:selected').attr('value');
 		
 		var _url = 'http://localhost:2796/api/CoSo/add';
 		var dataToPost = {
@@ -434,8 +768,8 @@ function lodgingFunction(){
 	$('#btnUpdateCoSo').on('click', function () {
 		var maCoSo = $('#txtMaCoSo').val();
 		var diaChi = $('#txtDiaChiCoSo').val();
-		var truSo = $('#txtTruSo1').val();
-		var nguoiQuanLy = $('#txtNguoiQuanLy').val();
+		var truSo = $('#mySelectTruSo option:selected').attr('value');
+		var nguoiQuanLy = $('#mySelectNguoiQuanLy option:selected').attr('value');
 		
 		var _url = 'http://localhost:2796/api/CoSo/' + maCoSo;
 		var dataToPost = {
@@ -467,13 +801,25 @@ function lodgingFunction(){
 			});
 	});
 
-	  function getCoSoAction(maCoSo, diaChi, truSo, nguoiQuanLy){
-			$("#btnUpdateCoSo").prop("disabled",false);
-			$("#btnAddCoSo").prop("disabled",true);
-			$('#txtMaCoSo').val(maCoSo);
-			$('#txtDiaChiCoSo').val(diaChi);
-			$('#txtTruSo1').val(truSo);
-			$('#txtNguoiQuanLy').val(nguoiQuanLy);
+	  function getCoSoAction(maCoSo){
+		  var _url = 'http://localhost:2796/api/CoSo/' + maCoSo;
+			$.ajax({
+				url: _url,
+				dataType: 'json',
+				timeout: 30 * 1000
+			})
+			.done(function (data) {
+				$('#txtMaCoSo').val(data.MaCS);	
+				$('#txtDiaChiCoSo').val(data.DiaChiCS);
+				$('#mySelectTruSo option[value=' + data.MaTruSo + ']').attr('selected','selected');	
+				$('#mySelectNguoiQuanLy option[value=' + data.NguoiQuanLy + ']').attr('selected','selected');					
+				$("#btnUpdateCoSo").prop("disabled",false);
+				$("#btnAddCoSo").prop("disabled",true);
+			})
+			.fail(function (jqXHR, textStatus, error) {
+				console.log(jqXHR);
+				console.log(jqXHR.statusCode);
+			});
 	  };
 	  
 	  function deleteCoSoAction(maCoSo){
@@ -487,8 +833,7 @@ function lodgingFunction(){
 		}
 
 		var jsonToPost = JSON.stringify(dataToPost);
-		//console.log(jsonToPost);
-
+		
 		$.ajax({
 			type: 'DELETE',
 			url: _url,
@@ -505,9 +850,757 @@ function lodgingFunction(){
 				console.log(error);
 			});
 	};
+	
+		
+// Quản lý chuồng
+	function getChuong(){
+		var _url = 'http://localhost:2796/api/Chuong';
+	   var maxMaChuong = 1;
+		$.ajax({
+			url: _url,
+			dataType: 'json',
+			timeout: 30 * 1000
+		})
+		.done(function (data) {
+			$('#chuongList').empty();
+			$.each(data, function (index, dm) {
+				var tr = '<tr>' +
+							'<td>' + dm.MaSoChuong + '</td>' +
+							'<td>' + dm.MaCoSo + '</td>' +
+							'<td>' + dm.DiaChiChuong + '</td>' +
+							'<td><a href="#" onclick="getChuongAction('+ dm.MaSoChuong +')" ><img src="images/user_edit.png" alt="" title="" border="0" /></a></td>' +
+							'<td><a href="#" onclick="deleteChuongAction('+ dm.MaSoChuong +')"><img src="images/trash.png" alt="" title="" border="0" /></a></td>' +
+						+'</tr>';
 
-</script>
+				$('#chuongList').append(tr);
+				maxMaChuong = dm.MaSoChuong + 1;
+			});
+			$('#txtMaSoChuong').val(maxMaChuong);
+			$('#txtDiaChiChuong').val("");
+			$("#btnUpdateChuong").prop("disabled",true);
+			$("#btnAddChuong").prop("disabled",false);
+		})
+		.fail(function (jqXHR, textStatus, error) {
+			console.log(jqXHR);
+			console.log(jqXHR.statusCode);
+		});
+	};
+	
+	function getComboCoSo(){
+		var _url = 'http://localhost:2796/api/CoSo';
+	   var maxstation = 1;
+		$.ajax({
+			url: _url,
+			dataType: 'json',
+			timeout: 30 * 1000
+		})
+		.done(function (data) {
+			$.each(data, function (index, dm) {		
+				$('#mySelectCoSoChuong').append($("<option/>", {
+					value: dm.MaCS,
+					text: dm.DiaChiCS
+				}));
+			});
+		})
+		.fail(function (jqXHR, textStatus, error) {
+			console.log(jqXHR);
+			console.log(jqXHR.statusCode);
+		});
+	};
 
+	$('#btnAddChuong').on('click', function () {
+		var maSoChuong = $('#txtMaSoChuong').val();
+		var maCoSo = $('#mySelectCoSoChuong option:selected').attr('value');
+		var diaChi = $('#txtDiaChiChuong').val();
+		
+		var _url = 'http://localhost:2796/api/Chuong/add';
+		var dataToPost = {
+				'MaSoChuong': maSoChuong,
+				'MaCoSo': maCoSo,
+				'DiaChiChuong': diaChi
+		}
 
+		var jsonToPost = JSON.stringify(dataToPost);
+
+		$.ajax({
+			type: 'POST',
+			url: _url,
+			data: jsonToPost,
+			dataType: 'json',
+			contentType: 'application/json',
+			timeout: 30 * 1000
+		})
+			.done(function (data, textStatus, jqXHR) {
+				getChuong();
+			})
+			.fail(function (jqXHR, textStatus, error) {
+				console.log(error);
+			});
+	});
+	
+	$('#btnUpdateChuong').on('click', function () {
+		var maSoChuong = $('#txtMaSoChuong').val();
+		var maCoSo = $('#mySelectCoSoChuong option:selected').attr('value');
+		var diaChi = $('#txtDiaChiChuong').val();
+		
+		var _url = 'http://localhost:2796/api/Chuong/' + maSoChuong;
+		var dataToPost = {
+				'MaSoChuong': maSoChuong,
+				'MaCoSo': maCoSo,
+				'DiaChiChuong': diaChi
+		}
+
+		var jsonToPost = JSON.stringify(dataToPost);
+
+		$.ajax({
+			type: 'PUT',
+			url: _url,
+			data: jsonToPost,
+			dataType: 'json',
+			contentType: 'application/json',
+			timeout: 30 * 1000
+		})
+			.done(function (data, textStatus, jqXHR) {
+				console.log(data);
+				console.log(jqXHR);
+				getChuong();
+
+			})
+			.fail(function (jqXHR, textStatus, error) {
+				console.log(error);
+			});
+	});
+
+	  function getChuongAction(maSoChuong){
+		  var _url = 'http://localhost:2796/api/Chuong/' + maSoChuong;
+		   var maxMaChuong = 1;
+			$.ajax({
+				url: _url,
+				dataType: 'json',
+				timeout: 30 * 1000
+			})
+			.done(function (data) {
+				$("#btnUpdateChuong").prop("disabled",false);
+				$("#btnAddChuong").prop("disabled",true);
+				$('#txtMaSoChuong').val(data.MaSoChuong);
+				$('#mySelectCoSoChuong option[value=' + data.MaCoSo + ']').attr('selected','selected');
+				$('#txtDiaChiChuong').val(data.DiaChiChuong);
+			})
+			.fail(function (jqXHR, textStatus, error) {
+				console.log(jqXHR);
+				console.log(jqXHR.statusCode);
+			});
+	  };
+	  
+	  function deleteChuongAction(maSoChuong){
+
+		var _url = 'http://localhost:2796/api/Chuong/' + maSoChuong;
+		var dataToPost = {
+				'MaSoChuong': maSoChuong,
+				'MaCoSo': '',
+				'DiaChiChuong': ''
+		}
+
+		var jsonToPost = JSON.stringify(dataToPost);
+
+		$.ajax({
+			type: 'DELETE',
+			url: _url,
+			data: jsonToPost,
+			dataType: 'json',
+			contentType: 'application/json',
+			timeout: 30 * 1000
+		})
+			.done(function (data, textStatus, jqXHR) {
+				getChuong();
+			})
+			.fail(function (jqXHR, textStatus, error) {
+				console.log(error);
+			});
+	};
+	
+	// Quản lý bò
+	function getBo(){
+		var now = new Date();
+		var day = ("0" + now.getDate()).slice(-2);
+		var month = ("0" + (now.getMonth() + 1)).slice(-2);
+		var today = now.getFullYear()+"-"+(month)+"-"+ (day);
+
+		$('#txtNgayNhap').val(today); 
+	
+		var _url = 'http://localhost:2796/api/Bo';
+	   var maxMaChip = 1;
+		$.ajax({
+			url: _url,
+			dataType: 'json',
+			timeout: 30 * 1000
+		})
+		.done(function (data) {
+			$('#BoList').empty();
+			$.each(data, function (index, dm) {
+				var tr = '<tr>' +
+							'<td>' + dm.MaSoChip + '</td>' +
+							'<td>' + dm.NgayNhap.substring(0, 10)+ '</td>' +
+							'<td>' + dm.CanNang + '</td>' +
+							'<td>' + dm.MauSac + '</td>' +
+							'<td>' + dm.DacDiemNhanDien + '</td>' +
+							'<td>' + dm.DiTat + '</td>' +
+							'<td><a href="#" onclick="getBoAction('+ dm.MaSoChip +')" ><img src="images/user_edit.png" alt="" title="" border="0" /></a></td>' +
+							'<td><a href="#" onclick="deleteBoAction('+ dm.MaSoChip +')"><img src="images/trash.png" alt="" title="" border="0" /></a></td>' +
+						+'</tr>';
+
+				$('#BoList').append(tr);
+				maxMaChip = dm.MaSoChip + 1;
+			});
+			$('#txtMaSoChip').val(maxMaChip);	
+			$('#txtCanNang').val("");
+			$('#txtMauSac').val("");	
+			$('#txtDacDiemNhanDien').val("");	
+			$('#txtDiTat').prop("checked", true);
+			
+			$("#btnUpdateBo").prop("disabled",true);
+			$("#btnAddBo").prop("disabled",false);
+		})
+		.fail(function (jqXHR, textStatus, error) {
+			console.log(jqXHR);
+			console.log(jqXHR.statusCode);
+		});
+	};
+
+	$('#btnAddBo').on('click', function () {
+		var maSoChip = $('#txtMaSoChip').val();
+		var ngayNhap = $("#txtNgayNhap").val();
+		var canNang = $('#txtCanNang').val();
+		var mauSac = $('#txtMauSac').val();	
+		var dacDiemNhanDien = $('#txtDacDiemNhanDien').val();	
+		var diTat = $('#txtDiTat').prop('checked');
+
+		var _url = 'http://localhost:2796/api/Bo/add';
+		var dataToPost = {
+				'MaSoChip': maSoChip,
+				'NgayNhap': ngayNhap,
+				'CanNang': canNang,
+				'MauSac': mauSac,
+				'DacDiemNhanDien': dacDiemNhanDien,
+				'DiTat': diTat
+		}
+
+		var jsonToPost = JSON.stringify(dataToPost);
+
+		$.ajax({
+			type: 'POST',
+			url: _url,
+			data: jsonToPost,
+			dataType: 'json',
+			contentType: 'application/json',
+			timeout: 30 * 1000
+		})
+			.done(function (data, textStatus, jqXHR) {
+				getBo();
+			})
+			.fail(function (jqXHR, textStatus, error) {
+				console.log(error);
+			});
+	});
+	
+	$('#btnUpdateBo').on('click', function () {
+		var maSoChip = $('#txtMaSoChip').val();
+		var ngayNhap = $('#txtNgayNhap').val();	
+		var canNang = $('#txtCanNang').val();
+		var mauSac = $('#txtMauSac').val();	
+		var dacDiemNhanDien = $('#txtDacDiemNhanDien').val();	
+		var diTat = $('#txtDiTat').prop('checked');
+		
+		var _url = 'http://localhost:2796/api/Bo/' + maSoChip;
+		var dataToPost = {
+				'MaSoChip': maSoChip,
+				'NgayNhap': ngayNhap,
+				'CanNang': canNang,
+				'MauSac': mauSac,
+				'DacDiemNhanDien': dacDiemNhanDien,
+				'DiTat': diTat
+		}
+
+		var jsonToPost = JSON.stringify(dataToPost);
+
+		$.ajax({
+			type: 'PUT',
+			url: _url,
+			data: jsonToPost,
+			dataType: 'json',
+			contentType: 'application/json',
+			timeout: 30 * 1000
+		})
+			.done(function (data, textStatus, jqXHR) {
+				console.log(data);
+				console.log(jqXHR);
+				getBo();
+
+			})
+			.fail(function (jqXHR, textStatus, error) {
+				console.log(error);
+			});
+	});
+
+	  function getBoAction(maSochip){
+			var _url = 'http://localhost:2796/api/Bo/' + maSochip;
+	   var maxMaChip = 1;
+		$.ajax({
+			url: _url,
+			dataType: 'json',
+			timeout: 30 * 1000
+		})
+		.done(function (data) {
+			$("#btnUpdateBo").prop("disabled",false);
+			$("#btnAddBo").prop("disabled",true);	
+			$('#txtMaSoChip').val(data.MaSoChip);
+				
+			$('#txtCanNang').val(data.CanNang);
+			$('#txtMauSac').val(data.MauSac);	
+			$('#txtDacDiemNhanDien').val(data.DacDiemNhanDien);	
+
+			var ngaynhap = data.NgayNhap.substring(0, 10);
+			$('#txtNgayNhap').val(ngaynhap);
+			$('#txtDiTat').prop("checked", data.DiTat);
+		})
+		.fail(function (jqXHR, textStatus, error) {
+			console.log(jqXHR);
+			console.log(jqXHR.statusCode);
+		});	
+	  };
+	  
+	  function deleteBoAction(maSochip){
+		var _url = 'http://localhost:2796/api/Bo/' + maSochip;
+		var dataToPost = {
+				"MaSoChip": maSochip,
+				"NgayNhap": '',
+				"CanNang": '',
+				"MauSac": '',
+				"DacDiemNhanDien": '',
+				"DiTat": ''
+		}
+
+		var jsonToPost = JSON.stringify(dataToPost);
+
+		$.ajax({
+			type: 'DELETE',
+			url: _url,
+			data: jsonToPost,
+			dataType: 'json',
+			contentType: 'application/json',
+			timeout: 30 * 1000
+		})
+			.done(function (data, textStatus, jqXHR) {
+				getBo();
+			})
+			.fail(function (jqXHR, textStatus, error) {
+				console.log(error);
+			});
+	};
+	
+	
+	
+	// Quản lý chi tiết quy trình
+	function getCTQuyTrinh(){
+		var _url = 'http://localhost:2796/api/CTQuyTrinh';
+		$.ajax({
+			url: _url,
+			dataType: 'json',
+			timeout: 30 * 1000
+		})
+		.done(function (data) {
+			$('#CTQuyTrinhList').empty();
+			$.each(data, function (index, dm) {
+				var tr = '<tr>' +
+							'<td>' + dm.MaQuyTrinh + '</td>' +
+							'<td>' + dm.MaSoChip + '</td>' +
+							'<td>' + dm.SoLuongSua + '</td>' +
+							'<td>' + dm.TinhTrangBauVu + '</td>' +
+							'<td><a href="#" onclick="deleteCTQuyTrinhAction('+ dm.MaQuyTrinh + ', ' + dm.maSoChip +')"><img src="images/trash.png" alt="" title="" border="0" /></a></td>' +
+						+'</tr>';
+
+				$('#CTQuyTrinhList').append(tr);
+			});
+			$('#txtMaSoChuong').val("");
+			$('#txtDiaChiChuong').val("");
+			$("#btnUpdateChuong").prop("disabled",true);
+			$("#btnAddChuong").prop("disabled",false);
+		})
+		.fail(function (jqXHR, textStatus, error) {
+			console.log(jqXHR);
+			console.log(jqXHR.statusCode);
+		});
+	};
+	
+	function getComboChip(){
+		var _url = 'http://localhost:2796/api/Bo';
+	   var maxstation = 1;
+		$.ajax({
+			url: _url,
+			dataType: 'json',
+			timeout: 30 * 1000
+		})
+		.done(function (data) {
+			$.each(data, function (index, dm) {		
+				$('#mySelectChip').append($("<option/>", {
+					value: dm.MaSoChip,
+					text: dm.MaSoChip
+				}));
+			});
+		})
+		.fail(function (jqXHR, textStatus, error) {
+			console.log(jqXHR);
+			console.log(jqXHR.statusCode);
+		});
+	};
+
+	$('#btnAddCTQuyTrinh').on('click', function () {
+		var maQuyTrinh = $('#mySelectQuyTrinh option:selected').attr('value');
+		var maSoChip = $('#mySelectChip option:selected').attr('value');	
+		var slSua = $('#txtSoLuongSua').val();
+		var tinhTrangBauVu = $('#txtTinhTrangBauVu').val();	
+		
+		var _url = 'http://localhost:2796/api/CTQuyTrinh/add';
+		var dataToPost = {
+				'MaQuyTrinh': maQuyTrinh,
+				'MaSoChip': maSoChip,
+				'SoLuongSua': slSua,
+				'TinhTrangBauVu': tinhTrangBauVu
+		}
+
+		var jsonToPost = JSON.stringify(dataToPost);
+
+		$.ajax({
+			type: 'POST',
+			url: _url,
+			data: jsonToPost,
+			dataType: 'json',
+			contentType: 'application/json',
+			timeout: 30 * 1000
+		})
+			.done(function (data, textStatus, jqXHR) {
+				getCTQuyTrinh();
+			})
+			.fail(function (jqXHR, textStatus, error) {
+				console.log(error);
+			});
+	});
+	
+	  function deleteCTQuyTrinhAction(maQuyTrinh, maSoChip){
+
+		var _url = 'http://localhost:2796/api/CTQuyTrinh';
+		var dataToPost = {
+				'MaQuyTrinh': maQuyTrinh,
+				'MaSoChip': maSoChip,
+				'SoLuongSua': '',
+				'TinhTrangBauVu': ''
+		}
+
+		var jsonToPost = JSON.stringify(dataToPost);
+
+		$.ajax({
+			type: 'DELETE',
+			url: _url,
+			data: jsonToPost,
+			dataType: 'json',
+			contentType: 'application/json',
+			timeout: 30 * 1000
+		})
+			.done(function (data, textStatus, jqXHR) {
+				getCTQuyTrinh();
+			})
+			.fail(function (jqXHR, textStatus, error) {
+				console.log(error);
+			});
+	};
+	
+	$('input[type="date"]').change(function(){
+		$('#mySelectQuyTrinh').empty();
+        var inputDate = new Date(this.value);
+		var _url = 'http://localhost:2796/api/QTVatSua/add';
+		var dataToPost = {
+				"MaQuyTrinh": '',
+				"MaSoChuong": '',
+				"MaNhanVien": '',
+				"NgayThucHien": inputDate,
+				"GioBatDau": '',
+				"GioKetThuc": ''
+		}
+
+		var jsonToPost = JSON.stringify(dataToPost);
+
+		$.ajax({
+			type: 'POST',
+			url: _url,
+			data: jsonToPost,
+			dataType: 'json',
+			contentType: 'application/json',
+			timeout: 30 * 1000
+		})
+			.done(function (data, textStatus, jqXHR) {
+				$.each(data, function (index, dm) {		
+					$('#mySelectQuyTrinh').append($("<option/>", {
+						value: dm.MaQuyTrinh,
+						text: dm.MaQuyTrinh
+					}));
+				});
+			})
+			.fail(function (jqXHR, textStatus, error) {
+				console.log(jqXHR);
+				console.log(jqXHR.statusCode);
+			});
+    });
+	
+	// Quản lý quy trình vắt sữa
+	function getqtVatSua(){
+		var _url = 'http://localhost:2796/api/qtvatsua';
+	   var maxstation = 1;
+		$.ajax({
+			url: _url,
+			dataType: 'json',
+			timeout: 30 * 1000
+		})
+		.done(function (data) {
+			//console.log(data);
+			$('#QuyTrinhList').empty();
+			$.each(data, function (index, dm) {
+				var tr = '<tr>' +
+							'<td>' + dm.MaQuyTrinh + '</td>' +
+							'<td>' + dm.MaSoChuong + '</td>' +
+							'<td>' + dm.MaNhanVien + '</td>' +
+							'<td>' + dm.NgayThucHien.substring(0, 10) + '</td>'+
+							'<td>' + dm.GioBatDau + '</td>' +
+							'<td>' + dm.GioKetThuc + '</td>' +
+							'<td><a href="#" onclick="getqtVatSuaAction('+ dm.MaQuyTrinh +')" ><img src="images/user_edit.png" alt="" title="" border="0" /></a></td>' +
+							'<td><a href="#" onclick="deleteqtVatSuaAction('+ dm.MaQuyTrinh +')"><img src="images/trash.png" alt="" title="" border="0" /></a></td>' +
+						+'</tr>';
+
+				$('#QuyTrinhList').append(tr);
+				maxstation = dm.MaQuyTrinh + 1;
+			});
+			
+			$('#txtMaQuyTrinh').val(maxstation);	
+			$('#txtMaSoChuongQT').val("");
+			$('#txtMaNhanVien').val("");
+			$('#txtNgayThucHien').val("");
+			$('#txtGioBatDau').val("");
+			$('#txtGioKetThuc').val("");
+			$("#btnUpdateQuyTrinh").prop("disabled",true);
+			$("#btnAddQuyTrinh").prop("disabled",false);
+		})
+		.fail(function (jqXHR, textStatus, error) {
+			console.log(jqXHR);
+			console.log(jqXHR.statusCode);
+		});
+	};
+
+	$('#btnAddQuyTrinh').on('click', function () {
+		var processNo = $('#txtMaQuyTrinh').val();
+		var cageNo = $('#mySelectChuong').val();
+		var employeeNo = $('#mySelectNhanVienQuyTrinh').val();
+		var date = $('#txtNgayThucHien').val();
+		var startTime = $('#txtGioBatDau').val();
+		var finishTime = $('#txtGioKetThuc').val();
+		var _url = 'http://localhost:2796/api/qtvatsua/add';
+		var dataToPost = {
+				'MaQuyTrinh': processNo,
+				'MaSoChuong': cageNo,
+				'MaNhanVien': employeeNo,
+				'NgayThucHien': date,
+				'GioBatDau': startTime,
+				'GioKetThuc': finishTime
+		}
+
+		var jsonToPost = JSON.stringify(dataToPost);
+		//console.log(jsonToPost);
+
+		$.ajax({
+			type: 'POST',
+			url: _url,
+			data: jsonToPost,
+			dataType: 'json',
+			contentType: 'application/json',
+			timeout: 30 * 1000
+		})
+			.done(function (data, textStatus, jqXHR) {
+				$('#QuyTrinhList').empty();
+				getqtVatSua();
+			})
+			.fail(function (jqXHR, textStatus, error) {
+				console.log(error);
+			});
+	});
+	
+	$('#btnUpdateQuyTrinh').on('click', function () {
+		var processNo = $('#txtMaQuyTrinh').val();
+		var cageNo = $('#mySelectChuong').val();
+		var employeeNo = $('#mySelectNhanVienQuyTrinh').val();
+		var date = $('#txtNgayThucHien').val();
+		var startTime = $('#txtGioBatDau').val();
+		var finishTime = $('#txtGioKetThuc').val();
+		var _url = 'http://localhost:2796/api/qtvatsua/' + processNo;
+		var dataToPost = {
+				'MaQuyTrinh': processNo,
+				'MaSoChuong': cageNo,
+				'MaNhanVien': employeeNo,
+				'NgayThucHien': date,
+				'GioBatDau': startTime,
+				'GioKetThuc': finishTime
+		}
+
+		var jsonToPost = JSON.stringify(dataToPost);
+
+		$.ajax({
+			type: 'PUT',
+			url: _url,
+			data: jsonToPost,
+			dataType: 'json',
+			contentType: 'application/json',
+			timeout: 30 * 1000
+		})
+			.done(function (data, textStatus, jqXHR) {
+				console.log(data);
+				console.log(jqXHR);
+				$('#QuyTrinhList').empty();
+				getqtVatSua();
+
+			})
+			.fail(function (jqXHR, textStatus, error) {
+				console.log(error);
+			});
+	});
+
+	  function getqtVatSuaAction(processNo){
+	  var _url = 'http://localhost:2796/api/qtvatsua/' + processNo;
+			$.ajax({
+				url: _url,
+				dataType: 'json',
+				timeout: 30 * 1000
+			})
+			.done(function (data) {
+				$('#txtMaQuyTrinh').val(data.MaQuyTrinh);
+				$('#mySelectChuong').val(data.MaSoChuong);
+				$('#mySelectNhanVienQuyTrinh').val(data.MaNhanVien);
+				$('#txtNgayThucHien').val(data.NgayThucHien.substring(0, 10));
+				$('#txtGioBatDau').val(data.GioBatDau);
+				$('#txtGioKetThuc').val(data.GioKetThuc);
+				$("#btnUpdateQuyTrinh").prop("disabled",false);
+				$("#btnAddQuyTrinh").prop("disabled",true);
+			})
+			.fail(function (jqXHR, textStatus, error) {
+				console.log(jqXHR);
+				console.log(jqXHR.statusCode);
+			});	
+	  };
+	  
+	  function deleteqtVatSuaAction(processNo){
+
+		var _url = 'http://localhost:2796/api/qtvatsua/' + processNo;
+		var dataToPost = {
+				'MaQuyTrinh': processNo,
+				'MaSoChuong': '',
+				'MaNhanVien': '',
+				'NgayThucHien':'',
+				'GioBatDau': '',
+				'GioKetThuc': ''
+		}
+
+		var jsonToPost = JSON.stringify(dataToPost);
+
+		$.ajax({
+			type: 'DELETE',
+			url: _url,
+			data: jsonToPost,
+			dataType: 'json',
+			contentType: 'application/json',
+			timeout: 30 * 1000
+		})
+			.done(function (data, textStatus, jqXHR) {
+				$('#QuyTrinhList').empty();
+				getqtVatSua();
+			})
+			.fail(function (jqXHR, textStatus, error) {
+				console.log(error);
+			});
+	};
+	//combobox Ma so chuong cua quy trinh vat sua
+	function getComboChuong(){
+		var _url = 'http://localhost:2796/api/chuong';
+	   var maxstation = 1;
+		$.ajax({
+			url: _url,
+			dataType: 'json',
+			timeout: 30 * 1000
+		})
+		.done(function (data) {
+			$.each(data, function (index, dm) {		
+				$('#mySelectChuong').append($("<option/>", {
+					value: dm.MaSoChuong,
+					text: dm.MaSoChuong,
+					
+				}));
+			});
+		})
+		.fail(function (jqXHR, textStatus, error) {
+			console.log(jqXHR);
+			console.log(jqXHR.statusCode);
+		});
+	};
+	// combobox Ma nhan vien cua quy trinh vat sua
+	function getComboNhanVienQuyTrinh(){
+		var _url = 'http://localhost:2796/api/nhanvien';
+	   var maxstation = 1;
+		$.ajax({
+			url: _url,
+			dataType: 'json',
+			timeout: 30 * 1000
+		})
+		.done(function (data) {
+			$.each(data, function (index, dm) {		
+				$('#mySelectNhanVienQuyTrinh').append($("<option/>", {
+					value: dm.MaNV,
+					text: dm.MaNV,
+					
+				}));
+			});
+		})
+		.fail(function (jqXHR, textStatus, error) {
+			console.log(jqXHR);
+			console.log(jqXHR.statusCode);
+		});
+	};
+	
+	// Quản lý thông tin Sức Khỏe Bò
+	function getSucKhoeBo(){
+		var _url = 'http://localhost:2796/api/ctsuckhoe';
+	   var maxMaChip = 1;
+		$.ajax({
+			url: _url,
+			dataType: 'json',
+			timeout: 30 * 1000
+		})
+		.done(function (data) {
+			$.each(data, function (index, dm) {
+				var tr = '<tr>' +
+							'<td>' + dm.MaSoChip + '</td>' +
+							'<td>' + dm.NgayGhiNhan + '</td>' +
+							'<td>' + dm.GioGhiNhan + '</td>' +
+							'<td>' + dm.CanNang + '</td>' +
+							'<td>' + dm.NhietDo + '</td>' +
+							'<td>' + dm.Protit + '</td>' +
+							'<td>' + dm.Gluxit + '</td>' +
+							'<td>' + dm.Lipit + '</td>' +
+							'<td>' + dm.TTSucKhoe + '</td>' +
+						+'</tr>';
+
+				$('#SucKhoeBoList').append(tr);
+			});
+		})
+		.fail(function (jqXHR, textStatus, error) {
+			console.log(jqXHR);
+			console.log(jqXHR.statusCode);
+		});
+	};	
+	</script>
 </body>
 </html>
