@@ -26,12 +26,28 @@ namespace WebsiteApi.Controllers
         // POST api/values
         public void Post([FromBody]DomainModel.CTQUYTRINH value)
         {
+            IEnumerable<CTQUYTRINH> CTQuyTrinh = new BusinessLayer.BusinessLayer().GetAllCTQuyTrinh();
+            foreach(CTQUYTRINH ct in CTQuyTrinh)
+            {
+                if(ct.MaQuyTrinh == value.MaQuyTrinh && ct.MaSoChip == value.MaSoChip)
+                {
+                    return;
+                }
+            }
             new BusinessLayer.BusinessLayer().AddCTQuyTrinh(value);
         }
 
         // PUT api/values/5
         public void Put(int id, [FromBody]DomainModel.CTQUYTRINH value)
         {
+            IEnumerable<CTQUYTRINH> CTQuyTrinh = new BusinessLayer.BusinessLayer().GetAllCTQuyTrinh();
+            foreach (CTQUYTRINH ct in CTQuyTrinh)
+            {
+                if (ct.MaQuyTrinh == value.MaQuyTrinh && ct.MaSoChip == value.MaSoChip)
+                {
+                    return;
+                }
+            }
             new BusinessLayer.BusinessLayer().UpdateCTQuyTrinh(value);
         }
 

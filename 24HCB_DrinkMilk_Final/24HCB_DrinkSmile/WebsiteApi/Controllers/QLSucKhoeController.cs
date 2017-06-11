@@ -14,7 +14,7 @@ namespace WebsiteApi.Controllers
         // GET api/values
         public string Get()
         {
-            string pkgLocation = @"D:\Downloads\1542238\1542238\Import.dtsx";
+            string pkgLocation = @"C:\\Users\\ng.phuocloc\\Documents\\GitHub\\24HCB-PTHTTTHD\\24HCB_DrinkMilk_Final\\DrinkSmile_Code\\importFileChip\\1542238\\Import.dtsx";
             Package pkg;
             Application app;
             DTSExecResult pkgResults;
