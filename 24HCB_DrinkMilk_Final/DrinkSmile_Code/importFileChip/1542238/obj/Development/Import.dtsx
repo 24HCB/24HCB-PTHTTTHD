@@ -11,15 +11,15 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Import"
   DTS:PackageType="5"
-  DTS:VersionBuild="21"
-  DTS:VersionGUID="{9698D531-F0A4-4370-A535-ED3CB88612BF}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{94EAF8A7-EB0E-4C76-98EF-212AC854DB19}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[.\sqlexpress.24HCB_VN]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{0CC2B1D2-5571-4104-AD0D-9E9DE6C38667}"
+      DTS:DTSID="{EEFE7410-79A5-46AA-B5BE-FAAA76B43CCE}"
       DTS:ObjectName=".\sqlexpress.24HCB_VN">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -29,31 +29,11 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
       DTS:CreationName="EXCEL"
-      DTS:DTSID="{02BCE9ED-D8A9-469F-BDCE-B609A6B664D5}"
+      DTS:DTSID="{A41D1152-4CE9-4FD7-B3DE-A4429EAA0B91}"
       DTS:ObjectName="Excel Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Xuan Nghiep\Downloads\TTSUCKHOE-2.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
-      DTS:CreationName="EXCEL"
-      DTS:DTSID="{6C301F46-F082-4BB6-B3DB-6762EA499B7E}"
-      DTS:ObjectName="Excel Connection Manager 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
           DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\ng.phuocloc\Documents\GitHub\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\DrinkSmile_Code\importFileChip\COW_INFO\TTSUCKHOE-2.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[localhost.DrinkMilk]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{1B93C51D-FB7F-495E-B2B6-F290D1912D1B}"
-      DTS:ObjectName="localhost.DrinkMilk">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=DrinkMilk;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -127,8 +107,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -137,15 +117,6 @@
                   refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output]"
                   name="Excel Source Output">
                   <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MaSoChip]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[MaSoChip]"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MaSoChip]"
-                      name="MaSoChip"
-                      truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NgayGhiNhan]"
                       dataType="wstr"
@@ -219,6 +190,15 @@
                       lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[TTSucKhoe]"
                       name="TTSucKhoe"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MaSoChip]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[MaSoChip]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MaSoChip]"
+                      name="MaSoChip"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -266,11 +246,6 @@
                   isErrorOut="true"
                   name="Excel Source Error Output">
                   <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[MaSoChip]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[MaSoChip]"
-                      name="MaSoChip" />
                     <outputColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[NgayGhiNhan]"
                       dataType="wstr"
@@ -324,6 +299,11 @@
                       lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[MaSoChip]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[MaSoChip]"
+                      name="MaSoChip" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -367,7 +347,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -379,7 +359,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -401,19 +381,6 @@
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaSoChip]"
-                      cachedDataType="r8"
-                      cachedName="MaSoChip"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaSoChip]"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MaSoChip]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NgayGhiNhan]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="NgayGhiNhan"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NgayGhiNhan]"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NgayGhiNhan]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GioGhiNhan]"
                       cachedDataType="date"
@@ -456,6 +423,19 @@
                       cachedName="TTSucKhoe"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TTSucKhoe]"
                       lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[TTSucKhoe]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaSoChip]"
+                      cachedDataType="r8"
+                      cachedName="MaSoChip"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaSoChip]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MaSoChip]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NgayGhiNhan]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="NgayGhiNhan"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NgayGhiNhan]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NgayGhiNhan]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -568,33 +548,33 @@
         <NodeLayout
           Size="171.2,41.6"
           Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="127.2,243.2" />
+          TopLeft="127.2,251.011764714462" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Excel Source Output]"
           TopLeft="192,92.8">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="20.8,150.4"
+              EndConnector="20.8,158.211764714462"
               Start="0,0"
-              End="20.8,142.9">
+              End="20.8,150.711764714462">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,71.2" />
+                    End="0,75.105882357231" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,71.2"
-                    Point2="0,75.2"
-                    Point3="4,75.2" />
+                    Point1="0,75.105882357231"
+                    Point2="0,79.105882357231"
+                    Point3="4,79.105882357231" />
                   <mssgle:LineSegment
-                    End="16.8,75.2" />
+                    End="16.8,79.105882357231" />
                   <mssgle:CubicBezierSegment
-                    Point1="16.8,75.2"
-                    Point2="20.8,75.2"
-                    Point3="20.8,79.2" />
+                    Point1="16.8,79.105882357231"
+                    Point2="20.8,79.105882357231"
+                    Point3="20.8,83.105882357231" />
                   <mssgle:LineSegment
-                    End="20.8,142.9" />
+                    End="20.8,150.711764714462" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

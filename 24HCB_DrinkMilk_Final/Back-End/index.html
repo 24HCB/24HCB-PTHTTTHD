@@ -403,6 +403,24 @@
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 
+$( document ).ready(function() {
+	window.setInterval(function(){
+		var _url = 'http://localhost:2796/api/QLSucKhoe';
+		$.ajax({
+			url: _url,
+			dataType: 'json',
+			timeout: 30 * 1000
+		})
+		.done(function (data) {
+			console.log("Insert data successed");
+		})
+		.fail(function (jqXHR, textStatus, error) {
+			console.log(jqXHR);
+			console.log(jqXHR.statusCode);
+		});
+	}, 600000);
+});
+
 function myFunction() {
 		document.getElementById("myDropdown").classList.toggle("show");
 	}
