@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="DrinkMilkManagement.POJO.NhanvienEntity" table="NHANVIEN" schema="dbo" catalog="DrinkMilk">
+        <id name="maNv" column="MaNV"/>
+        <property name="tenNhanVien" column="TenNhanVien"/>
+        <property name="cmnd" column="CMND"/>
+        <property name="soDienThoai" column="SoDienThoai"/>
+        <property name="username" column="username"/>
+        <property name="password" column="password"/>
+    </class>
+</hibernate-mapping>

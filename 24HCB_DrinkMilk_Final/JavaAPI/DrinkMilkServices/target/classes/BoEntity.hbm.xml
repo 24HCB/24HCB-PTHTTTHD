@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="DrinkMilkManagement.POJO.BoEntity" table="BO" schema="dbo" catalog="DrinkMilk">
+        <id name="maSoChip" type="java.lang.Integer">
+            <column name="maSoChip"/>
+            <generator class="identity"/>
+        </id>
+        <property name="ngayNhap" column="NgayNhap"/>
+        <property name="canNang" column="CanNang"/>
+        <property name="mauSac" column="MauSac"/>
+        <property name="dacDiemNhanDien" column="DacDiemNhanDien"/>
+        <property name="diTat" column="DiTat"/>
+    </class>
+</hibernate-mapping>

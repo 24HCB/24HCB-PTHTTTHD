@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="DrinkMilkManagement.POJO.ChuongEntity" table="CHUONG" schema="dbo" catalog="DrinkMilk">
+        <id name="maSoChuong" column="MaSoChuong"/>
+        <property name="maCoSo" column="MaCoSo"/>
+        <property name="diaChiChuong" column="DiaChiChuong"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:sqlserver://localhost;databaseName=24HCB_VN</property>
+    <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+    <property name="hibernate.connection.username">sa</property>
+    <property name="hibernate.connection.password">123456</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+
+    <!-- JDBC connection pool (use the built-in) -->
+    <property name="connection.pool_size">1</property>
+
+    <!-- SQL dialect -->
+    <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+
+    <!-- Enable Hibernate's automatic session context management -->
+    <property name="current_session_context_class">thread</property>
+
+    <!-- Disable the second-level cache -->
+    <property name="cache.provider_class">org.hibernate.cache.internal.NoCachingRegionFactory</property>
+
+    <!-- Echo all executed SQL to stdout -->
+    <property name="show_sql">true</property>
+
+    <property name="hibernate.jdbc.batch_size">20</property>
+
+    <mapping class="DrinkMilkManagement.POJO.BoEntity"/>
+    <mapping class="DrinkMilkManagement.POJO.BonchuaEntity"/>
+    <mapping class="DrinkMilkManagement.POJO.ChuongEntity"/>
+    <mapping class="DrinkMilkManagement.POJO.CosoEntity"/>
+
+    <mapping class="DrinkMilkManagement.POJO.NhanvienEntity"/>
+    <mapping class="DrinkMilkManagement.POJO.TrusoEntity"/>
+    <mapping class="DrinkMilkManagement.POJO.CtquytrinhEntity"/>
+    <mapping class="DrinkMilkManagement.POJO.PhanphoiEntity"/>
+    <mapping class="DrinkMilkManagement.POJO.QuytrinhvatsuaEntity"/>
+    <mapping resource="BoEntity.hbm.xml"/>
+    <mapping resource="BonchuaEntity.hbm.xml"/>
+    <mapping resource="ChuongEntity.hbm.xml"/>
+    <mapping resource="CosoEntity.hbm.xml"/>
+    <mapping resource="NhanvienEntity.hbm.xml"/>
+    <mapping resource="PhanphoiEntity.hbm.xml"/>
+    <mapping resource="QuytrinhvatsuaEntity.hbm.xml"/>
+    <mapping resource="TrusoEntity.hbm.xml"/>
+    <mapping resource="CtquytrinhEntity.hbm.xml"/>
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

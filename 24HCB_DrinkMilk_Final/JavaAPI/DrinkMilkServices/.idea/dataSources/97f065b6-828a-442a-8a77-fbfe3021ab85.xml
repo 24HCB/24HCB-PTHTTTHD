@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="DrinkMilk@localhost">
+  <database-model serializer="dbm" rdbms="MSSQL" format-version="4.2">
+    <root id="1"/>
+    <database id="2" parent="1" name="DrinkMilk">
+      <ObjectId>11</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="master">
+      <ObjectId>1</ObjectId>
+    </database>
+    <database id="4" parent="1" name="tempdb">
+      <ObjectId>2</ObjectId>
+    </database>
+    <database id="5" parent="1" name="model">
+      <ObjectId>3</ObjectId>
+    </database>
+    <database id="6" parent="1" name="msdb">
+      <ObjectId>4</ObjectId>
+    </database>
+    <database id="7" parent="1" name="ReportServer">
+      <ObjectId>5</ObjectId>
+    </database>
+    <database id="8" parent="1" name="ReportServerTempDB">
+      <ObjectId>6</ObjectId>
+    </database>
+    <database id="9" parent="1" name="DWDiagnostics">
+      <ObjectId>7</ObjectId>
+    </database>
+    <database id="10" parent="1" name="DWConfiguration">
+      <ObjectId>8</ObjectId>
+    </database>
+    <database id="11" parent="1" name="DWQueue">
+      <ObjectId>9</ObjectId>
+    </database>
+    <database id="12" parent="1" name="BBQManage">
+      <ObjectId>10</ObjectId>
+    </database>
+    <schema id="13" parent="2" name="dbo">
+      <ObjectId>1</ObjectId>
+      <IntrospectionTimestamp>2017-06-10.18:19:46.580</IntrospectionTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="14" parent="2" name="guest">
+      <ObjectId>2</ObjectId>
+    </schema>
+    <schema id="15" parent="2" name="INFORMATION_SCHEMA">
+      <ObjectId>3</ObjectId>
+    </schema>
+    <schema id="16" parent="2" name="sys">
+      <ObjectId>4</ObjectId>
+    </schema>
+    <schema id="17" parent="2" name="usr">
+      <ObjectId>5</ObjectId>
+    </schema>
+    <schema id="18" parent="2" name="dqs">
+      <ObjectId>6</ObjectId>
+    </schema>
+    <schema id="19" parent="2" name="mdm">
+      <ObjectId>7</ObjectId>
+    </schema>
+    <schema id="20" parent="2" name="mdq">
+      <ObjectId>8</ObjectId>
+    </schema>
+    <schema id="21" parent="2" name="stg">
+      <ObjectId>9</ObjectId>
+    </schema>
+    <schema id="22" parent="2" name="db_owner">
+      <ObjectId>16384</ObjectId>
+    </schema>
+    <schema id="23" parent="2" name="db_accessadmin">
+      <ObjectId>16385</ObjectId>
+    </schema>
+    <schema id="24" parent="2" name="db_securityadmin">
+      <ObjectId>16386</ObjectId>
+    </schema>
+    <schema id="25" parent="2" name="db_ddladmin">
+      <ObjectId>16387</ObjectId>
+    </schema>
+    <schema id="26" parent="2" name="db_backupoperator">
+      <ObjectId>16389</ObjectId>
+    </schema>
+    <schema id="27" parent="2" name="db_datareader">
+      <ObjectId>16390</ObjectId>
+    </schema>
+    <schema id="28" parent="2" name="db_datawriter">
+      <ObjectId>16391</ObjectId>
+    </schema>
+    <schema id="29" parent="2" name="db_denydatareader">
+      <ObjectId>16392</ObjectId>
+    </schema>
+    <schema id="30" parent="2" name="db_denydatawriter">
+      <ObjectId>16393</ObjectId>
+    </schema>
+    <table id="31" parent="13" name="BO">
+      <ObjectId>816721962</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.413</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.413</ModifiedTimestamp>
+    </table>
+    <table id="32" parent="13" name="BONCHUA">
+      <ObjectId>848722076</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.420</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.420</ModifiedTimestamp>
+    </table>
+    <table id="33" parent="13" name="CHUONG">
+      <ObjectId>880722190</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.423</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.423</ModifiedTimestamp>
+    </table>
+    <table id="34" parent="13" name="COSO">
+      <ObjectId>912722304</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.427</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.427</ModifiedTimestamp>
+    </table>
+    <table id="35" parent="13" name="CTQUYTRINH">
+      <ObjectId>944722418</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.430</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.430</ModifiedTimestamp>
+    </table>
+    <table id="36" parent="13" name="CTSUCKHOE">
+      <ObjectId>976722532</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.437</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.437</ModifiedTimestamp>
+    </table>
+    <table id="37" parent="13" name="NHANVIEN">
+      <ObjectId>1008722646</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.440</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.440</ModifiedTimestamp>
+    </table>
+    <table id="38" parent="13" name="PHANPHOI">
+      <ObjectId>1040722760</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.450</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.450</ModifiedTimestamp>
+    </table>
+    <table id="39" parent="13" name="QUYTRINHVATSUA">
+      <ObjectId>1072722874</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.457</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.457</ModifiedTimestamp>
+    </table>
+    <table id="40" parent="13" name="TRUSO">
+      <ObjectId>1152723159</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.463</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.463</ModifiedTimestamp>
+    </table>
+    <table id="41" parent="13" name="sysdiagrams">
+      <ObjectId>1104722988</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.460</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.460</ModifiedTimestamp>
+    </table>
+    <routine id="42" parent="13" name="fn_diagramobjects">
+      <ObjectId>800721905</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.407</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.407</ModifiedTimestamp>
+      <RoutineKind>function</RoutineKind>
+      <RoutineType>scalar-fun</RoutineType>
+    </routine>
+    <routine id="43" parent="13" name="sp_alterdiagram">
+      <ObjectId>1264723558</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:13.980</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:13.980</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="44" parent="13" name="sp_creatediagram">
+      <ObjectId>1232723444</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:13.977</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:13.977</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="45" parent="13" name="sp_dropdiagram">
+      <ObjectId>1280723615</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:13.983</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:13.983</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="46" parent="13" name="sp_helpdiagramdefinition">
+      <ObjectId>1216723387</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:13.973</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:13.973</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="47" parent="13" name="sp_helpdiagrams">
+      <ObjectId>1200723330</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:13.970</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:13.970</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="48" parent="13" name="sp_renamediagram">
+      <ObjectId>1248723501</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:13.980</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:13.980</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="49" parent="13" name="sp_upgraddiagrams">
+      <ObjectId>1184723273</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:13.963</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:13.963</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <column id="50" parent="31" name="MaSoChip">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="31" name="NgayNhap">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="52" parent="31" name="CanNang">
+      <Position>3</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="53" parent="31" name="MauSac">
+      <Position>4</Position>
+      <DataType>nvarchar(20)|0</DataType>
+    </column>
+    <column id="54" parent="31" name="DacDiemNhanDien">
+      <Position>5</Position>
+      <DataType>nvarchar(200)|0</DataType>
+    </column>
+    <column id="55" parent="31" name="DiTat">
+      <Position>6</Position>
+      <DataType>bit|0</DataType>
+    </column>
+    <index id="56" parent="31" name="PK_BO">
+      <Position>1</Position>
+      <ColNames>MaSoChip</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="57" parent="31" name="PK_BO">
+      <ObjectId>832722019</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.417</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.417</ModifiedTimestamp>
+      <ColNames>MaSoChip</ColNames>
+      <UnderlyingIndexName>PK_BO</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="58" parent="32" name="MaBonChua">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="59" parent="32" name="MaCoSo">
+      <Position>2</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="60" parent="32" name="SucChuaToiDa">
+      <Position>3</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="61" parent="32" name="SucChuaHienTai">
+      <Position>4</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <index id="62" parent="32" name="PK_BonChua">
+      <Position>1</Position>
+      <ColNames>MaBonChua</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="63" parent="32" name="PK_BonChua">
+      <ObjectId>864722133</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.420</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.420</ModifiedTimestamp>
+      <ColNames>MaBonChua</ColNames>
+      <UnderlyingIndexName>PK_BonChua</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="64" parent="33" name="MaSoChuong">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="65" parent="33" name="MaCoSo">
+      <Position>2</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="66" parent="33" name="DiaChiChuong">
+      <Position>3</Position>
+      <DataType>nvarchar(100)|0</DataType>
+    </column>
+    <index id="67" parent="33" name="PK_CHUONG">
+      <Position>1</Position>
+      <ColNames>MaSoChuong</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="68" parent="33" name="PK_CHUONG">
+      <ObjectId>896722247</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.423</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.423</ModifiedTimestamp>
+      <ColNames>MaSoChuong</ColNames>
+      <UnderlyingIndexName>PK_CHUONG</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="69" parent="34" name="MaCS">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="34" name="DiaChiCS">
+      <Position>2</Position>
+      <DataType>nvarchar(100)|0</DataType>
+    </column>
+    <column id="71" parent="34" name="MaTruSo">
+      <Position>3</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="72" parent="34" name="NguoiQuanLy">
+      <Position>4</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <index id="73" parent="34" name="PK_COSO">
+      <Position>1</Position>
+      <ColNames>MaCS</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="74" parent="34" name="PK_COSO">
+      <ObjectId>928722361</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.430</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.430</ModifiedTimestamp>
+      <ColNames>MaCS</ColNames>
+      <UnderlyingIndexName>PK_COSO</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="75" parent="35" name="MaQuyTrinh">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="76" parent="35" name="MaSoChip">
+      <Position>2</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="77" parent="35" name="SoLuongSua">
+      <Position>3</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="78" parent="35" name="TinhTrangBauVu">
+      <Position>4</Position>
+      <DataType>nvarchar(50)|0</DataType>
+    </column>
+    <index id="79" parent="35" name="PK_ChiTietQuyTrinh">
+      <Position>1</Position>
+      <ColNames>MaQuyTrinh
+MaSoChip</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="80" parent="35" name="PK_ChiTietQuyTrinh">
+      <ObjectId>960722475</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.433</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.433</ModifiedTimestamp>
+      <ColNames>MaQuyTrinh
+MaSoChip</ColNames>
+      <UnderlyingIndexName>PK_ChiTietQuyTrinh</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="81" parent="36" name="MaSoChip">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="82" parent="36" name="NgayGhiNhan">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="83" parent="36" name="GioGhiNhan">
+      <Position>3</Position>
+      <DataType>time|0</DataType>
+    </column>
+    <column id="84" parent="36" name="CanNang">
+      <Position>4</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="85" parent="36" name="NhietDo">
+      <Position>5</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="86" parent="36" name="Protit">
+      <Position>6</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="87" parent="36" name="Gluxit">
+      <Position>7</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="88" parent="36" name="Lipit">
+      <Position>8</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="89" parent="36" name="TTSucKhoe">
+      <Position>9</Position>
+      <DataType>nvarchar(50)|0</DataType>
+    </column>
+    <index id="90" parent="36" name="PK_CTSUCKHOE">
+      <Position>1</Position>
+      <ColNames>MaSoChip
+NgayGhiNhan</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="91" parent="36" name="PK_CTSUCKHOE">
+      <ObjectId>992722589</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.437</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.437</ModifiedTimestamp>
+      <ColNames>MaSoChip
+NgayGhiNhan</ColNames>
+      <UnderlyingIndexName>PK_CTSUCKHOE</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="92" parent="37" name="MaNV">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="93" parent="37" name="TenNhanVien">
+      <Position>2</Position>
+      <DataType>nvarchar(50)|0</DataType>
+    </column>
+    <column id="94" parent="37" name="CMND">
+      <Position>3</Position>
+      <DataType>char(12)|0</DataType>
+    </column>
+    <column id="95" parent="37" name="SoDienThoai">
+      <Position>4</Position>
+      <DataType>char(12)|0</DataType>
+    </column>
+    <column id="96" parent="37" name="username">
+      <Position>5</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="97" parent="37" name="password">
+      <Position>6</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <index id="98" parent="37" name="PK_NHANVIEN">
+      <Position>1</Position>
+      <ColNames>MaNV</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="99" parent="37" name="PK_NHANVIEN">
+      <ObjectId>1024722703</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.440</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.440</ModifiedTimestamp>
+      <ColNames>MaNV</ColNames>
+      <UnderlyingIndexName>PK_NHANVIEN</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="100" parent="38" name="MaPhanPhoi">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="101" parent="38" name="MaNhaSX">
+      <Position>2</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="102" parent="38" name="MaBonChua">
+      <Position>3</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="103" parent="38" name="NgayPP">
+      <Position>4</Position>
+      <DataType>time|0</DataType>
+    </column>
+    <index id="104" parent="38" name="PK_PhanPhoi">
+      <Position>1</Position>
+      <ColNames>MaPhanPhoi</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="105" parent="38" name="PK_PhanPhoi">
+      <ObjectId>1056722817</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.453</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.453</ModifiedTimestamp>
+      <ColNames>MaPhanPhoi</ColNames>
+      <UnderlyingIndexName>PK_PhanPhoi</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="106" parent="39" name="MaQuyTrinh">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="107" parent="39" name="MaSoChuong">
+      <Position>2</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="108" parent="39" name="MaNhanVien">
+      <Position>3</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="109" parent="39" name="NgayThucHien">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="110" parent="39" name="GioBatDau">
+      <Position>5</Position>
+      <DataType>time|0</DataType>
+    </column>
+    <column id="111" parent="39" name="GioKetThuc">
+      <Position>6</Position>
+      <DataType>time|0</DataType>
+    </column>
+    <index id="112" parent="39" name="PK_QUYTRINHVATSUA">
+      <Position>1</Position>
+      <ColNames>MaQuyTrinh</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="113" parent="39" name="PK_QUYTRINHVATSUA">
+      <ObjectId>1088722931</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.457</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.457</ModifiedTimestamp>
+      <ColNames>MaQuyTrinh</ColNames>
+      <UnderlyingIndexName>PK_QUYTRINHVATSUA</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="114" parent="40" name="MaTruSo">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="115" parent="40" name="DiaChiTruSo">
+      <Position>2</Position>
+      <DataType>nchar(10)|0</DataType>
+    </column>
+    <index id="116" parent="40" name="PK_TRUSO">
+      <Position>1</Position>
+      <ColNames>MaTruSo</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="117" parent="40" name="PK_TRUSO">
+      <ObjectId>1168723216</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.463</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.463</ModifiedTimestamp>
+      <ColNames>MaTruSo</ColNames>
+      <UnderlyingIndexName>PK_TRUSO</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="118" parent="41" name="name">
+      <Position>1</Position>
+      <DataType>sysname|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="119" parent="41" name="principal_id">
+      <Position>2</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="120" parent="41" name="diagram_id">
+      <Position>3</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="121" parent="41" name="version">
+      <Position>4</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="122" parent="41" name="definition">
+      <Position>5</Position>
+      <DataType>varbinary|0</DataType>
+    </column>
+    <index id="123" parent="41" name="PK__sysdiagr__C2B05B619904CD39">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>diagram_id</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <index id="124" parent="41" name="UK_principal_name">
+      <Position>2</Position>
+      <ColNames>principal_id
+name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="125" parent="41" name="PK__sysdiagr__C2B05B619904CD39">
+      <ObjectId>1120723045</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2017-06-10.13:45:06.460</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.460</ModifiedTimestamp>
+      <ColNames>diagram_id</ColNames>
+      <UnderlyingIndexName>PK__sysdiagr__C2B05B619904CD39</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="126" parent="41" name="UK_principal_name">
+      <ObjectId>1136723102</ObjectId>
+      <CreatedTimestamp>2017-06-10.13:45:06.460</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-10.13:45:06.460</ModifiedTimestamp>
+      <ColNames>principal_id
+name</ColNames>
+      <UnderlyingIndexName>UK_principal_name</UnderlyingIndexName>
+    </key>
+    <argument id="127" parent="42">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>int|0</DataType>
+    </argument>
+    <argument id="128" parent="43" name="@diagramname">
+      <DataType>sysname|0</DataType>
+    </argument>
+    <argument id="129" parent="43" name="@owner_id">
+      <DataType>int|0</DataType>
+    </argument>
+    <argument id="130" parent="43" name="@version">
+      <DataType>int|0</DataType>
+    </argument>
+    <argument id="131" parent="43" name="@definition">
+      <DataType>varbinary|0</DataType>
+    </argument>
+    <argument id="132" parent="44" name="@diagramname">
+      <DataType>sysname|0</DataType>
+    </argument>
+    <argument id="133" parent="44" name="@owner_id">
+      <DataType>int|0</DataType>
+    </argument>
+    <argument id="134" parent="44" name="@version">
+      <DataType>int|0</DataType>
+    </argument>
+    <argument id="135" parent="44" name="@definition">
+      <DataType>varbinary|0</DataType>
+    </argument>
+    <argument id="136" parent="45" name="@diagramname">
+      <DataType>sysname|0</DataType>
+    </argument>
+    <argument id="137" parent="45" name="@owner_id">
+      <DataType>int|0</DataType>
+    </argument>
+    <argument id="138" parent="46" name="@diagramname">
+      <DataType>sysname|0</DataType>
+    </argument>
+    <argument id="139" parent="46" name="@owner_id">
+      <DataType>int|0</DataType>
+    </argument>
+    <argument id="140" parent="47" name="@diagramname">
+      <DataType>sysname|0</DataType>
+    </argument>
+    <argument id="141" parent="47" name="@owner_id">
+      <DataType>int|0</DataType>
+    </argument>
+    <argument id="142" parent="48" name="@diagramname">
+      <DataType>sysname|0</DataType>
+    </argument>
+    <argument id="143" parent="48" name="@owner_id">
+      <DataType>int|0</DataType>
+    </argument>
+    <argument id="144" parent="48" name="@new_diagramname">
+      <DataType>sysname|0</DataType>
+    </argument>
+  </database-model>
+</dataSource>
