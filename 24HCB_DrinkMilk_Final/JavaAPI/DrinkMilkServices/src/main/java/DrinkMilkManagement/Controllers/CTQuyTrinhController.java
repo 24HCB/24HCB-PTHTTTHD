@@ -15,13 +15,17 @@ import java.util.List;
  */
 @RequestMapping("/api/ctquytrinh")
 @RestController
-public class CTQuyTrinhController {
+public class CTQuyTrinhController {	
+	@CrossOrigin
     @RequestMapping(value = "year/{year}", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public List<CtquytrinhEntity> getSoLuongSuaByYear(@PathVariable int year) {
         return CTQuyTrinhBUS.getSoLuongSuaByYear(year);
     }
+    @CrossOrigin
     @RequestMapping(value = "month/{month}-{year}", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public List<CtquytrinhEntity> getSoLuongSuaByMonth(@PathVariable int month, @PathVariable int year) {
-        return CTQuyTrinhBUS.getSoLuongSuaByMonth(month, year);
+
+        List<CtquytrinhEntity> slSua = CTQuyTrinhBUS.getSoLuongSuaByMonth(month, year);
+        return slSua;
     }
 }
