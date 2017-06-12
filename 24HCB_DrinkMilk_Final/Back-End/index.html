@@ -48,11 +48,50 @@
 
 
 <form id="form_reports" style="display: none;" class="formshow" >
-		<p> Báo cáo </p>
-        <br />
-        Nhập Tên TK cần tạo: <input type="text" id="txtTenThe" />
-        <button id="btnDangKy" type="button">Rút tiền</button>
-        <br></br>
+<input type="radio" name="reporttype" onclick="ChangeSelect(this);" value="month" checked=""> Báo Cáo theo tháng
+<input type="radio" name="reporttype" onclick="ChangeSelect(this);" value="quarter"> Báo cáo theo Quý
+<input type="radio" name="reporttype" onclick="ChangeSelect(this);" value="year"> Báo cáo theo năm
+<select class="report_month">
+	<option value="-1">--Chọn Tháng--</option>
+	<option value="1">Tháng 1</option>
+	<option value="2">Tháng 2</option>
+	<option value="3">Tháng 3</option>
+	<option value="4">Tháng 4</option>
+	<option value="5">Tháng 5</option>
+	<option value="6">Tháng 6</option>
+	<option value="7">Tháng 7</option>
+	<option value="8">Tháng 8</option>
+	<option value="9">Tháng 9</option>
+	<option value="10">Tháng 10</option>
+	<option value="11">Tháng 11</option>
+	<option value="12">Tháng 12</option>
+</select>
+<select class="report_quarter" style="display:none">
+	<option value="-1">--Chọn Quý--</option>
+	<option value="1">Quý 1</option>
+	<option value="2">Quý 2</option>
+	<option value="3">Quý 3</option>
+	<option value="4">Quý 4</option>
+</select>
+<select class="report_year">
+	<option value="-1">--Chọn năm--</option>
+	<option value="2015">2015</option>
+	<option value="2016">2016</option>
+	<option value="2017">2017</option>
+</select>
+<input type="button" class="btnreport" value="Kết xuất">
+<h2>Báo cáo số lượng sữa</h2>                  
+	<table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+		<thead>
+			<tr>
+				<th scope="col" class="rounded">Mã số chip</th>
+				<th scope="col" class="rounded">Số lượng sữa</th>
+			</tr>
+		</thead>
+		<tbody  id="slList">
+		
+		</tbody>
+	</table>
 </form>
 
 <form id="form_getmilk" style="display: none;" class="formshow" >
@@ -398,7 +437,7 @@
     <div class="clear"></div>
     </div> <!--end of main content-->
 </div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script type="text/javascript">
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
@@ -408,7 +447,61 @@ $( document ).ready(function() {
 	window.setInterval(function(){
 		AddQLSucKhoe();
 	}, 600000);
+	/*$("#form_reports").find("select").change(function(){
+		var me = $(this);
+		var currentVal = me.find("option:selected").val();
+		console.log(currentVal);
+	});*/
+
+	$(document).on("click",".btnreport", function(){
+		//alert("123")
+		var type = $("#form_reports input[name='reporttype']").filter(':checked').val();
+		var url = "";
+		if(type=="month"){
+			var month = $(".report_month option:selected").val();
+			var year = $(".report_year option:selected").val();
+			url = "http://localhost:8080/api/ctquytrinh/month/"+month+"-"+year
+			console.log(month + year)
+		}else if(type == "quarter"){
+		}else{
+			var year = $(".report_year option:selected").val();
+			url = "http://localhost:8080/api/ctquytrinh/year/"+year
+		}
+		$.ajax({
+			url: url,
+			dataType: 'json',
+			timeout: 30 * 1000
+		})
+		.done(function (data) {
+			$('#slList').empty();
+			$.each(data, function (index, dm) {
+				var tr = '<tr>' +
+							'<td>' + dm.MaSoChip + '</td>' +
+							'<td>' + dm.slSua+ '</td>' +
+						+'</tr>';
+
+				$('#slList').append(tr);
+			});
+		});
+	});
 });
+
+function  ChangeSelect(myRadio){
+	var myVal = myRadio.value;
+	if (myVal == "month") {
+	    $(".report_month").show();
+	    $(".report_year").show();
+	    $(".report_quarter").hide();
+	}else if(myVal == "quarter"){
+		$(".report_month").hide();
+	    $(".report_year").show();
+	    $(".report_quarter").show();
+	}else{
+		$(".report_month").hide();
+	    $(".report_year").show();
+	    $(".report_quarter").hide();
+	}
+}
 
 function AddQLSucKhoe()
 {
@@ -542,6 +635,17 @@ function lodgingFunction(){
 	getComboCoSo();
 	getChuong();
 }
+function getReportFunction(){
+	document.getElementById("form_inforcows").style.display="none";
+	document.getElementById("form_unit").style.display="none";
+	document.getElementById("form_lodging").style.display="none";
+	document.getElementById("form_CoSo").style.display="none";
+	document.getElementById("form_getdetailmilk").style.display="none";
+	document.getElementById("form_reporthealth").style.display="none";
+	document.getElementById("form_getmilk").style.display="none";
+	document.getElementById("form_reports").style.display="block";
+}
+
 
 // Quản lý trụ sở
 	function getTruSo(){
