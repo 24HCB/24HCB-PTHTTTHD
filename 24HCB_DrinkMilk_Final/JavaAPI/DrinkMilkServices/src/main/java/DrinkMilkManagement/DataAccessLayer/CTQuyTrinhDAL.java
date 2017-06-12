@@ -48,4 +48,21 @@ public class CTQuyTrinhDAL {
         }
         return ds;
     }
+	public static List<CtquytrinhEntity> getSoLuongSuaByMonth(int month, int year)
+    {
+        List<CtquytrinhEntity> ds = null;
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        try {
+            String hql = "select ct.maSoChip, sum(ct.soLuongSua) as slSua from CtquytrinhEntity ct, QuytrinhvatsuaEntity qt" +
+                    " where ct.maQuyTrinh = qt.maQuyTrinh and MONTH(qt.ngayThucHien) = " + month +
+                    " and YEAR(qt.ngayThucHien) = " + year + " group by ct.maSoChip";
+            Query query = session.createQuery(hql);
+            ds = query.list();
+        } catch (HibernateException ex) {
+            System.err.println(ex);
+        } finally {
+            session.close();
+        }
+        return ds;
+    }
 }
