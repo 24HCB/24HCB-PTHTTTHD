@@ -34,14 +34,12 @@ C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkS
 C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\obj\Debug\DomainModel.dll
 C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\obj\Debug\DomainModel.pdb
-C:\Users\ng.phuocloc\Documents\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\obj\Debug\DomainModel.csprojResolveAssemblyReference.cache
-D:\Downloads\24HCB-PTHTTTHD-master\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\DomainModel.dll.config
-D:\Downloads\24HCB-PTHTTTHD-master\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\DomainModel.dll
-D:\Downloads\24HCB-PTHTTTHD-master\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\DomainModel.pdb
-D:\Downloads\24HCB-PTHTTTHD-master\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\EntityFramework.dll
-D:\Downloads\24HCB-PTHTTTHD-master\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\EntityFramework.SqlServer.dll
-D:\Downloads\24HCB-PTHTTTHD-master\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\EntityFramework.xml
-D:\Downloads\24HCB-PTHTTTHD-master\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\EntityFramework.SqlServer.xml
-D:\Downloads\24HCB-PTHTTTHD-master\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\obj\Debug\DomainModel.csprojResolveAssemblyReference.cache
-D:\Downloads\24HCB-PTHTTTHD-master\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\obj\Debug\DomainModel.dll
-D:\Downloads\24HCB-PTHTTTHD-master\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\obj\Debug\DomainModel.pdb
+D:\Hoàn Chỉnh Đại Học\HK4\PTHTTTHD\24HCB_Đồ Án\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\DomainModel.dll.config
+D:\Hoàn Chỉnh Đại Học\HK4\PTHTTTHD\24HCB_Đồ Án\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\DomainModel.dll
+D:\Hoàn Chỉnh Đại Học\HK4\PTHTTTHD\24HCB_Đồ Án\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\DomainModel.pdb
+D:\Hoàn Chỉnh Đại Học\HK4\PTHTTTHD\24HCB_Đồ Án\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\EntityFramework.dll
+D:\Hoàn Chỉnh Đại Học\HK4\PTHTTTHD\24HCB_Đồ Án\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\Hoàn Chỉnh Đại Học\HK4\PTHTTTHD\24HCB_Đồ Án\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\EntityFramework.xml
+D:\Hoàn Chỉnh Đại Học\HK4\PTHTTTHD\24HCB_Đồ Án\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\Hoàn Chỉnh Đại Học\HK4\PTHTTTHD\24HCB_Đồ Án\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\obj\Debug\DomainModel.dll
+D:\Hoàn Chỉnh Đại Học\HK4\PTHTTTHD\24HCB_Đồ Án\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\24HCB_DrinkSmile\DomainModel\obj\Debug\DomainModel.pdb

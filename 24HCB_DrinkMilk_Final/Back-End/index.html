@@ -48,50 +48,50 @@
 
 
 <form id="form_reports" style="display: none;" class="formshow" >
-<input type="radio" name="reporttype" onclick="ChangeSelect(this);" value="month" checked=""> Báo Cáo theo tháng
-<input type="radio" name="reporttype" onclick="ChangeSelect(this);" value="quarter"> Báo cáo theo Quý
-<input type="radio" name="reporttype" onclick="ChangeSelect(this);" value="year"> Báo cáo theo năm
-<select class="report_month">
-	<option value="-1">--Chọn Tháng--</option>
-	<option value="1">Tháng 1</option>
-	<option value="2">Tháng 2</option>
-	<option value="3">Tháng 3</option>
-	<option value="4">Tháng 4</option>
-	<option value="5">Tháng 5</option>
-	<option value="6">Tháng 6</option>
-	<option value="7">Tháng 7</option>
-	<option value="8">Tháng 8</option>
-	<option value="9">Tháng 9</option>
-	<option value="10">Tháng 10</option>
-	<option value="11">Tháng 11</option>
-	<option value="12">Tháng 12</option>
-</select>
-<select class="report_quarter" style="display:none">
-	<option value="-1">--Chọn Quý--</option>
-	<option value="1">Quý 1</option>
-	<option value="2">Quý 2</option>
-	<option value="3">Quý 3</option>
-	<option value="4">Quý 4</option>
-</select>
-<select class="report_year">
-	<option value="-1">--Chọn năm--</option>
-	<option value="2015">2015</option>
-	<option value="2016">2016</option>
-	<option value="2017">2017</option>
-</select>
-<input type="button" class="btnreport" value="Kết xuất">
-<h2>Báo cáo số lượng sữa</h2>                  
-	<table id="rounded-corner" summary="2007 Major IT Companies' Profit">
-		<thead>
-			<tr>
-				<th scope="col" class="rounded">Mã số chip</th>
-				<th scope="col" class="rounded">Số lượng sữa</th>
-			</tr>
-		</thead>
-		<tbody  id="slList">
-		
-		</tbody>
-	</table>
+		<input type="radio" name="reporttype" onclick="ChangeSelect(this);" value="month" checked=""> Báo Cáo theo tháng
+		<input type="radio" name="reporttype" onclick="ChangeSelect(this);" value="quarter"> Báo cáo theo Quý
+		<input type="radio" name="reporttype" onclick="ChangeSelect(this);" value="year"> Báo cáo theo năm
+		<select class="report_month">
+			<option value="-1">--Chọn Tháng--</option>
+			<option value="1">Tháng 1</option>
+			<option value="2">Tháng 2</option>
+			<option value="3">Tháng 3</option>
+			<option value="4">Tháng 4</option>
+			<option value="5">Tháng 5</option>
+			<option value="6">Tháng 6</option>
+			<option value="7">Tháng 7</option>
+			<option value="8">Tháng 8</option>
+			<option value="9">Tháng 9</option>
+			<option value="10">Tháng 10</option>
+			<option value="11">Tháng 11</option>
+			<option value="12">Tháng 12</option>
+		</select>
+		<select class="report_quarter" style="display:none">
+			<option value="-1">--Chọn Quý--</option>
+			<option value="1">Quý 1</option>
+			<option value="2">Quý 2</option>
+			<option value="3">Quý 3</option>
+			<option value="4">Quý 4</option>
+		</select>
+		<select class="report_year">
+			<option value="-1">--Chọn năm--</option>
+			<option value="2015">2015</option>
+			<option value="2016">2016</option>
+			<option value="2017">2017</option>
+		</select>
+		<input type="button" class="btnreport" value="Kết xuất">
+		<h2>Báo cáo số lượng sữa</h2>                  
+			<table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+				<thead>
+					<tr>
+						<th scope="col" class="rounded">Mã số chip</th>
+						<th scope="col" class="rounded">Số lượng sữa</th>
+					</tr>
+				</thead>
+				<tbody  id="slList">
+				
+				</tbody>
+			</table>
 </form>
 
 <form id="form_getmilk" style="display: none;" class="formshow" >
@@ -437,11 +437,10 @@
     <div class="clear"></div>
     </div> <!--end of main content-->
 </div>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
-
 $( document ).ready(function() {
 	AddQLSucKhoe();
 	window.setInterval(function(){
@@ -454,7 +453,6 @@ $( document ).ready(function() {
 	});*/
 
 	$(document).on("click",".btnreport", function(){
-		//alert("123")
 		var type = $("#form_reports input[name='reporttype']").filter(':checked').val();
 		var url = "";
 		if(type=="month"){
@@ -474,14 +472,15 @@ $( document ).ready(function() {
 		})
 		.done(function (data) {
 			$('#slList').empty();
-			$.each(data, function (index, dm) {
-				var tr = '<tr>' +
-							'<td>' + dm.MaSoChip + '</td>' +
-							'<td>' + dm.slSua+ '</td>' +
-						+'</tr>';
-
+			var total = 0;
+			var tr;
+			for(i = 0; i<data.length; i++){
+				tr = '<tr> <td> ' + data[i][0] + '</td> <td> ' + data[i][1]+ '</td> </tr>';
+				total = Number(total) + Number(data[i][1]);
 				$('#slList').append(tr);
-			});
+			}
+			tr = '<tr> <td> Tổng số lượng sữa: </td> <td> ' + total+ '</td> </tr>';
+			$('#slList').append(tr);
 		});
 	});
 });
@@ -502,7 +501,6 @@ function  ChangeSelect(myRadio){
 	    $(".report_quarter").hide();
 	}
 }
-
 function AddQLSucKhoe()
 {
 	var _url = 'http://localhost:2796/api/QLSucKhoe';
@@ -519,11 +517,9 @@ function AddQLSucKhoe()
 		console.log(jqXHR.statusCode);
 	});
 }
-
 function myFunction() {
 		document.getElementById("myDropdown").classList.toggle("show");
 	}
-
 function getmilkFunction(){
 	document.getElementById("form_inforcows").style.display="none";
 	document.getElementById("form_unit").style.display="none";
@@ -540,7 +536,6 @@ function getmilkFunction(){
 	getComboNhanVienQuyTrinh();
 	getqtVatSua();
 }
-
 function getdetailmilkFunction(){
 	document.getElementById("form_inforcows").style.display="none";
 	document.getElementById("form_unit").style.display="none";
@@ -555,7 +550,6 @@ function getdetailmilkFunction(){
 	getComboChip();
 	getCTQuyTrinh();
 }
-
 function inforcowsFunction(){
 	document.getElementById("form_unit").style.display="none";
 	document.getElementById("form_lodging").style.display="none";
@@ -567,17 +561,14 @@ function inforcowsFunction(){
 	document.getElementById("form_inforcows").style.display="block";
 	
 	$('#BoList').empty();
-
 	getBo();
 	
 	var now = new Date();
 	var day = ("0" + now.getDate()).slice(-2);
 	var month = ("0" + (now.getMonth() + 1)).slice(-2);
 	var today = now.getFullYear()+"-"+(month)+"-"+ (day);
-
 	$('#txtNgayNhap').val(today);  
 }
-
 function reporthealthFunction(){
 	document.getElementById("form_unit").style.display="none";
 	document.getElementById("form_lodging").style.display="none";
@@ -590,7 +581,6 @@ function reporthealthFunction(){
 	$('#SucKhoeBoList').empty();
 	getSucKhoeBo();
 }
-
 function unitFunction(){
 	document.getElementById("form_lodging").style.display="none";
 	document.getElementById("form_getmilk").style.display="none";
@@ -604,7 +594,6 @@ function unitFunction(){
 	$('#stationList').empty();
 	getTruSo();
 }
-
 function cosoFunction(){
 	document.getElementById("form_lodging").style.display="none";
 	document.getElementById("form_getmilk").style.display="none";
@@ -620,7 +609,6 @@ function cosoFunction(){
 	getComboNhanVien();
 	getCoSo();
 }
-
 function lodgingFunction(){
 	document.getElementById("form_getmilk").style.display="none";
 	document.getElementById("form_inforcows").style.display="none";
@@ -635,6 +623,7 @@ function lodgingFunction(){
 	getComboCoSo();
 	getChuong();
 }
+
 function getReportFunction(){
 	document.getElementById("form_inforcows").style.display="none";
 	document.getElementById("form_unit").style.display="none";
@@ -643,10 +632,9 @@ function getReportFunction(){
 	document.getElementById("form_getdetailmilk").style.display="none";
 	document.getElementById("form_reporthealth").style.display="none";
 	document.getElementById("form_getmilk").style.display="none";
+	
 	document.getElementById("form_reports").style.display="block";
 }
-
-
 // Quản lý trụ sở
 	function getTruSo(){
 		var _url = 'http://localhost:2796/api/TruSo';
@@ -726,7 +714,6 @@ function getReportFunction(){
 			console.log(jqXHR.statusCode);
 		});
 	};
-
 	$('#btnAddTruSo').on('click', function () {
 		var stationNo = $('#txtTruSo').val();
 		var address = $('#txtDiaChiTruSo').val();
@@ -846,7 +833,6 @@ function getReportFunction(){
 							'<td><a href="#" onclick="getCoSoAction('+ dm.MaCS +')" ><img src="images/user_edit.png" alt="" title="" border="0" /></a></td>' +
 							'<td><a href="#" onclick="deleteCoSoAction('+ dm.MaCS +')"><img src="images/trash.png" alt="" title="" border="0" /></a></td>' +
 						+'</tr>';
-
 				$('#stationList1').append(tr);
 				maxstation = dm.MaCS;
 			});
@@ -861,7 +847,6 @@ function getReportFunction(){
 			console.log(jqXHR.statusCode);
 		});
 	};
-
 	$('#btnAddCoSo').on('click', function () {
 		var maCoSo = $('#txtMaCoSo').val();
 		var diaChi = $('#txtDiaChiCoSo').val();
@@ -875,9 +860,7 @@ function getReportFunction(){
 				'MaTruSo': truSo,
 				'NguoiQuanLy': nguoiQuanLy
 		}
-
 		var jsonToPost = JSON.stringify(dataToPost);
-
 		$.ajax({
 			type: 'POST',
 			url: _url,
@@ -908,9 +891,7 @@ function getReportFunction(){
 				'MaTruSo': truSo,
 				'NguoiQuanLy': nguoiQuanLy
 		}
-
 		var jsonToPost = JSON.stringify(dataToPost);
-
 		$.ajax({
 			type: 'PUT',
 			url: _url,
@@ -924,13 +905,11 @@ function getReportFunction(){
 				console.log(jqXHR);
 				$('#stationList').empty();
 				getCoSo();
-
 			})
 			.fail(function (jqXHR, textStatus, error) {
 				console.log(error);
 			});
 	});
-
 	  function getCoSoAction(maCoSo){
 		  var _url = 'http://localhost:2796/api/CoSo/' + maCoSo;
 			$.ajax({
@@ -953,7 +932,6 @@ function getReportFunction(){
 	  };
 	  
 	  function deleteCoSoAction(maCoSo){
-
 		var _url = 'http://localhost:2796/api/CoSo/' + maCoSo;
 		var dataToPost = {
 				'MaCS': maCoSo,
@@ -961,7 +939,6 @@ function getReportFunction(){
 				'MaTruSo': '',
 				'NguoiQuanLy': ''
 		}
-
 		var jsonToPost = JSON.stringify(dataToPost);
 		
 		$.ajax({
@@ -1001,7 +978,6 @@ function getReportFunction(){
 							'<td><a href="#" onclick="getChuongAction('+ dm.MaSoChuong +')" ><img src="images/user_edit.png" alt="" title="" border="0" /></a></td>' +
 							'<td><a href="#" onclick="deleteChuongAction('+ dm.MaSoChuong +')"><img src="images/trash.png" alt="" title="" border="0" /></a></td>' +
 						+'</tr>';
-
 				$('#chuongList').append(tr);
 				maxMaChuong = dm.MaSoChuong + 1;
 			});
@@ -1038,7 +1014,6 @@ function getReportFunction(){
 			console.log(jqXHR.statusCode);
 		});
 	};
-
 	$('#btnAddChuong').on('click', function () {
 		var maSoChuong = $('#txtMaSoChuong').val();
 		var maCoSo = $('#mySelectCoSoChuong option:selected').attr('value');
@@ -1050,9 +1025,7 @@ function getReportFunction(){
 				'MaCoSo': maCoSo,
 				'DiaChiChuong': diaChi
 		}
-
 		var jsonToPost = JSON.stringify(dataToPost);
-
 		$.ajax({
 			type: 'POST',
 			url: _url,
@@ -1080,9 +1053,7 @@ function getReportFunction(){
 				'MaCoSo': maCoSo,
 				'DiaChiChuong': diaChi
 		}
-
 		var jsonToPost = JSON.stringify(dataToPost);
-
 		$.ajax({
 			type: 'PUT',
 			url: _url,
@@ -1095,13 +1066,11 @@ function getReportFunction(){
 				console.log(data);
 				console.log(jqXHR);
 				getChuong();
-
 			})
 			.fail(function (jqXHR, textStatus, error) {
 				console.log(error);
 			});
 	});
-
 	  function getChuongAction(maSoChuong){
 		  var _url = 'http://localhost:2796/api/Chuong/' + maSoChuong;
 		   var maxMaChuong = 1;
@@ -1124,16 +1093,13 @@ function getReportFunction(){
 	  };
 	  
 	  function deleteChuongAction(maSoChuong){
-
 		var _url = 'http://localhost:2796/api/Chuong/' + maSoChuong;
 		var dataToPost = {
 				'MaSoChuong': maSoChuong,
 				'MaCoSo': '',
 				'DiaChiChuong': ''
 		}
-
 		var jsonToPost = JSON.stringify(dataToPost);
-
 		$.ajax({
 			type: 'DELETE',
 			url: _url,
@@ -1156,7 +1122,6 @@ function getReportFunction(){
 		var day = ("0" + now.getDate()).slice(-2);
 		var month = ("0" + (now.getMonth() + 1)).slice(-2);
 		var today = now.getFullYear()+"-"+(month)+"-"+ (day);
-
 		$('#txtNgayNhap').val(today); 
 	
 		var _url = 'http://localhost:2796/api/Bo';
@@ -1179,7 +1144,6 @@ function getReportFunction(){
 							'<td><a href="#" onclick="getBoAction('+ dm.MaSoChip +')" ><img src="images/user_edit.png" alt="" title="" border="0" /></a></td>' +
 							'<td><a href="#" onclick="deleteBoAction('+ dm.MaSoChip +')"><img src="images/trash.png" alt="" title="" border="0" /></a></td>' +
 						+'</tr>';
-
 				$('#BoList').append(tr);
 				maxMaChip = dm.MaSoChip + 1;
 			});
@@ -1197,7 +1161,6 @@ function getReportFunction(){
 			console.log(jqXHR.statusCode);
 		});
 	};
-
 	$('#btnAddBo').on('click', function () {
 		var maSoChip = $('#txtMaSoChip').val();
 		var ngayNhap = $("#txtNgayNhap").val();
@@ -1205,7 +1168,6 @@ function getReportFunction(){
 		var mauSac = $('#txtMauSac').val();	
 		var dacDiemNhanDien = $('#txtDacDiemNhanDien').val();	
 		var diTat = $('#txtDiTat').prop('checked');
-
 		var _url = 'http://localhost:2796/api/Bo/add';
 		var dataToPost = {
 				'MaSoChip': maSoChip,
@@ -1215,9 +1177,7 @@ function getReportFunction(){
 				'DacDiemNhanDien': dacDiemNhanDien,
 				'DiTat': diTat
 		}
-
 		var jsonToPost = JSON.stringify(dataToPost);
-
 		$.ajax({
 			type: 'POST',
 			url: _url,
@@ -1251,9 +1211,7 @@ function getReportFunction(){
 				'DacDiemNhanDien': dacDiemNhanDien,
 				'DiTat': diTat
 		}
-
 		var jsonToPost = JSON.stringify(dataToPost);
-
 		$.ajax({
 			type: 'PUT',
 			url: _url,
@@ -1266,13 +1224,11 @@ function getReportFunction(){
 				console.log(data);
 				console.log(jqXHR);
 				getBo();
-
 			})
 			.fail(function (jqXHR, textStatus, error) {
 				console.log(error);
 			});
 	});
-
 	  function getBoAction(maSochip){
 			var _url = 'http://localhost:2796/api/Bo/' + maSochip;
 	   var maxMaChip = 1;
@@ -1289,7 +1245,6 @@ function getReportFunction(){
 			$('#txtCanNang').val(data.CanNang);
 			$('#txtMauSac').val(data.MauSac);	
 			$('#txtDacDiemNhanDien').val(data.DacDiemNhanDien);	
-
 			var ngaynhap = data.NgayNhap.substring(0, 10);
 			$('#txtNgayNhap').val(ngaynhap);
 			$('#txtDiTat').prop("checked", data.DiTat);
@@ -1310,9 +1265,7 @@ function getReportFunction(){
 				"DacDiemNhanDien": '',
 				"DiTat": ''
 		}
-
 		var jsonToPost = JSON.stringify(dataToPost);
-
 		$.ajax({
 			type: 'DELETE',
 			url: _url,
@@ -1349,7 +1302,6 @@ function getReportFunction(){
 							'<td>' + dm.TinhTrangBauVu + '</td>' +
 							'<td><a href="#" onclick="deleteCTQuyTrinhAction('+ dm.MaQuyTrinh + ', ' + dm.MaSoChip +')"><img src="images/trash.png" alt="" title="" border="0" /></a></td>' +
 						+'</tr>';
-
 				$('#CTQuyTrinhList').append(tr);
 			});
 			$('#txtMaSoChuong').val("");
@@ -1385,7 +1337,6 @@ function getReportFunction(){
 			console.log(jqXHR.statusCode);
 		});
 	};
-
 	$('#btnAddCTQuyTrinh').on('click', function () {
 		var maQuyTrinh = $('#mySelectQuyTrinh option:selected').attr('value');
 		var maSoChip = $('#mySelectChip option:selected').attr('value');	
@@ -1399,9 +1350,7 @@ function getReportFunction(){
 				'SoLuongSua': slSua,
 				'TinhTrangBauVu': tinhTrangBauVu
 		}
-
 		var jsonToPost = JSON.stringify(dataToPost);
-
 		$.ajax({
 			type: 'POST',
 			url: _url,
@@ -1419,8 +1368,6 @@ function getReportFunction(){
 	});
 	
 	  function deleteCTQuyTrinhAction(maQuyTrinh, maSoChip){
-		alert(maQuyTrinh);
-		alert(maSoChip);
 		var _url = 'http://localhost:2796/api/CTQuyTrinh';
 		var dataToPost = {
 				'MaQuyTrinh': maQuyTrinh,
@@ -1428,9 +1375,7 @@ function getReportFunction(){
 				'SoLuongSua': '',
 				'TinhTrangBauVu': ''
 		}
-
 		var jsonToPost = JSON.stringify(dataToPost);
-
 		$.ajax({
 			type: 'DELETE',
 			url: _url,
@@ -1459,9 +1404,7 @@ function getReportFunction(){
 				"GioBatDau": '',
 				"GioKetThuc": ''
 		}
-
 		var jsonToPost = JSON.stringify(dataToPost);
-
 		$.ajax({
 			type: 'POST',
 			url: _url,
@@ -1507,7 +1450,6 @@ function getReportFunction(){
 							'<td><a href="#" onclick="getqtVatSuaAction('+ dm.MaQuyTrinh +')" ><img src="images/user_edit.png" alt="" title="" border="0" /></a></td>' +
 							'<td><a href="#" onclick="deleteqtVatSuaAction('+ dm.MaQuyTrinh +')"><img src="images/trash.png" alt="" title="" border="0" /></a></td>' +
 						+'</tr>';
-
 				$('#QuyTrinhList').append(tr);
 				maxstation = dm.MaQuyTrinh + 1;
 			});
@@ -1526,7 +1468,6 @@ function getReportFunction(){
 			console.log(jqXHR.statusCode);
 		});
 	};
-
 	$('#btnAddQuyTrinh').on('click', function () {
 		var processNo = $('#txtMaQuyTrinh').val();
 		var cageNo = $('#mySelectChuong').val();
@@ -1543,10 +1484,8 @@ function getReportFunction(){
 				'GioBatDau': startTime,
 				'GioKetThuc': finishTime
 		}
-
 		var jsonToPost = JSON.stringify(dataToPost);
 		//console.log(jsonToPost);
-
 		$.ajax({
 			type: 'POST',
 			url: _url,
@@ -1580,9 +1519,7 @@ function getReportFunction(){
 				'GioBatDau': startTime,
 				'GioKetThuc': finishTime
 		}
-
 		var jsonToPost = JSON.stringify(dataToPost);
-
 		$.ajax({
 			type: 'PUT',
 			url: _url,
@@ -1596,13 +1533,11 @@ function getReportFunction(){
 				console.log(jqXHR);
 				$('#QuyTrinhList').empty();
 				getqtVatSua();
-
 			})
 			.fail(function (jqXHR, textStatus, error) {
 				console.log(error);
 			});
 	});
-
 	  function getqtVatSuaAction(processNo){
 	  var _url = 'http://localhost:2796/api/qtvatsua/' + processNo;
 			$.ajax({
@@ -1627,7 +1562,6 @@ function getReportFunction(){
 	  };
 	  
 	  function deleteqtVatSuaAction(processNo){
-
 		var _url = 'http://localhost:2796/api/qtvatsua/' + processNo;
 		var dataToPost = {
 				'MaQuyTrinh': processNo,
@@ -1637,9 +1571,7 @@ function getReportFunction(){
 				'GioBatDau': '',
 				'GioKetThuc': ''
 		}
-
 		var jsonToPost = JSON.stringify(dataToPost);
-
 		$.ajax({
 			type: 'DELETE',
 			url: _url,
@@ -1727,7 +1659,6 @@ function getReportFunction(){
 							'<td>' + dm.Lipit + '</td>' +
 							'<td>' + dm.TTSucKhoe + '</td>' +
 						+'</tr>';
-
 				$('#SucKhoeBoList').append(tr);
 			});
 		})

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Import"
   DTS:PackageType="5"
-  DTS:VersionBuild="34"
-  DTS:VersionGUID="{94EAF8A7-EB0E-4C76-98EF-212AC854DB19}">
+  DTS:VersionBuild="35"
+  DTS:VersionGUID="{38349940-FEF7-49EC-961C-314E50D6C2EB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -33,7 +33,17 @@
       DTS:ObjectName="Excel Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\ng.phuocloc\Documents\GitHub\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\DrinkSmile_Code\importFileChip\COW_INFO\TTSUCKHOE-2.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\ng.phuocloc\Documents\GitHub\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\DrinkSmile_Code\importFileChip\COW_INFO\TTSUCKHOE-2.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{A079C863-498F-45CA-B80E-184B35D7D137}"
+      DTS:ObjectName="Excel Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Hoàn Chỉnh Đại Học\HK4\PTHTTTHD\24HCB_Đồ Án\24HCB-PTHTTTHD\24HCB_DrinkMilk_Final\DrinkSmile_Code\importFileChip\COW_INFO\TTSUCKHOE-2.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -107,8 +117,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -208,8 +218,7 @@
                       name="MaSoChip" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[NgayGhiNhan]"
-                      dataType="wstr"
-                      length="255"
+                      dataType="date"
                       name="NgayGhiNhan" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[GioGhiNhan]"
@@ -248,8 +257,7 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[NgayGhiNhan]"
-                      dataType="wstr"
-                      length="255"
+                      dataType="date"
                       lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[NgayGhiNhan]"
                       name="NgayGhiNhan" />
                     <outputColumn
